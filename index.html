@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Colemak Mod-DH by ColemakMods</title>
+    <title>Colemak Mod-DH</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+	<link rel="stylesheet" href="stylesheets/steve.css">
     <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
@@ -25,42 +26,130 @@
           <li><a class="buttons github" href="https://github.com/ColemakMods/mod-dh">View On GitHub</a></li>
         </ul>
 
+		<p class="header">&nbsp;</p>
+		<!--
         <p class="header">This project is maintained by <a class="header name" href="https://github.com/ColemakMods">ColemakMods</a></p>
+		-->
 
 
       </header>
       <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+	  
+<h3><a name="welcome-to-mod-dh" class="anchor" href="#welcome-to-mod-dh">
+<span class="octicon octicon-link"></span></a>Colemak Mod-DH</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>Mod-DH is a minor modification to the <a href="http://colemak.com/">Colemak</a> keyboard layout which makes typing more comfortable.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<p class="caption"><img src="gfx/mod_dh_main.png"/><br/>
+Colemak with Mod-DH, shown for an ISO keyboard. Keys are colored according to the finger that should be used. The 10 most common English letters are assigned to the 10 easiest keys (highlighted in red).
+</p>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>Colemak is a great layout, but that doesn't mean it's impossible to improve on! The idea behind Mod-DH is that by making an adjustment to the placement of a small number of keys, it is possible to gain a significant improvement in ergonomics and comfort. For background information, see this <a href="http://forum.colemak.com/viewtopic.php?id=1939">thread on the Colemak forum.</a></p>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<b>Highlights:</b>
+<ul>
+<li>Places the heavily used D and H keys in more comfortable and easier-to-reach positions.</li>
+<li>Moves G to a slightly easier position also, reverting to its placement in Qwerty.</li>
+<li>Retains Colemak's many other strengths, such as it's home key placement and low rate of same-finger bigrams.</li>
+<li>No keys change fingers from standard Colemak, making it easy for existing Colemak users to adopt.</li>
+</ul>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>The mod consists of two separate parts, the left-hand "D" change, and the right-hand "H" change. It is perfectly acceptable to apply the mod to one side of the keyboard only. I especially recommend trying the left-hand change for the greatest benefit.
+</p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<h3><a name="colemak-changes" class="anchor" href="#colemak-changes"><span class="octicon octicon-link"></span></a>Changes From Colemak</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p class="caption"><img src="gfx/mod_dh_change_colemak.png"/><br/>
+Changed keys relative to standard Colemak. Note that none of the changes move keys to a new finger. This makes the mod easy to learn and also retains Colemak's excellent stats on same-finger digraphs.
+</p>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<h4><a name="left-hand-changes" class="anchor" href="#left-hand-changes"><span class="octicon octicon-link"></span></a>Left Hand Changes</h4>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>The primary change is to the left hand:<br/>
+1. The "Angle Shift" (<a href="#angle-mod">see below</a>) is applied to keys Z, X, C. This moves them one space to the left but retaining the conventional finger.<br/>
+2. Three keys are relocated: D, G, B. This makes the D key much easier to type, using your index finger. The position of G is also improves, and reverts to its Qwerty placement. The B key moves from the hard-to-reach position at the bottom-middle to the new location on the top row.<br/>
+</p>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<h4><a name="right-hand-changes" class="anchor" href="#right-hand-changes"><span class="octicon octicon-link"></span></a>Right Hand Changes</h4>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>There is a minor change to the right hand:<br/>
+The H and M keys exchange places. This makes H easy to type, being the more common character than M. In addition, since HE is the second most common bigram in English, it makes it more comfortable to type very common words such as "the", "then", "there", etc.
+</p>
+
+<h3><a name="qwerty-changes" class="anchor" href="#qwerty-changes"><span class="octicon octicon-link"></span></a>Changes From Qwerty</h3>
+
+<p class="caption"><img src="gfx/mod_dh_change_qwerty.png"/><br/>
+Changed keys relative to Qwerty. If the left-hand (D) mod is applied only, 17 keys are moved, same as Standard Colemak. For the full mod, 19 keys are changed. In either case, there are 12 keys which change fingers, same as Colemak.
+</p>
+
+<h3><a name="colemak-problems" class="anchor" href="#colemak-problems"><span class="octicon octicon-link"></span></a>What's wrong with standard Colemak anyway?</h3>
+
+<p>For many people, nothing! But others who have tried Colemak have identified flaws, and have found the transition from Qwerty frustrating as a result. Some have even <a href="https://viralintrospection.wordpress.com/2010/09/06/a-different-philosophy-in-designing-keyboard-layouts/#problem">given up on Colemak</a> and looked to other layouts instead. I believe that those who experience problems with Colemak need not give up on it. Mod-DH was created to fix the most common complaints, and to give a more comfortable Colemak experience for those who want it.
+</p>
+
+<p>The most commonly identified flaw is Colemak's placement of the D and H keys. As the 8th and 10th most common letters in English, they should ideally be in easy-to-reach positions. Colemak places them on the centre column, which means a lateral motion of the hand is required to access them. If you try this motion frequently, you'll probably find it is somewhat less comfortable than simply moving the index finger down, to where Mod-DH places those keys. The H-E combination is often cited as a common English bigram that is unduly awkward with Colemak. If you think it's easier for the index finger to reach down one key to the bottom row than to the centre column, then you'll find Mod-DH more comfortable to use.
+</p>
+
+<table>
+<tr> <td>             </td> <td> left</td> <td>right</td> <td> total</td> </tr>
+<tr> <td>Colemak      </td> <td>7.76%</td> <td>7.02%</td> <td>14.78%</td> </tr>
+<tr> <td>Mod-DH (left)</td> <td>4.49%</td> <td>7.02%</td> <td>11.51%</td> </tr>
+<tr> <td>Mod-DH (full)</td> <td>4.49%</td> <td>3.31%</td> <td> 7.80%</td> </tr>
+<caption>Usage of the centre-column keys for standard Colemak and Mod-DH</caption>
+</table>
+
+<p>My own experience is that I used standard Colemak for several months, but was somewhat unsatisfied with the frequent reaching for the middle of the keyboard to type D and H, and to some extent G. But I stuck with it, being reluctant to change an established layout and thinking Colemak's other benefits would outweigh its drawbacks. And to be fair, for the most part they do. But I eventually came to realize that in fact there is no need to compromise: By applying Mod-DH, it is possible to retain Colemak's best features, while placing some common letters in easier to access locations and reducing the need to reach for the centre column. Within a couple of days using the left-hand "D" mod, I found it to be a noticeable, significant improvement over standard Colemak. The new D position in particular is a major benefit.</p>
+
+<h3><a name="angle-mod" class="anchor" href="#angle-mods"><span class="octicon octicon-link"></span></a>The Angle Shift</h3>
+
+<p>The "Angle Shift" is a mod which makes it possible to adopt a more comfortable typing posture by introducing a degree of symmetry on a standard, staggered keyboard. The keys on the bottom-left are moved one space to the left, but you should type these keys with the conventional finger, Z=pinky, X=ring, C=middle. It works best on an <a href="http://deskthority.net/wiki/ANSI_vs_ISO">ISO keyboard</a>.</p>
+
+<p>This technique is more comfortable then the traditional method, which requires the fingers to twist in an awkward way. Many (including myself) previously compensated for this by using the "wrong" fingers, i.e Z=ring, X=middle, C=index. However it should be noted that the Colemak layout is designed assuming the conventional finger assignment.</p>
+
+<p>Many existing Colemak users apply the Angle Mod, see <a href="http://forum.colemak.com/viewtopic.php?id=1280">DreymaR's keyboard tricks</a>. Mind you, even Qwerty users have <a href="http://www.onehandkeyboard.org/standard-qwerty-finger-placement/">noticed the issue</a>! The Angle Mod is a good innovation, but in its default application assigns the rare V to one of best locations on they keyboard. Mod-DH fixes this by assigning D to that key instead.</p>
+
+<p>An important feature of Mod-DH is that on standard keyboards, it *requires* use of the angle shift and defines the finger assignment as part of the layout itself.</p>
+
+<h3><a name="keyboard-types" class="anchor" href="#keyboard-types"><span class="octicon octicon-link"></span></a>Implementation on Keyboard Types</h3>
+
+<p>The mod works best on keyboards which have good support for the "Angle" mod i.e. ISO&nbsp;keyboards, and symmetric ergonomic keyboards. It can also be applied successfully to ANSI&nbsp;keyboards with an adjustment. Let me know if you have other suggestions for implementing on an ANSI keyboard.</p>
+
+<p>Currently there are some example layout files for <a href="http://msdn.microsoft.com/en-GB/goglobal/bb964665.aspx">Microsoft Keyboard Layout Creator</a> in the <a href="https://github.com/ColemakMods/mod-dh">Downloads section</a>. </p>
+
+<h4><a name="iso-keyboards" class="anchor" href="#iso-keyboards"><span class="octicon octicon-link"></span></a>ISO Keyboards</h4>
+
+<p class="caption"><img src="gfx/mod_dh_keyb_iso.png"/><br/>
+Colemak Mod-DH for an ISO keyboard. The yellow keys may vary depending on your region.
+</p>
+
+<p class="caption"><img src="gfx/mod_dh_keyb_iso_wide.png"/><br/>
+Colemak Mod-DH for an ISO keyboard, in a "wide" configuration. This introduces a greater separation between the hands for a more ergonomic experience. See the <a href="http://forum.colemak.com/viewtopic.php?id=839">Colemak Forum</a> for more details on Wide mods. I&nbsp;recommend this approach if you have an ISO keyboard.
+</p>
+
+<h4><a name="ansi-keyboards" class="anchor" href="#ansi-keyboards"><span class="octicon octicon-link"></span></a>ANSI Keyboards</h4>
+
+<p class="caption"><img src="gfx/mod_dh_keyb_ansi.png"/><br/>
+Colemak Mod-DH for an ANSI keyboard. Due to the lack of an extra key to the right of the left shift key, we need to relocate the Z key. Here is one possible placement. Fortunately Z is a rare key so hopefully it shouldn't have too adverse an effect!
+</p>
+
+<p class="caption"><img src="gfx/mod_dh_keyb_ansi_alt.png"/><br/>
+Colemak Mod-DH for an ANSI keyboard with an alternative arrangement. Keeps Z in the same position relative to the other alphabetic keys by introducing a new column to the left. 
+</p>
+
+<h4><a name="matrix-keyboards" class="anchor" href="#matrix-keyboards"><span class="octicon octicon-link"></span></a>Matrix/Ergonomic Keyboards</h4>
+
+<p class="caption"><img src="gfx/mod_dh_keyb_matrix.png"/><br/>
+Colemak Mod-DH for an idealized, non-staggered keyboard.
+</p>
+
+<h3><a name="feedback-issues" class="anchor" href="#feedback-issues"><span class="octicon octicon-link"></span></a>Feedback / Issues</h3>
+
+<ul>
+<li>Post an <a href="https://github.com/ColemakMods/mod-dh/issues">issue or question</a>.</li>
+<li>Discuss it at the <a href="http://forum.colemak.com/">Colemak Forum</a>.</li>
+</ul>
+
+
       </section>
       <footer>
         <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
