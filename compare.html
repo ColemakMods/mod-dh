@@ -1,0 +1,106 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Colemak Mod-DH - compare layouts</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+	<link rel="stylesheet" href="stylesheets/steve.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Colemak Mod-DH</h1>
+        <p class="header">A Colemak mod for more comfortable typing.</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/ColemakMods/mod-dh/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/ColemakMods/mod-dh/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/ColemakMods/mod-dh">View On GitHub</a></li>
+        </ul>
+
+		<p class="header">&nbsp;</p>
+		<!--
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/ColemakMods">ColemakMods</a></p>
+		-->
+
+
+      </header>
+      <section>
+	  
+<h3><a name="mod-dh-compare-layouts" class="anchor" href="#mod-dh-compare-layouts">
+<span class="octicon octicon-link"></span></a>Colemak Mod-DH - Comparing Layouts</h3>
+
+<p>Finding a way to objectively compare keyboards layouts is not an easy task. There are many different factors to consider, as well as how much weight should be given to each factor. Scoring systems are highly subjective.</p> 
+
+<p>Nonetheless, here is an attempt to compare some layouts. It uses a fairly simple scoring system that simulates typing a large volume of standard English text<a href="#notes">¹</a>, and scores each layout according to two factors:
+</p>
+
+<p>1. A base effort value based on the ease with which each key can be typed.<br/>
+<img src="gfx/keyboard_scores.png"/>
+</p>
+
+<p>2. An additional penalty that is incurred for each pair of successive keys that were typing with same finger (same finger bigrams). The amount of penalty depends on the distance the finger moves to type both keys, i.e. the row difference between the two keys forming the bigram.
+<img src="gfx/keyboard_penalties.png"/>
+</p>
+
+<p>These are my estimates based on personal experience, others may disagree on the values. There are some other examples <a href="http://mkweb.bcgsc.ca/carpalx/?typing_effort#carpalx_typing_model">here</a>, <a href="http://viralintrospection.wordpress.com/2010/09/06/a-different-philosophy-in-designing-keyboard-layouts/#design">here</a> and <a href="http://forum.colemak.com/viewtopic.php?pid=15137#p15137">here</a>.</p>
+
+<p>You can try out this <a href="#layout-analyzer">Keyboard Layout Analyzer</a> tool (below) to generate statistics using your own input values!</p>
+
+<h3><a name="mod-dh-compare-layouts" class="anchor" href="#mod-dh-compare-layouts">
+<span class="octicon octicon-link"></span></a>Results</h3>
+
+<table>
+<tr> <td></td> <td>base effort<br/>per key</td> <td>same-finger<br/>bigrams percentage</td> <td> same-finger<br/>penalty</td> <td> overall score<br/>effort per key</td> </tr>
+<tr> <td>Mod-DH (full)</td> <td>1.602</td> <td>1.51%</td> <td>0.039</td> <td>1.642</td> </tr>
+<tr> <td>Mod-DH (left)</td> <td>1.629</td> <td>1.51%</td> <td>0.040</td> <td>1.670</td> </tr>
+<tr> <td>Workman      </td> <td>1.607</td> <td>2.96%</td> <td>0.078</td> <td>1.685</td> </tr>
+<tr> <td>Colemak      </td> <td>1.662</td> <td>1.51%</td> <td>0.040</td> <td>1.702</td> </tr>
+<tr> <td>Asset        </td> <td>1.689</td> <td>2.97%</td> <td>0.078</td> <td>1.768</td> </tr>
+<tr> <td>Norman       </td> <td>1.616</td> <td>6.38%</td> <td>0.166</td> <td>1.783</td> </tr>
+<tr> <td>qgmlwyfub    </td> <td>1.688</td> <td>4.58%</td> <td>0.115</td> <td>1.803</td> </tr>
+<tr> <td>Dvorak       </td> <td>1.798</td> <td>2.53%</td> <td>0.064</td> <td>1.862</td> </tr>
+<tr> <td>Minimak-8key </td> <td>1.761</td> <td>4.03%</td> <td>0.108</td> <td>1.870</td> </tr>
+<tr> <td>Qwerty       </td> <td>2.187</td> <td>6.57%</td> <td>0.184</td> <td>2.372</td> </tr>
+<caption>Comparison of various layouts using the scoring system defined above.</caption>
+</table>
+
+<p>Mod-DH comes out as the winner, but this is not surprising given the scoring system rewards use of the keys locations that Mod-DH optimizes. A cynic might argue that it is easy to win a competition when you choose your own rules! In that case, why not try out the tool below with your own inputs to see how it affects the results!</p>
+
+<h3><a name="layout-analyzer" class="anchor" href="#layout-analyzer">
+<span class="octicon octicon-link"></span></a>Layout Analyzer Tool</h3>
+
+<p>This is a tool for analyzing keyboard layouts, according to the two factors described above. Importantly, you can modify the input values - the effort weights of the keys and the penalties for same-finger bigrams - to whatever you think they should be. Note, it is a Java applet and so requires the <a href="https://java.com/en/download/index.jsp">Java Plugin</a> to be installed and enabled in your browser. Yeah, I know Java applets are old hat these days, but it was convenient!</p>
+
+<p>To use, select a layout from the list or type in your own (format is 3 rows of ten characters, space-separated) into the top-left panel. Enter key effort values in the top-right panel, and also three penalty values for same-finger bigrams. The "Analyze" button calculates the results according to the pre-calculated letter<a href="#notes">¹</a> and bigram frequency stats.</p>
+
+<div>
+<applet codebase="http://spwebgames.com/" code="com.spwebgames.keyboard.applet.KeyboardApplet"  
+	  archive="keyboard/keyboard.jar" width="560" height="600"> 
+	<span>Requires Java-capable browser.</span>
+</applet>
+</div>
+
+<h3><a name="notes" class="anchor" href="#notes"><span class="octicon octicon-link"></span></a>Notes</h3>
+
+<p><a class="anchor" href="#notes">¹</a> Statistics are generated using a corpus which comprises a variety of books from Project Guttenberg, the same as used by <a href="http://mkweb.bcgsc.ca/carpalx/?keyboard_statistics">carpalx.
+</p>
+
+
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
