@@ -1,2 +1,3 @@
 
-.caption {margin-right: 40px; margin-left: 40px; font-size: smaller; text-align: center;}
+.caption {margin-left: 40px; margin-right: 40px; font-size: smaller; text-align: center;}
+.center {margin-left: auto; margin-right: auto; display: block;}
