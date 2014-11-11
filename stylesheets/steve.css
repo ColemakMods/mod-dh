@@ -1,3 +1,12 @@
 
 .caption {margin-left: 40px; margin-right: 40px; font-size: smaller; text-align: center;}
 .center {margin-left: auto; margin-right: auto; display: block;}
+
+a.menu {
+	-webkit-font-smoothing: antialiased;
+	background: url(../images/arrow-right.png) no-repeat;
+	font-weight: normal;
+	text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
+	padding: 2px 2px 2px 22px;
+	height: 30px;
+}

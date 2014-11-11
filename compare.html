@@ -20,6 +20,11 @@
         <h1 class="header">Colemak Mod-DH</h1>
         <p class="header">A Colemak mod for more comfortable typing.</p>
 
+		<ul>
+          <li><a class="menu" href="./">About</a></li>
+          <li><a class="menu" href="./compare.html">Compare</a></li>
+        </ul>
+
         <ul>
           <li class="download"><a class="buttons" href="https://github.com/ColemakMods/mod-dh/zipball/master">Download ZIP</a></li>
           <li class="download"><a class="buttons" href="https://github.com/ColemakMods/mod-dh/tarball/master">Download TAR</a></li>
@@ -47,40 +52,40 @@
 <img src="gfx/keyboard_scores.png"/>
 </p>
 
-<p>2. An additional penalty that is incurred for each pair of successive keys that were typing with same finger (same finger bigrams). The amount of penalty depends on the distance the finger moves to type both keys, i.e. the row difference between the two keys forming the bigram.
+<p>2. An additional penalty that is incurred for each pair of successive keys that were typing with same finger (i.e. same-finger bigrams). The amount of penalty depends on the distance the finger moves to type both keys, i.e. the row difference between the two keys forming the bigram.
 <img src="gfx/keyboard_penalties.png"/>
 </p>
 
-<p>These are my estimates based on personal experience, others may disagree on the values. There are some other examples <a href="http://mkweb.bcgsc.ca/carpalx/?typing_effort#carpalx_typing_model">here</a>, <a href="http://viralintrospection.wordpress.com/2010/09/06/a-different-philosophy-in-designing-keyboard-layouts/#design">here</a> and <a href="http://forum.colemak.com/viewtopic.php?pid=15137#p15137">here</a>.</p>
+<p>These are my values based on personal experience, which I think are reasonable estimates. Others may disagree of course, there are some other examples <a href="http://mkweb.bcgsc.ca/carpalx/?typing_effort#carpalx_typing_model">here</a>, <a href="http://viralintrospection.wordpress.com/2010/09/06/a-different-philosophy-in-designing-keyboard-layouts/#design">here</a> and <a href="http://forum.colemak.com/viewtopic.php?pid=15137#p15137">here</a>. Note also the key efforts defined assume the application of the <a href="./#angle-mod">"angle"</a> mod.</p>
 
-<p>You can try out this <a href="#layout-analyzer">Keyboard Layout Analyzer</a> tool (below) to generate statistics using your own input values!</p>
+<p>You can try out this <a href="#layout-analyzer">Keyboard Layout Analyzer</a> tool (below) to generate statistics using your own input values.</p>
 
 <h3><a name="mod-dh-compare-layouts" class="anchor" href="#mod-dh-compare-layouts">
 <span class="octicon octicon-link"></span></a>Results</h3>
 
 <table>
 <tr> <td></td> <td>base effort<br/>per key</td> <td>same-finger<br/>bigrams percentage</td> <td> same-finger<br/>penalty</td> <td> overall score<br/>effort per key</td> </tr>
-<tr> <td>Mod-DH (full)</td> <td>1.590</td> <td>1.51%</td> <td>0.040</td> <td>1.630</td> </tr>
-<tr> <td>Mod-DH (left)</td> <td>1.622</td> <td>1.51%</td> <td>0.040</td> <td>1.662</td> </tr>
-<tr> <td>Workman      </td> <td>1.601</td> <td>2.96%</td> <td>0.078</td> <td>1.679</td> </tr>
-<tr> <td>Colemak      </td> <td>1.658</td> <td>1.51%</td> <td>0.040</td> <td>1.698</td> </tr>
-<tr> <td>Asset        </td> <td>1.693</td> <td>2.97%</td> <td>0.079</td> <td>1.772</td> </tr>
-<tr> <td>Norman       </td> <td>1.611</td> <td>6.38%</td> <td>0.166</td> <td>1.777</td> </tr>
-<tr> <td>qgmlwyfub    </td> <td>1.691</td> <td>4.58%</td> <td>0.116</td> <td>1.807</td> </tr>
-<tr> <td>Dvorak       </td> <td>1.795</td> <td>2.53%</td> <td>0.065</td> <td>1.859</td> </tr>
-<tr> <td>Minimak-8key </td> <td>1.756</td> <td>4.03%</td> <td>0.108</td> <td>1.864</td> </tr>
-<tr> <td>Qwerty       </td> <td>2.197</td> <td>6.57%</td> <td>0.185</td> <td>2.382</td> </tr>
-<caption>Comparison of various layouts using the scoring system defined above.</caption>
+<tr> <td>Mod-DH (full)</td> <td>1.596</td> <td>1.51%</td> <td>0.040</td> <td>1.636</td> </tr>
+<tr> <td>Mod-DH (left)</td> <td>1.628</td> <td>1.51%</td> <td>0.040</td> <td>1.668</td> </tr>
+<tr> <td>Workman      </td> <td>1.606</td> <td>2.96%</td> <td>0.078</td> <td>1.684</td> </tr>
+<tr> <td>Colemak      </td> <td>1.663</td> <td>1.51%</td> <td>0.040</td> <td>1.703</td> </tr>
+<tr> <td>Asset        </td> <td>1.696</td> <td>2.97%</td> <td>0.079</td> <td>1.775</td> </tr>
+<tr> <td>Norman       </td> <td>1.614</td> <td>6.38%</td> <td>0.166</td> <td>1.780</td> </tr>
+<tr> <td>qgmlwyfub    </td> <td>1.699</td> <td>4.58%</td> <td>0.116</td> <td>1.815</td> </tr>
+<tr> <td>Dvorak       </td> <td>1.793</td> <td>2.53%</td> <td>0.065</td> <td>1.857</td> </tr>
+<tr> <td>Minimak-8key </td> <td>1.763</td> <td>4.03%</td> <td>0.108</td> <td>1.872</td> </tr>
+<tr> <td>Qwerty       </td> <td>2.192</td> <td>6.57%</td> <td>0.185</td> <td>2.376</td> </tr>
+<caption>Comparison of various layouts using the scoring system defined above (lower is better).</caption>
 </table>
 
-<p>Mod-DH comes out as the winner, but this is not surprising given the scoring system rewards use of the keys locations that Mod-DH optimizes. A cynic might argue that it is easy to win a competition when you choose your own rules! In that case, why not try out the tool below with your own inputs to see how it affects the results!</p>
+<p>Mod-DH comes out as the winner, but perhaps this is not surprising given the scoring system rewards use of the key locations that Mod-DH optimizes. A cynic might argue that it is easy to win a competition when you choose your own rules! In that case, especially if you disagree with the input weights and penalties, why not try out the tool below with your own inputs to see how it affects the results!</p>
 
 <h3><a name="layout-analyzer" class="anchor" href="#layout-analyzer">
 <span class="octicon octicon-link"></span></a>Layout Analyzer Tool</h3>
 
 <p>This is a tool for analyzing keyboard layouts, according to the two factors described above. Importantly, you can modify the input values - the effort weights of the keys and the penalties for same-finger bigrams - to whatever you think they should be. Note, it is a Java applet and so requires the <a href="https://java.com/en/download/index.jsp">Java Plugin</a> to be installed and enabled in your browser. Yeah, I know Java applets are old hat these days, but it was convenient!</p>
 
-<p>To use, select a layout from the list or type in your own (format is 3 rows of ten characters, space-separated) into the top-left panel. Enter key effort values in the top-right panel, and also three penalty values for same-finger bigrams. The "Analyze" button calculates the results according to the pre-calculated letter<a href="#notes">¹</a> and bigram frequency stats.</p>
+<p>To use, select a layout from the list or type in your own (the format is 3 rows of ten characters, space-separated) into the top-left panel. Enter key effort values in the top-right panel, and also three penalty values for same-finger bigrams. The "Analyze" button calculates the results according to the pre-calculated letter<a href="#notes">¹</a> and bigram frequency stats.</p>
 
 <div>
 <applet class="center" codebase="http://spwebgames.com/" 
