@@ -1,5 +1,6 @@
-! xmodmap for the Colemak layout.
-! 2006-01-01 Shai Coleman, http://colemak.com/ . Public domain. 
+! xmodmap for the Colemak Mod-DH layout (US, ANSI keyboard).
+! http://colemakmods.github.io/mod-dh/. 
+! Public domain. 
 
 keycode  49 =        grave    asciitilde       dead_tilde        asciitilde            
 keycode  10 =            1        exclam       exclamdown       onesuperior            

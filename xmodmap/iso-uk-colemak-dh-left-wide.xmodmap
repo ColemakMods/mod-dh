@@ -1,6 +1,6 @@
-! xmodmap for the Colemak layout.
-! 2006-01-01 Shai Coleman, http://colemak.com/ . Public domain. 
-! Modified for english keyboards by CShadowRun
+! xmodmap for the Colemak Mod-DH layout (UK, ISO keyboard, Wide layout, left-hand only).
+! http://colemakmods.github.io/mod-dh/. 
+! Public domain. 
 
 keycode  49 =        grave    asciitilde       dead_tilde        asciitilde            
 keycode  10 =            1        exclam       exclamdown       onesuperior            
