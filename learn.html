@@ -1,0 +1,122 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Colemak Mod-DH - How easy to learn?</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+	<link rel="stylesheet" href="stylesheets/steve.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-56831209-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Colemak Mod-DH</h1>
+        <p class="header">A Colemak mod for more comfortable typing.</p>
+
+		<ul>
+          <li><a class="menu" href="./">About</a></li>
+          <li><a class="menu" href="./compare.html">Compare</a></li>
+		  <li><a class="menu selected" href="./learn.html">Difficulty Index</a></li>
+        </ul>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/ColemakMods/mod-dh/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/ColemakMods/mod-dh/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/ColemakMods/mod-dh">View On GitHub</a></li>
+        </ul>
+
+		<p class="header">&nbsp;</p>
+		<!--
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/ColemakMods">ColemakMods</a></p>
+		-->
+
+
+      </header>
+      <section>
+	  
+<h3><a name="mod-dh-compare-layouts" class="anchor" href="#mod-dh-compare-layouts">
+<span class="octicon octicon-link"></span></a>Colemak Mod-DH - How easy to learn?</h3>
+
+<p>On this page is a consideration of how relatively easy or difficult various keyboard layouts are to learn, assuming a starting point of Qwerty. A commonly used measure is to count how many keys change position. Perhaps sometimes people also consider the number of keys that move to a different finger. But I think it would be useful to have an overall measure of how difficult to learn (i.e. how <i>different</i>) a layout is, which would take into account the various relevant factors, to produce well-defined "difficulty index".</p>
+
+<p>Consider if you were to move the E key on your keyboard. Because E is so common, it would be extremely disruptive and would take a long time to be able to type efficiently again with it in a new location. On the other hand, if you were to move say, J, the impact would be minimal since it's so rarely typed. It seems that there are two factors to consider: both how much a key moved (for example, whether it's on the same finger, or same hand), and also the frequency with which that key is typed.</p>
+
+<h3><a name="difficulty-index" class="anchor" href="#difficulty-index"">
+<span class="octicon octicon-link"></span></a>The Difficulty Index</h3>
+
+<p>Caveat: Of course, it's impossible to come up with a perfect system of measuring something as hard to quantify as how difficult something is to learn. But that doesn't mean we shouldn't give up on the idea. It still may be instructive to create such a system.</p>
+
+<p>I propose the following scheme which would be used to measure how "different" two layouts are - or to put it another way, how difficult it would be to learn one from the starting point of the other. For each key, suppose we give it a movement score (m), from easiest to hardest, as follows:</p>
+
+<p>
+0 = not moved.<br/>
+0.25 = moved but same finger.<br/>
+0.50 = moved to new finger on same hand.<br/>
+0.75 = moved to equivalent finger on other hand.<br/>
+1.00 = moved to other finger on other hand.<br/>
+</p>
+
+<p>Then, for each key we multiply by that letter's frequency (f). This gives a final formula for the "difficulty index" (d) of a keyboard layout:</p>
+
+<p style="margin-left:50px">d&nbsp;&nbsp;=&nbsp;&nbsp;<span style="font-size: 200%; vertical-align:middle">Σ</span> (m * f )</p>
+
+<p>For the purposes of this analysis I am considering only the 30 keys in the main section of the keyboard. Calculating d for a selection of keyboard layouts gives these results:</p>
+
+<h3><a name="compare-results" class="anchor" href="#compare-results">
+<span class="octicon octicon-link"></span></a>Results</h3>
+
+<table style="width:70%; margin-left:auto; margin-right:auto;">
+<tr> <td></td> <td>Difficulty<br/>Index (d)</td> </tr>
+<tr> <td>Qwerty (base) <a href="http://en.wikipedia.org/wiki/QWERTY" target="new_win"><img src="gfx/open.png"/></a></td> 
+		<td>0%</td> </tr>
+<tr> <td>Minimak-8key <a href="http://www.minimak.org/" target="new_win"><img src="gfx/open.png"/></a></td> 
+		<td>20%</td> </tr>
+<tr> <td>Asset <a href="http://millikeys.sourceforge.net/asset/" target="new_win"><img src="gfx/open.png"/></a></td>
+		<td>23%</td> </tr>
+<tr> <td>Norman <a href="https://normanlayout.info/" target="new_win"><img src="gfx/open.png"/></a></td>
+		<td>24%</td> </tr>
+<tr> <td>Colemak <a href="http://colemak.com/" target="new_win"><img src="gfx/open.png"/></a></td> 
+		<td>36%</td> </tr>
+<tr> <td>Mod-DH (left) <a href="http://colemakmods.github.io/mod-dh/" target="new_win"><img src="gfx/open.png"/></a></td> 
+		<td>36%</td> </tr>
+<tr> <td>Mod-DH (full) <a href="http://colemakmods.github.io/mod-dh/" target="new_win"><img src="gfx/open.png"/></a></td> 
+		<td>38%</td> </tr>
+<tr> <td>Workman <a href="http://www.workmanlayout.com/blog/" target="new_win"><img src="gfx/open.png"/></a></td> 
+		<td>41%</td> </tr>
+<tr> <td>qgmlwyfub <a href="http://mkweb.bcgsc.ca/carpalx/?full_optimization" target="new_win"><img src="gfx/open.png"/></a></td>
+		<td>53%</td> </tr>
+<tr> <td>Dvorak <a href="http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard" target="new_win"><img src="gfx/open.png"/></a></td> 
+		<td>66%</td> </tr>
+<caption>Comparison of difficulty index for various layouts, assuming Qwerty as the starting point.</caption>
+</table>
+
+<p>As you might expect, the less optimized layouts such as Minimak, Asset and Norman are the easiest to learn. Of the fully optimized layouts, Colemak is easiest, with Mod-DH similary easy if you apply the left-hand mod only. The full version of Mod-DH is a little more difficult, primarily due to it's relocated H, but according to these results is still easier to learn than Workman. Predictably, the more radically changed layout Dvorak is the most difficult to learn.</p>
+
+<p>Although the results pretty much confirm what you might expect from glancing at the various layouts, I think it is useful to have a well-defined measure for layout designers. Perhaps also you might find this measure useful if you are deciding which layout to learn and want to consider the learning difficulty in addition to the benefit gained.</p>
+
+
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
