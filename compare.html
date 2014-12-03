@@ -33,6 +33,7 @@
           <li><a class="menu" href="./">About</a></li>
           <li><a class="menu selected" href="./compare.html">Compare</a></li>
 		  <li><a class="menu" href="./learn.html">Difficulty Index</a></li>
+		  <li><a class="menu" href="./analyze.html">Layout Analyzer</a></li>
         </ul>
 
         <ul>
@@ -68,7 +69,7 @@
 
 <p>These efforts and penalties are my estimations based on personal experience/opinion, but I think they're fairly reasonable. Others may disagree of course, and there are some other examples <a href="http://mkweb.bcgsc.ca/carpalx/?typing_effort#carpalx_typing_model">here</a>, <a href="http://viralintrospection.wordpress.com/2010/09/06/a-different-philosophy-in-designing-keyboard-layouts/#design">here</a> and <a href="http://forum.colemak.com/viewtopic.php?pid=15137#p15137">here</a>. Note that for the purposes of fair comparison, all layouts will use these key-effort values, which assume the <a href="./#angle-mod">"angle"</a> mod has been applied.</p>
 
-<p>You can try out this <a href="#layout-analyzer">Keyboard Layout Analyzer</a> tool (below) to generate results using your own input values.</p>
+<p>You can try out this <a href="./analyze.html">Keyboard Layout Analyzer</a> tool to generate results using your own input values.</p>
 
 <h3><a name="compare-results" class="anchor" href="#compare-results">
 <span class="octicon octicon-link"></span></a>Results</h3>
@@ -98,41 +99,19 @@
 <caption>Comparison of various layouts using the scoring system defined above (lower is better).</caption>
 </table>
 
-<p>Hooray, Mod-DH comes out as the clear winner! Perhaps this is not surprising given the scoring system rewards use of the key locations that Mod-DH optimizes. A cynic might even argue that it is easy to win a competition when you choose your own scoring system! But unless you wildly disagree with the effort values used, Mod-DH should work out more comfortable than any of the layouts shown. And of course, if you think the input weights and penalties used need modifying, then why not try out the tool below with your own inputs to see how it affects the results!</p>
+<p>Hooray, Mod-DH comes out as the clear winner! Perhaps this is not surprising given the scoring system rewards use of the key locations that Mod-DH optimizes. A cynic might even argue that it is easy to win a competition when you choose your own scoring system! But unless you wildly disagree with the effort values used, Mod-DH should work out more comfortable than any of the layouts shown. And of course, if you think the input weights and penalties used need modifying, then why not try out the <a href="./analyze.html">analyzer tool</a> with your own inputs to see how it affects the results!</p>
 
-<p>It is my view that Mod-DH's optimized D and H positions are of almost home key quality, and these keys are often underrated in the design of other layouts. When using the Colemak layout, D and H are the most common non-home keys, so they ought to have good locations. While the Workman layout does a good job of making better use of some easy-to-type keys, in the process it makes some keys unduly difficult (I am not a fan of its placement of D), and also increases the amount of same finger bigrams. Mod-DH takes some of the good design elements of Workman and applies them to Colemak, to produce a layout which I would argue is superior to both!</p>
+<p>It is my view that Mod-DH's optimized D and H positions are of almost home key quality, and these keys are often underrated in the design of other layouts. When using the Colemak layout, D and H are the most common non-home keys, so they ought to have good locations. Mod-DH is the only layout with the 10 most common keys in the 10 easiest-to-type positions. While the Workman layout does a good job of making better use of some easy-to-type keys, in the process it makes some keys unduly difficult (I am not a fan of its placement of D), and also increases the amount of same finger bigrams. Mod-DH takes some of the good design elements of Workman and applies them to Colemak, to produce a layout which I would argue is superior to both!</p>
 
 <p>For a consideration of how easy or difficult the various layouts are to learn, take a look at the <a href="learn.html">Difficulty Index</a> comparison.</p>
 
-<h3><a name="layout-analyzer" class="anchor" href="#layout-analyzer">
-<span class="octicon octicon-link"></span></a>Layout Analyzer Tool</h3>
-
-<p>This is a tool for analyzing keyboard layouts, according to the two factors described above. Importantly, you can modify the input values - the effort weights of the keys and the penalties for same-finger bigrams - to whatever you think they should be. Note, it is a Java applet and so requires the <a href="https://java.com/en/download/index.jsp">Java Plugin</a> to be installed and enabled in your browser. Yeah, I know Java applets are old hat these days, but it was convenient!</p>
-
-<p>To use, select a layout from the list or type in your own (the format is 3 rows of ten characters, space-separated) into the top-left panel. Enter key effort values in the top-right panel, and also three penalty values for same-finger bigrams. The "Analyze" button calculates the results according to the pre-calculated letter<a href="#notes">¹</a> and bigram frequency stats.</p>
-
-<div>
-<applet class="center" codebase="http://spwebgames.com/" 
-      code="com.spwebgames.keyboard.applet.KeyboardApplet"
-	  archive="keyboard/keyboard.jar" width="560" height="600"> 
-	<span>Requires Java-capable browser.</span>
-</applet>
-</div>
-
-<h3><a name="notes" class="anchor" href="#notes"><span class="octicon octicon-link"></span></a>Notes</h3>
-
-<p><a class="anchor" href="#notes">¹</a> Statistics are generated using a corpus which comprises a variety of books from Project Guttenberg, the same as used by <a href="http://mkweb.bcgsc.ca/carpalx/?keyboard_statistics">carpalx</a>.
-</p>
-
-<p> Results shown by finger refer to: left-hand (0-4) and right-hand (5-9). Fingers 0/9 are pinkies, 1/8 are ring, 2/7 are middle, 3/6 are index, and 4/5 (not included in stats) are thumbs. 
-<img src="gfx/fingers.png" class="center"/>
-</p>
-
 
       </section>
+	  <!--
       <footer>
         <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer>
+	  -->
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
 		
