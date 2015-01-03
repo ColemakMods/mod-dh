@@ -3,6 +3,12 @@ Colemak Mod-DH
 
 **See the [Colemak Mod-DH Project Home Page](http://colemakmods.github.io/mod-dh/ "Colemak Mod-DH") for information.**
 
+## Linux: XKB files
+
+Mod-DH is now supported by [DreymaR's Big Bag of Keyboard Tricks](http://forum.colemak.com/viewtopic.php?id=1438). 
+
+To enable it, edit the symbols/colemak file and uncomment the DVBG and HM sections as mentioned in this [Colemak forum discussion](http://forum.colemak.com/viewtopic.php?pid=16117#p16117).
+
 ## Linux: Xmodmap files
 
 There are currently a selection of files for [xmodmap](http://www.x.org/archive/X11R6.8.2/doc/xmodmap.1.html). See [xmodmap folder](xmodmap/) for details. You may need to customize these for your own language/region.
