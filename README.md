@@ -3,9 +3,13 @@ Colemak Mod-DH
 
 **See the [Colemak Mod-DH Project Home Page](http://colemakmods.github.io/mod-dh/ "Colemak Mod-DH") for information.**
 
-## KLC files
+## Linux: Xmodmap files
 
-There are currently a selection of files for [Microsoft Keyboard Layout Creator](http://msdn.microsoft.com/en-GB/goglobal/bb964665.aspx "Keyboard Layout Creator") (KLC). To use, load them into Keyboard Layout Creator and use the menu option "Project > Build DLL and Setup Package".
+There are currently a selection of files for [xmodmap](http://www.x.org/archive/X11R6.8.2/doc/xmodmap.1.html). See [xmodmap folder](xmodmap/) for details. You may need to customize these for your own language/region.
+
+## Windows: KLC files
+
+There are also files for [Microsoft Keyboard Layout Creator](http://msdn.microsoft.com/en-GB/goglobal/bb964665.aspx "Keyboard Layout Creator") (KLC). To use, load them into Keyboard Layout Creator and use the menu option "Project > Build DLL and Setup Package".
 
 ### ISO (UK) keyboard
 
