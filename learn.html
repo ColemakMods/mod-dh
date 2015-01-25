@@ -54,26 +54,27 @@
 <h3><a name="mod-dh-compare-layouts" class="anchor" href="#mod-dh-compare-layouts">
 <span class="octicon octicon-link"></span></a>Colemak Mod-DH - How easy to learn?</h3>
 
-<p>On this page is a consideration of how relatively easy or difficult various keyboard layouts are to learn, assuming a starting point of Qwerty. A commonly used measure is to count how many keys change position. Perhaps sometimes people also consider the number of keys that move to a different finger. But I think it would be useful to have an overall measure of how difficult to learn (i.e. how <i>different</i>) a layout is, which would take into account the various relevant factors, to produce well-defined "difficulty index".</p>
+<p>On this page is a consideration of how relatively easy or difficult various keyboard layouts are to learn, <b>assuming a starting point of Qwerty</b>. A commonly used measure is to count how many keys change position. Perhaps sometimes people also consider the number of keys that move to a different finger. But I think it would be useful to have an overall measure of how difficult to learn (i.e. how <i>different</i>) a layout is, which would take into account various relevant factors, to produce well-defined <a href="#difficulty-index">"switching difficulty index"</a>.</p>
 
-<p>Consider if you were to move the E key on your keyboard. Because E is so common, it would be extremely disruptive and would take a long time to be able to type efficiently again with it in a new location. On the other hand, if you were to move say, J, the impact would be minimal since it's so rarely typed. It seems that there are two factors to consider: both how much a key moved (for example, whether it's on the same finger, or same hand), and also the frequency with which that key is typed.</p>
+<p>Consider if you were to move the E key on your keyboard. Because E is so common, it would be extremely disruptive and would take a long time to be able to type efficiently again with it in a new location. On the other hand, if you were to move say, J, the impact would be minimal since it's so rarely typed. It seems that there are at least two factors to consider: both how much a key moved (for example, whether it's on the same finger, or same hand), and also the frequency with which that key is typed.</p>
+
+<p>Caveat: Of course, it's impossible to come up with a perfect system of measuring something as hard to quantify as how difficult something is to learn. Presented here is just one such proposal.</p>
+
 
 <h3><a name="difficulty-index" class="anchor" href="#difficulty-index"">
-<span class="octicon octicon-link"></span></a>The Difficulty Index</h3>
+<span class="octicon octicon-link"></span></a>The Switching Difficulty Index</h3>
 
-<p>Caveat: Of course, it's impossible to come up with a perfect system of measuring something as hard to quantify as how difficult something is to learn. But that doesn't mean we shouldn't give up on the idea. It still may be instructive to create such a system.</p>
-
-<p>I propose the following scheme which would be used to measure how "different" two layouts are - or to put it another way, how difficult it would be to learn one from the starting point of the other. For each key, suppose we give it a movement score (m), from easiest to hardest, as follows:</p>
+<p>I propose the following scheme which would be used to measure how "different" two layouts are - or to put it another way, how difficult it would be to learn one from the starting point of another (usually Qwerty!). When comparing the two layouts, consider each each key, and give it a movement score (m), from easiest to hardest, as follows:</p>
 
 <p>
-0 = not moved.<br/>
+0 = not moved / angle mod only.<br/>
 0.25 = moved but same finger.<br/>
 0.50 = moved to new finger on same hand.<br/>
 0.75 = moved to equivalent finger on other hand.<br/>
 1.00 = moved to other finger on other hand.<br/>
 </p>
 
-<p>Then, for each key we multiply by that letter's frequency (f). This gives a final formula for the "difficulty index" (d) of a keyboard layout:</p>
+<p>Then, for each key we multiply by that letter's frequency (f). This gives a final formula for the "switching difficulty index" (d) of a keyboard layout:</p>
 
 <p style="margin-left:50px">d&nbsp;&nbsp;=&nbsp;&nbsp;<span style="font-size: 200%; vertical-align:middle">Σ</span> (m * f )</p>
 
@@ -82,32 +83,36 @@
 <h3><a name="compare-results" class="anchor" href="#compare-results">
 <span class="octicon octicon-link"></span></a>Results</h3>
 
-<table style="width:70%; margin-left:auto; margin-right:auto;">
-<tr> <td></td> <td>Difficulty<br/>Index (d)</td> </tr>
+<table style="width:90%; margin-left:auto; margin-right:auto;">
+<tr> <td></td> <td>Keys<br/>Moved<br/>Finger</td> <td>Keys<br/>Moved<br/>Total</td> <td>Keys Moved<br/>Index<br/><span style="font-size: 200%; vertical-align:middle">Σ</span> m</td> <td>Switching<br/>Difficulty<br/>Index (d)</td> </tr>
 <tr> <td>Qwerty (base) <a href="http://en.wikipedia.org/wiki/QWERTY" target="new_win"><img src="gfx/open.png"/></a></td> 
-		<td>0%</td> </tr>
+		<td> 0</td> <td> 0</td> <td>0.00</td> <td>0%</td> </tr>
 <tr> <td>Minimak-8key <a href="http://www.minimak.org/" target="new_win"><img src="gfx/open.png"/></a></td> 
-		<td>20%</td> </tr>
+		<td> 3</td> <td> 8</td> <td>3.50</td> <td>20%</td> </tr>
+<tr> <td>Qwpr <a href="http://sourceforge.net/projects/qwpr/" target="new_win"><img src="gfx/open.png"/></a></td> 
+		<td> 2</td> <td>11</td> <td>4.25</td> <td>23%</td> </tr>
 <tr> <td>Asset <a href="http://millikeys.sourceforge.net/asset/" target="new_win"><img src="gfx/open.png"/></a></td>
-		<td>23%</td> </tr>
+		<td> 6</td> <td>15</td> <td>6.25</td> <td>23%</td> </tr>
 <tr> <td>Norman <a href="https://normanlayout.info/" target="new_win"><img src="gfx/open.png"/></a></td>
-		<td>24%</td> </tr>
+		<td> 4</td> <td>15</td> <td>5.75</td> <td>24%</td> </tr>
 <tr> <td>Colemak <a href="http://colemak.com/" target="new_win"><img src="gfx/open.png"/></a></td> 
-		<td>36%</td> </tr>
+		<td>12</td> <td>17</td> <td>8.00</td> <td>36%</td> </tr>
 <tr> <td>Mod-DH (left) <a href="http://colemakmods.github.io/mod-dh/" target="new_win"><img src="gfx/open.png"/></a></td> 
-		<td>36%</td> </tr>
+		<td>12</td> <td>17</td> <td>8.00</td> <td>36%</td> </tr>
 <tr> <td>Mod-DH (full) <a href="http://colemakmods.github.io/mod-dh/" target="new_win"><img src="gfx/open.png"/></a></td> 
-		<td>38%</td> </tr>
+		<td>12</td> <td>19</td> <td>8.50</td> <td>38%</td> </tr>
 <tr> <td>Workman <a href="http://www.workmanlayout.com/blog/" target="new_win"><img src="gfx/open.png"/></a></td> 
-		<td>41%</td> </tr>
+		<td>13</td> <td>21</td> <td>10.00</td> <td>41%</td> </tr>
 <tr> <td>qgmlwyfub <a href="http://mkweb.bcgsc.ca/carpalx/?full_optimization" target="new_win"><img src="gfx/open.png"/></a></td>
-		<td>53%</td> </tr>
+		<td>17</td> <td>20</td> <td>12.25</td> <td>53%</td> </tr>
 <tr> <td>Dvorak <a href="http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard" target="new_win"><img src="gfx/open.png"/></a></td> 
-		<td>66%</td> </tr>
-<caption>Comparison of difficulty index for various layouts, assuming Qwerty as the starting point.</caption>
+		<td>26</td> <td>28</td> <td>22.25</td> <td>66%</td> </tr>
+<tr> <td>MTGAP <a href="http://mtgap.bilfo.com/completed_keyboard.html" target="new_win"><img src="gfx/open.png"/></a></td> 
+		<td>21</td> <td>28</td> <td>18.50</td> <td>68%</td> </tr>		
+<caption>Comparison of switching difficulty for various layouts, assuming Qwerty as the starting point.</caption>
 </table>
 
-<p>As you might expect, the less optimized layouts such as Minimak, Asset and Norman are the easiest to learn. Of the fully optimized layouts, Colemak is easiest, with Mod-DH similary easy if you apply the left-hand mod only. The full version of Mod-DH is a little more difficult, primarily due to it's relocated H, but according to these results is still easier to learn than Workman. Predictably, the more radically changed layout Dvorak is the most difficult to learn.</p>
+<p>As you might expect, the less optimized layouts such as Minimak, Asset and Qwpr are the easiest to learn. Of the fully optimized layouts, Colemak is easiest, with Mod-DH similary easy if you apply the left-hand mod only. The full version of Mod-DH is a little more difficult, primarily due to it's relocated H, but according to these results is still easier to learn than Workman. Predictably, the more radically changed layouts Dvorak and MTGAP are the most difficult to learn.</p>
 
 <p>Although the results pretty much confirm what you might expect from glancing at the various layouts, I think it is useful to have a well-defined measure for layout designers. Perhaps also you might find this measure useful if you are deciding which layout to learn and want to consider the learning difficulty in addition to the benefit gained.</p>
 
