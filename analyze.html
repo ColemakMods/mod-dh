@@ -54,24 +54,18 @@
 <h3><a name="layout-analyzer" class="anchor" href="#layout-analyzer">
 <span class="octicon octicon-link"></span></a>Layout Analyzer Tool</h3>
 
-<p>This is a tool for analyzing keyboard layouts, according to the two factors described in the <a href="compare.html">layout comparison</a> page. Importantly, you can modify the input values - the effort weights of the keys and the penalties for same-finger bigrams - to whatever you think they should be. Note, it is a Java applet and so requires the <a href="https://java.com/en/download/index.jsp">Java Plugin</a> to be installed and enabled in your browser. Yeah, I know Java applets are old hat these days, but it was convenient!</p>
+<p>This is a tool for analyzing keyboard layouts, according to the two factors described in the <a href="compare.html">layout comparison</a> page. Importantly, you can modify the input values - the effort weights of the keys and the penalties for same-finger bigrams - to whatever you think they should be!</p>
 
-<p>To use, select a layout from the list or type in your own (the format is 3 rows of ten characters, space-separated) into the top-left panel. Enter key effort values in the top-right panel, and also three penalty values for same-finger bigrams. See the <a href="./compare.html">layout comparison</a> page for more explanation of the parameters.</p>
+<p>To use, select a layout from the list provided or type in your own (the format is 3 rows of ten characters, space-separated) into the top-left panel. Enter key effort values in the top-right panel, and also three penalty values for same-finger bigrams. See the <a href="./compare.html">layout comparison</a> page for more explanation of the parameters.</p>
+
+<iframe width="640" height="860" frameborder="0" style="border:none;" src="http://spwebgames.com/keyboard/web/index.html">
+</iframe>
 
 <p>Three possible configurations for the left hand are available. The chosen configuration will affect which finger presses each of the keys on the left-hand bottom row, and will also affect the key-effort scoring. To see the results click the "Analyze" button - results will shown according to the pre-calculated letter<a href="#notes">¹</a> and bigram frequency stats.</p></p>
 
 <p class="caption"><img src="gfx/left_hand_technique.png"/><br/>
 Possible key-finger configurations for the left hand. Keys indicated with the same colour should be typed with the same finger. The "Ergonomic" technique (<a href="./#angle-mod">using the Angle Mod</a>) is the recommended configuration.
 </p>
-
-<div>
-<applet class="center" codebase="http://spwebgames.com/" 
-      code="com.spwebgames.keyboard.applet.KeyboardApplet"
-	  archive="keyboard/keyboard.jar" width="560" height="600"> 
-	<span>Requires Java-capable browser.</span>
-</applet>
-</div>
-<br/>
 
 <p>Results shown by finger refer to: left-hand (0-4) and right-hand (5-9). Fingers 0/9 are pinkies, 1/8 are ring, 2/7 are middle, 3/6 are; index, and 4/5 (not included in stats) are thumbs. 
 <img src="gfx/fingers.png" class="center"/>
