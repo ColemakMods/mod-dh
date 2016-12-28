@@ -1,4 +1,4 @@
-! xmodmap for the Colemak Mod-DH layout (UK, ISO keyboard, Wide layout).
+! xmodmap for the Colemak Mod-DH layout (UK, ISO keyboard, Wide layout, DbgHk variant).
 ! http://colemakmods.github.io/mod-dh/.
 ! Public domain.
 
@@ -36,7 +36,7 @@ keycode  40  =  s             S            ssharp                asciitilde
 keycode  41  =  t             T            dead_acute            dead_doubleacute
 keycode  42  =  g             G            dead_ogonek           asciitilde
 keycode  43  =  bracketright  braceright   guillemotright        U203a
-keycode  44  =  m             M            dead_macron           asciitilde
+keycode  44  =  k             K            dead_abovering        asciitilde
 keycode  45  =  n             N            ntilde                Ntilde
 keycode  46  =  e             E            eacute                Eacute
 keycode  47  =  i             I            iacute                Iacute
@@ -45,12 +45,12 @@ keycode  48  =  o             O            oacute                Oacute
 keycode  94  =  z             Z            ae                    AE
 keycode  52  =  x             X            dead_circumflex       asciitilde
 keycode  53  =  c             C            ccedilla              Ccedilla
-keycode  54  =  d             D            dead_diaeresis        asciitilde
-keycode  55  =  v             V            oe                    OE
+keycode  54  =  v             V            oe                    OE
+keycode  55  =  d             D            dead_diaeresis        asciitilde
 keycode  56  =  backslash     bar          asciitilde            asciitilde
 keycode  57  =  slash         question     questiondown          asciitilde
-keycode  58  =  k             K            dead_abovering        asciitilde
-keycode  59  =  h             H            dead_caron            asciitilde
+keycode  58  =  h             H            dead_caron            asciitilde
+keycode  59  =  m             M            dead_macron           asciitilde
 keycode  60  =  comma         less         dead_cedilla          asciitilde
 keycode  61  =  period        greater      dead_abovedot         asciitilde
 

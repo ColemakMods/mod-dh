@@ -1,53 +1,53 @@
-! xmodmap for the Colemak Mod-DH layout (UK, ISO keyboard, Wide layout).
+! xmodmap for the Colemak Mod-DH layout (US, ANSI keyboard, A-Wing angle mod).
 ! http://colemakmods.github.io/mod-dh/.
 ! Public domain.
 
 keycode  49  =  grave         asciitilde   dead_tilde            asciitilde
-keycode  10  =  1             exclam       exclamdown            onesuperior
-keycode  11  =  2             at           masculine             twosuperior
-keycode  12  =  3             numbersign   ordfeminine           threesuperior
-keycode  13  =  4             dollar       cent                  sterling
-keycode  14  =  5             percent      EuroSign              yen
-keycode  15  =  equal         plus         multiply              division
+keycode  10  =  minus         underscore   endash                emdash
+keycode  11  =  1             exclam       exclamdown            onesuperior
+keycode  12  =  2             at           masculine             twosuperior
+keycode  13  =  3             numbersign   ordfeminine           threesuperior
+keycode  14  =  4             dollar       cent                  sterling
+keycode  15  =  5             percent      EuroSign              yen
 keycode  16  =  6             asciicircum  hstroke               Hstroke
 keycode  17  =  7             ampersand    eth                   ETH
 keycode  18  =  8             asterisk     thorn                 THORN
 keycode  19  =  9             parenleft    leftsinglequotemark   leftdoublequotemark
 keycode  20  =  0             parenright   rightsinglequotemark  rightdoublequotemark
-keycode  21  =  minus         underscore   endash                emdash
+keycode  21  =  equal         plus         multiply              division
 
-keycode  24  =  q             Q            adiaeresis            Adiaeresis
-keycode  25  =  w             W            aring                 Aring
-keycode  26  =  f             F            atilde                Atilde
-keycode  27  =  p             P            oslash                Ooblique
-keycode  28  =  b             B            dead_breve            asciitilde
-keycode  29  =  bracketleft   braceleft    guillemotleft         U2039
+keycode  24  =  bracketleft   braceleft    guillemotleft         U2039
+keycode  25  =  q             Q            adiaeresis            Adiaeresis
+keycode  26  =  w             W            aring                 Aring
+keycode  27  =  f             F            atilde                Atilde
+keycode  28  =  p             P            oslash                Ooblique
+keycode  29  =  b             B            dead_breve            asciitilde
 keycode  30  =  j             J            dstroke               Dstroke
 keycode  31  =  l             L            lstroke               Lstroke
 keycode  32  =  u             U            uacute                Uacute
 keycode  33  =  y             Y            udiaeresis            Udiaeresis
 keycode  34  =  semicolon     colon        odiaeresis            Odiaeresis
-keycode  35  =  numbersign    asciitilde   dead_circumflex       asciitilde
-keycode  51  =  apostrophe    quotedbl     otilde                Otilde
+keycode  35  =  apostrophe    quotedbl     otilde                Otilde
+keycode  51  =  backslash     bar          asciitilde            asciitilde
 
-keycode  38  =  a             A            aacute                Aacute
-keycode  39  =  r             R            dead_grave            asciitilde
-keycode  40  =  s             S            ssharp                asciitilde
-keycode  41  =  t             T            dead_acute            dead_doubleacute
-keycode  42  =  g             G            dead_ogonek           asciitilde
-keycode  43  =  bracketright  braceright   guillemotright        U203a
+keycode  38  =  bracketright  braceright   guillemotright        U203a
+keycode  39  =  a             A            aacute                Aacute
+keycode  40  =  r             R            dead_grave            asciitilde
+keycode  41  =  s             S            ssharp                asciitilde
+keycode  42  =  t             T            dead_acute            dead_doubleacute
+keycode  43  =  g             G            dead_ogonek           asciitilde
 keycode  44  =  m             M            dead_macron           asciitilde
 keycode  45  =  n             N            ntilde                Ntilde
 keycode  46  =  e             E            eacute                Eacute
 keycode  47  =  i             I            iacute                Iacute
 keycode  48  =  o             O            oacute                Oacute
 
-keycode  94  =  z             Z            ae                    AE
-keycode  52  =  x             X            dead_circumflex       asciitilde
-keycode  53  =  c             C            ccedilla              Ccedilla
-keycode  54  =  d             D            dead_diaeresis        asciitilde
-keycode  55  =  v             V            oe                    OE
-keycode  56  =  backslash     bar          asciitilde            asciitilde
+keycode  94  =  minus         underscore   endash                emdash
+keycode  52  =  z             Z            ae                    AE
+keycode  53  =  x             X            dead_circumflex       asciitilde
+keycode  54  =  c             C            ccedilla              Ccedilla
+keycode  55  =  d             D            dead_diaeresis        asciitilde
+keycode  56  =  v             V            oe                    OE
 keycode  57  =  slash         question     questiondown          asciitilde
 keycode  58  =  k             K            dead_abovering        asciitilde
 keycode  59  =  h             H            dead_caron            asciitilde

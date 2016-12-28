@@ -1,0 +1,14 @@
+
+! Remove this line if you want caps lock unmodified
+keycode  58 =    BackSpace     BackSpace        BackSpace         BackSpace
+
+keycode   1 = Escape
+keycode  14 = Delete
+keycode  15 = Tab
+keycode  28 = Return
+        alt     keycode  28 = Meta_Control_m
+keycode  29 = Control
+keycode  42 = Shift
+keycode  54 = Shift
+keycode  56 = Alt
+keycode  97 = Control
