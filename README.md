@@ -9,9 +9,18 @@ Mod-DH is now supported by [DreymaR's Big Bag of Keyboard Tricks](http://forum.c
 
 To enable it, edit the symbols/colemak file and uncomment the DVBG and HM sections as mentioned in this [Colemak forum discussion](http://forum.colemak.com/viewtopic.php?pid=16117#p16117).
 
-## Linux: Xmodmap files
+## Linux
+### Xmodmap files
 
 There are currently a selection of files for [xmodmap](http://www.x.org/archive/X11R6.8.2/doc/xmodmap.1.html). See [xmodmap folder](xmodmap/) for details. You may need to customize these for your own language/region.
+
+### Console files
+
+Keymap files for the console are also provided. These can be installed by running `make install` in this repository as root. Since the location of console keymap files varies depending on the distro, you may need to specify a different directory than the default `/usr/share/keymaps` (which is correct for Debian-based distros):
+
+```
+# make KEYMAP_PREFIX=/usr/share/kbd/keymaps install
+```
 
 ## Windows: KLC files
 

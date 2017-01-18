@@ -1,0 +1,347 @@
+#!/usr/bin/env bash
+# requires sponge and gawk
+
+# * Option Parsing
+print_help() {
+	echo "
+	Generates Colemak-DH console and xmodmap keymap files.
+
+usage: generate [options]
+options:
+	-h, --help                          print this message
+	-l, --left                          whether to generate the left keymaps
+	-o, --out-dir <output directory>    specify a directory to output the keymaps to
+"
+	if [[ $1 == illegal_opt ]]; then
+		exit 1
+	else
+		exit 0
+	fi
+}
+
+out_dir="./"
+left=false
+while getopts :o:h opt; do
+	case $opt in
+		h) print_help;;
+		l) left=true;;
+		o) out_dir=$OPTARG;;
+		-)
+			OPTION=${OPTARG%%=*}
+			if [[ $OPTARG =~ ^(help|left)$ ]] || \
+					   [[ $OPTARG == *=* ]]; then
+				OPTION=${OPTARG%%=*}
+				OPTARG=${OPTARG#*=}
+			else
+				OPTION=$OPTARG
+				# shellcheck disable=SC2124
+				OPTARG=${@:$OPTIND:1}
+				((OPTIND++))
+			fi
+			case $OPTION in
+				help) print_help;;
+				left) left=true;;
+				out-dir) out_dir=$OPTARG;;
+				*) print_help illegal_opt;;
+			esac;;
+		*) print_help illegal_opt;;
+	esac
+done
+
+# * General Helper Functions
+align_base() { # base-file xmodmap-base?(optional)
+	column -t "$1" | sponge "$1"
+	# add back blank lines (-e flag is for bsd column)
+	if [[ -z $2 ]]; then
+		awk '{print}
+($2 == 13 || $2 == 43 || $2 == 40 || $2 == 53) {print ""}' "$1" | sponge "$1"
+	else
+		awk '{print}
+($2 == 21 || $2 == 51 || $2 == 48 || $2 == 61) {print ""}' "$1" | sponge "$1"
+	fi
+}
+
+sort_base() { # base-file
+	# inefficient but simple
+	temp=temp-$1
+	sort -n -k 2 "$1" > "$temp"
+	# number row
+	awk '$2 == 41 {print}' "$temp" > "$1"
+	awk '($2 >= 2 && $2 <= 13) {print}' "$temp" >> "$1"
+	echo "" >> "$1"
+	# top row
+	awk '(($2 >= 16 && $2 <= 27) || ($2 == 43)) {print}' "$temp" >> "$1"
+	echo "" >> "$1"
+	# middle row
+	awk '(($2 >= 30 && $2 <= 40)) {print}' "$temp" >> "$1"
+	echo "" >> "$1"
+	# bottom row
+	awk '$2 == 86 {print}' "$temp" >> "$1"
+	awk '(($2 == 42) || ($2 >= 44 && $2 <= 53)) {print}'  "$temp" >> "$1"
+	echo "" >> "$1"
+	awk '($2 == 56 || $2 == 57) {print}' "$temp" >> "$1"
+	echo "" >> "$1"
+	rm "$temp"
+}
+
+make_wide_base() { # base-file # out-name
+	cp "$1" "$2"
+	# shift 6 to - over; move = before
+	# shift j to ; over; move [ before; # (or \ for ansi) and ' after
+	# shift m to o over; ] before
+	# shift k to . over; / before
+	awk '{
+	if (($2 >= 7 && $2 <= 12) || ($2 >= 21 && $2 <= 25) ||
+	    ($2 >= 35 && $2 <= 39) || ($2 >= 49 && $2 <= 52)) {
+		$2=$2+1;
+	} else if ($2 == 13) {
+		$2=7;
+	} else if ($2 == 26) {
+		$2=21;
+	} else if ($2 == 27) {
+		$2=35;
+	} else if ($2 == 43) {
+		$2=27;
+	} else if ($2 == 40) {
+		$2=43;
+	} else if ($2 == 53) {
+		$2=49;
+	}
+	print;
+}' "$2" | sponge "$2"
+}
+
+swap_keys() { # file # key1 # key2
+	awk "
+FNR == NR {
+	if (\$4 == \"$2\") {
+		line1=\$0;
+		code1=\$2;
+	} else if (\$4 == \"$3\") {
+		line2=\$0;
+		code2=\$2;
+	}
+	next;
+}
+{
+	if (\$4 == \"$2\") {
+		\$0=line2;
+		n=split(\$0, a, \" \", seps);
+		a[2]=code1;
+	} else if (\$4 == \"$3\") {
+		\$0=line1;
+		n=split(\$0, a, \" \", seps);
+		a[2]=code2;
+	}
+	if (\$4 == \"$2\" || \$4 == \"$3\") {
+		# to preserve whitespace
+		line=\"\";
+		for (i = 1; i <= n; i++) line=(line a[i] seps[i])
+		print line;
+	} else {
+		print;
+	}
+}" "$1" "$1" | sponge "$1"
+}
+
+# * Conversion Functions
+to_xmodmap() { # base-file keymap-name
+	new_base=xmodmap-$1
+	cp "$1" "$new_base"
+	# shift keycodes up by 8
+	awk '/^keycode/ {$2=$2+8; print}' "$new_base" | sponge "$new_base"
+	# remove 5th mapping
+	awk '{$8=""; print $0}' "$new_base" | sponge "$new_base"
+	sed -i -e 's/ one / 1 /; s/ two / 2 /; s/ three / 3 /; s/ four / 4 /' \
+		-e 's/ five / 5 /; s/ six / 6 /; s/ seven / 7 /; s/ eight / 8 /' \
+		-e 's/ nine / 9 /; s/ zero / 0 /; s/0x1002039/U2039/; s/0x100203a/U203a/' \
+		-e 's/euro/EuroSign/' \
+		"$new_base"
+	# fix whitespace changes from awk
+	align_base "$new_base" t
+	cat xmodmap-header "$new_base" xmodmap-footer > "xmodmap/$2.xmodmap"
+	rm "$new_base"
+}
+
+to_console() { # base-file keymap-name
+	new_base=console-$1
+	cp "$1" "$new_base"
+	# remove invalid entries
+	sed -r -i -e 's/(leftsinglequotemark|leftdoublequotemark)/asciitilde/g' \
+		-e 's/(rightsinglequotemark|rightdoublequotemark)/asciitilde/g' \
+		-e 's/(endash|emdash|dead_ogonek|dstroke|Dstroke)/asciitilde/g' \
+		-e 's/(lstroke|Lstroke|guillemotleft|guillemotright)/asciitilde/g' \
+		-e 's/(dead_acute|dead_doubleacute|dead_caron)/asciitilde/g' \
+		-e 's/(dead_breve|dead_abovering|dead_macron)/asciitilde/g' \
+		-e 's/dead_abovedot/asciitilde/g' \
+		-e 's/Shift_L/Shift/g; s/Alt_L/Alt/g; s/Meta_L//g' \
+		"$new_base"
+	align_base "$new_base"
+	cat console-header "$new_base" console-footer > "console/$2.map"
+	rm "$new_base"
+}
+
+full_to_left() { # keymap-file (should have "full" in the name)
+	new_file=${1//full/left}
+	cp "$1" "$new_file"
+	# swap the key codes for m and h back to normal (only for DvbgHm)
+	swap_keys "$new_file" m h
+	sed -i "1 s/)\.$/, left-hand only)\./" "$new_file"
+}
+
+dvbghm_to_dbghk() { # keymap-file ("dh" in name)
+	new_file=${1//dh/dbghk}
+	cp "$1" "$new_file"
+	swap_keys "$new_file" d v
+	if [[ $1 == *full* ]]; then
+		swap_keys "$new_file" h k
+		swap_keys "$new_file" m k
+	fi
+	sed -i "1 s/)\.$/, DbgHk variant)\./" "$new_file"
+}
+
+# * Generation Functions
+# ** Generic
+generate_keymap() { # base-file keymap-name description
+	sort_base "$1"
+	to_console "$1" "$2"
+	to_xmodmap "$1" "$2"
+	sed -i "1 s/$/$3/" console/"$2".map
+	sed -i "1 s/$/$3/" xmodmap/"$2".xmodmap
+}
+
+generate_left() {
+	for file in "$1"*; do
+		full_to_left "$file"
+	done
+}
+
+generate_dbghk() {
+	for file in "$1"*; do
+		dvbghm_to_dbghk "$file"
+	done
+}
+
+# ** ISO UK
+generate_full_iso_uk() {
+	generate_keymap iso-base iso-uk-colemak-dh-full "(UK, ISO keyboard)."
+}
+
+generate_full_wide_iso_uk() {
+	make_wide_base iso-base iso-wide-base
+	generate_keymap iso-wide-base iso-uk-colemak-dh-full-wide \
+		"(UK, ISO keyboard, Wide layout)."
+
+	rm iso-wide-base
+}
+
+# ** ANSI US
+generate_full_z_ansi_us() {
+	generate_keymap ansi-base ansi-us-colemak-dh-full-z  \
+		"(US, ANSI keyboard, Z angle mod)."
+}
+
+generate_full_shift_z_ansi_us() {
+	# replace shift with z and lalt with shift
+	cp ansi-base ansi-shift-z-base
+	echo "keycode 42 = Shift_L" >> ansi-shift-z-base
+	echo "keycode 56 = Alt_L Meta_L" >> ansi-shift-z-base
+	swap_keys ansi-shift-z-base Shift_L z
+	swap_keys ansi-shift-z-base Shift_L Alt_L
+
+	generate_keymap ansi-shift-z-base ansi-us-colemak-dh-full-shift-z \
+		"(US, ANSI keyboard, Shift-z angle mod)."
+	# remove default shift/alt (from console footer)
+	sed -r -i -e 's/^keycode\s*42.*Shift.*$//; s/^keycode\s*56.*Alt.*$//' \
+		console/ansi-us-colemak-dh-full-shift-z.map
+}
+
+generate_full_awing_ansi_us() {
+	cp ansi-base ansi-awing-base
+	# shift 1 to 0 over; move - before
+	# shift q to ; over; move [ before; ' after
+	# move a to o over; move ] before
+	# move x to v and k to . over; move z before; move / before
+
+	awk '{
+	if (($2 >= 2 && $2 <= 11) || ($2 >= 16 && $2 <= 25) ||
+	    ($2 >= 30 && $2 <= 39) || ($2 >= 44 && $2 <= 47) ||
+	    ($2 >= 49 && $2 <= 52)) {
+		$2=$2+1;
+	} else if ($2 == 12) {
+		$2=2;
+	} else if ($2 == 26) {
+		$2=16;
+	} else if ($2 == 27) {
+		$2=30;
+	} else if ($2 == 40) {
+		$2=27;
+	} else if ($2 == 48) {
+		$2=44;
+	} else if ($2 == 53) {
+		$2=49;
+	}
+	print;
+}' ansi-awing-base | sponge ansi-awing-base
+
+	generate_keymap ansi-awing-base ansi-us-colemak-dh-full-awing \
+		"(US, ANSI keyboard, A-Wing angle mod)."
+
+	rm ansi-awing-base
+}
+
+generate_wide_ansi_us() {
+	make_wide_base ansi-base ansi-wide-base
+	swap_keys ansi-wide-base backslash apostrophe
+	generate_keymap ansi-wide-base ansi-us-colemak-dh-full-z-wide \
+		"(US, ANSI keyboard, Z angle mod, Wide layout)."
+
+	make_wide_base ansi-shift-z-base ansi-shift-z-wide-base
+	generate_keymap ansi-shift-z-wide-base ansi-us-colemak-dh-full-shift-z-wide \
+		"(US, ANSI keyboard, Shift-z angle mod, Wide layout)."
+
+	rm ansi-shift-z-base ansi-wide-base ansi-shift-z-wide-base
+}
+
+# * Main
+main() {
+	if ! hash sponge 2> /dev/null; then
+		echo "This script requires sponge (from moreutils)."
+		exit 1
+	fi
+
+	mkdir -p xmodmap
+	mkdir -p console
+
+	awk '!/# ansi/ {sub("# iso.*",""); print}' base > iso-base
+	awk '!/# iso/ {sub("# ansi.*",""); print}' base > ansi-base
+
+	generate_full_iso_uk
+	generate_full_wide_iso_uk
+
+	generate_full_z_ansi_us
+	generate_full_shift_z_ansi_us
+	generate_full_awing_ansi_us
+
+	generate_wide_ansi_us
+
+	if $left; then
+		generate_left console/
+		generate_left xmodmap/
+	fi
+
+	generate_dbghk console/
+	generate_dbghk xmodmap/
+
+	rm iso-base ansi-base
+
+	if [[ -n $out_dir ]]; then
+		mkdir -p "$out_dir"/console/
+		mkdir -p "$out_dir"/xmodmap/
+		cp -r console/* "$out_dir"/console
+		cp -r xmodmap/* "$out_dir"/xmodmap
+		rm -r console xmodmap
+	fi
+}
+
+main

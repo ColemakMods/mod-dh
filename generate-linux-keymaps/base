@@ -1,0 +1,56 @@
+keycode  41  =  grave         asciitilde   dead_tilde            asciitilde            nul
+keycode  2   =  one           exclam       exclamdown            onesuperior
+keycode  3   =  two           at           masculine             twosuperior           nul
+keycode  4   =  three         numbersign   ordfeminine           threesuperior         Escape
+keycode  5   =  four          dollar       cent                  sterling              Control_backslash
+keycode  6   =  five          percent      euro                  yen                   Control_bracketright
+keycode  7   =  six           asciicircum  hstroke               Hstroke               Control_asciicircum
+keycode  8   =  seven         ampersand    eth                   ETH                   Control_underscore
+keycode  9   =  eight         asterisk     thorn                 THORN                 Delete
+keycode  10  =  nine          parenleft    leftsinglequotemark   leftdoublequotemark
+keycode  11  =  zero          parenright   rightsinglequotemark  rightdoublequotemark
+keycode  12  =  minus         underscore   endash                emdash                Control_underscore
+keycode  13  =  equal         plus         multiply              division
+
+keycode  16  =  q             Q            adiaeresis            Adiaeresis            Control_q
+keycode  17  =  w             W            aring                 Aring                 Control_w
+keycode  18  =  f             F            atilde                Atilde                Control_f
+keycode  19  =  p             P            oslash                Ooblique              Control_p
+keycode  20  =  b             B            dead_breve            asciitilde            Control_b
+keycode  21  =  j             J            dstroke               Dstroke               Control_j
+keycode  22  =  l             L            lstroke               Lstroke               Control_l
+keycode  23  =  u             U            uacute                Uacute                Control_u
+keycode  24  =  y             Y            udiaeresis            Udiaeresis            Control_y
+keycode  25  =  semicolon     colon        odiaeresis            Odiaeresis
+keycode  26  =  bracketleft   braceleft    guillemotleft         0x1002039             Escape
+keycode  27  =  bracketright  braceright   guillemotright        0x100203a             Control_bracketright
+keycode  43  =  backslash     bar          asciitilde            asciitilde            Control_backslash # ansi us only
+keycode  43  =  numbersign    asciitilde   dead_circumflex       asciitilde # iso uk only
+
+keycode  30  =  a             A            aacute                Aacute                Control_a
+keycode  31  =  r             R            dead_grave            asciitilde            Control_r
+keycode  32  =  s             S            ssharp                asciitilde            Control_s
+keycode  33  =  t             T            dead_acute            dead_doubleacute      Control_t
+keycode  34  =  g             G            dead_ogonek           asciitilde            Control_g
+keycode  35  =  m             M            dead_macron           asciitilde            Control_m
+keycode  36  =  n             N            ntilde                Ntilde                Control_n
+keycode  37  =  e             E            eacute                Eacute                Control_e
+keycode  38  =  i             I            iacute                Iacute                Control_i
+keycode  39  =  o             O            oacute                Oacute                Control_o
+keycode  40  =  apostrophe    quotedbl     otilde                Otilde
+
+keycode  86  =  z             Z            ae                    AE                    Control_z # iso uk only
+keycode  86  =  minus         underscore   endash                emdash                Control_underscore # ansi us only
+keycode  44  =  x             X            dead_circumflex       asciitilde            Control_x
+keycode  45  =  c             C            ccedilla              Ccedilla              Control_c
+keycode  46  =  d             D            dead_diaeresis        asciitilde            Control_d
+keycode  47  =  v             V            oe                    OE                    Control_v
+keycode  48  =  backslash     bar          asciitilde            asciitilde            Control_backslash # iso uk only
+keycode  48  =  z             Z            ae                    AE                    Control_z # ansi us only
+keycode  49  =  k             K            dead_abovering        asciitilde            Control_k
+keycode  50  =  h             H            dead_caron            asciitilde            Control_h
+keycode  51  =  comma         less         dead_cedilla          asciitilde
+keycode  52  =  period        greater      dead_abovedot         asciitilde
+keycode  53  =  slash         question     questiondown          asciitilde            Delete
+
+keycode  57  =  space         space        space                 nobreakspace          nul

@@ -1,0 +1,11 @@
+# console keymap for the Colemak Mod-DH layout 
+# http://colemakmods.github.io/mod-dh/.
+# Public domain.
+
+alt_is_meta
+charset "iso-8859-15"  # use a ISO-8859-15 font, e.g.: consolechars -f lat9v-14
+keymaps 0-12
+include "qwerty-layout"
+include "linux-with-alt-and-altgr"
+strings as usual
+
