@@ -1,5 +1,5 @@
-Colemak-DH keyboard layout for OSX. This is the ANSI,  no ergo-mods version. All
-of the standard Alt-gr keys are mapped to the placement of the Coleman character (´ is under the Colemak e) 
+Colemak-DH keyboard layout for OSX. This is the ANSI,full,  no ergo-mods version.
+All of the standard Alt-gr keys are mapped to the placement of the Coleman character (´ is under the Colemak e) 
 
 ## Install 
 To install, copy the Colemak-DH-ansi.bundle folder to either
