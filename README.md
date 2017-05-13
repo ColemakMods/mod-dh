@@ -7,7 +7,7 @@ Colemak Mod-DH
 
 Mod-DH is now supported by [DreymaR's Big Bag of Keyboard Tricks](http://forum.colemak.com/viewtopic.php?id=1438). 
 
-To enable it, edit the symbols/colemak file and uncomment the DVBG and HM sections as mentioned in this [Colemak forum discussion](http://forum.colemak.com/viewtopic.php?pid=16117#p16117).
+To enable it, edit the symbols/colemak file as mentioned in this [Colemak forum discussion](http://forum.colemak.com/viewtopic.php?pid=16117#p16117).
 
 ## Linux
 ### Xmodmap files
@@ -16,11 +16,11 @@ There are currently a selection of files for [xmodmap](http://www.x.org/archive/
 
 ### Console files
 
-Keymap files for the console are also provided. These can be installed by running `make install` in this repository as root. Since the location of console keymap files varies depending on the distro, you may need to specify a different directory than the default `/usr/share/keymaps` (which is correct for Debian-based distros):
+Keymap files for the console are also provided. These can be installed by running `make install` in this repository as root. Since the location of console keymap files varies depending on the distro, you may need to specify a different directory than the default `/usr/share/keymaps` (which is correct for Debian-based distros): `# make KEYMAP_PREFIX=/usr/share/kbd/keymaps install`.
 
-```
-# make KEYMAP_PREFIX=/usr/share/kbd/keymaps install
-```
+## Windows: AutoHotKey
+
+The fastest way to try out Mod-DH on Windows is to use the [AutoHotKey](https://autohotkey.com/) scripts. See the [autohotkey folder](autohotkey/) for downloads.
 
 ## Windows: KLC files
 
@@ -28,32 +28,31 @@ There are also files for [Microsoft Keyboard Layout Creator](http://msdn.microso
 
 ### ISO (UK) keyboard
 
-**UK Mod-DH (full):** [Download](klc/uk-ck-moddh-full.klc?raw=true)
-![UK Mod-DH (full)](klc/uk-ck-moddh-full.jpg)
+**UK Mod-DH:**  
+[Download KLC](klc/moddh-iso-uk.klc?raw=true)  
+[Download ZIP](klc/moddh-iso-uk.zip?raw=true)  
+![UK Mod-DH (full)](klc/moddh-iso-uk.jpg)
 
-**UK Mod-DH (left):** [Download](klc/uk-ck-moddh-left.klc?raw=true)
-![UK Mod-DH (left)](klc/uk-ck-moddh-left.jpg)
-
-**UK Mod-DH (full, wide):** [Download](klc/uk-ck-moddh-full-wide.klc?raw=true)
-![UK Mod-DH (full, wide)](klc/uk-ck-moddh-full-wide.jpg)
-
-**UK Mod-DH (left, wide):** [Download](klc/uk-ck-moddh-left-wide.klc?raw=true)
-![UK Mod-DH (left, wide)](klc/uk-ck-moddh-left-wide.jpg)
+**UK Mod-DH (wide):**  
+[Download KLC](klc/moddh-iso-uk-wide.klc?raw=true)  
+[Download zip](klc/moddh-iso-uk-wide.zip?raw=true)  
+![UK Mod-DH (left)](klc/moddh-iso-uk-wide.jpg)
 
 
-### ANSI (US) keyboard
+### ANSI (US) keyboard  
 
-**US Mod-DH (full):** [Download](klc/us-ck-moddh-full.klc?raw=true)
-![US Mod-DH (full)](klc/us-ck-moddh-full.jpg)
+**US Mod-DH:**  
+[Download KLC](klc/moddh-ansi-us.klc?raw=true)  
+[Download zip](klc/moddh-ansi-us.zip?raw=true)  
+![US Mod-DH (full)](klc/moddh-ansi-us.jpg)
 
-**US Mod-DH (left):** [Download](klc/us-ck-moddh-left.klc?raw=true)
-![US Mod-DH (left)](klc/us-ck-moddh-left.jpg)
+**US Mod-DH (alternative home):**  
+[Download KLC](klc/moddh-ansi-us-alt.klc?raw=true)  
 
-**US Mod-DH (full, alt):** [Download](klc/us-ck-moddh-full-alt.klc?raw=true)
-![US Mod-DH (full, alt)](klc/us-ck-moddh-full-alt.jpg)
 
-**US Mod-DH (left, alt):** [Download](klc/us-ck-moddh-left-alt.klc?raw=true)
-![US Mod-DH (left, alt)](klc/us-ck-moddh-left-alt.jpg)
+### Matrix keyboard  
 
+**Matrix Mod-DH:**  
+[Download KLC](klc/moddh-ansi-us.klc?raw=true)
 
 

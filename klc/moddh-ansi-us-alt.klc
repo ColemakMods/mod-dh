@@ -1,8 +1,10 @@
-KBD	usckdha	"United States - Colemak Mod-DH ISO-alt"
+KBD	usckdha	"United States - Colemak Mod-DH ANSI-alt"
 
 COPYRIGHT	"(c) 2014 Company"
 
 COMPANY	"colemakmods.github.io/mod-dh/"
+
+LOCALENAME	"en-US"
 
 LOCALEID	"00000409"
 
@@ -635,4 +637,11 @@ KEYNAME_DEAD
 02d9	"DOT ABOVE"
 
 
+DESCRIPTIONS
+
+0409	United States - Colemak Mod-DH ANSI-alt
+LANGUAGENAMES
+
+0409	English (United States)
 ENDKBD
+
