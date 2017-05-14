@@ -7,21 +7,21 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-	<link rel="stylesheet" href="stylesheets/steve.css">
+    <link rel="stylesheet" href="stylesheets/steve.css">
     <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-56831209-1', 'auto');
-	  ga('send', 'pageview');
-	</script>	
+      ga('create', 'UA-56831209-1', 'auto');
+      ga('send', 'pageview');
+    </script>    
   </head>
   <body>
     <div class="wrapper">
@@ -29,28 +29,28 @@
         <h1 class="header">Colemak Mod-DH</h1>
         <p class="header">A Colemak mod for more comfortable typing.</p>
 
-		<ul>
-          <li><a class="menu selected" href="./">About</a></li>
-          <li><a class="menu" href="./compare.html">Compare</a></li>
-		  <li><a class="menu" href="./learn.html">Difficulty Index</a></li>
-		  <li><a class="menu" href="./analyze.html">Layout Analyzer</a></li>
-        </ul>
-		
         <ul>
-          <li class="download"><a class="buttons" href="https://github.com/ColemakMods/mod-dh/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/ColemakMods/mod-dh/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="https://github.com/ColemakMods/mod-dh">View On GitHub</a></li>
+          <li><a class="menu selected" href="./">About</a></li>
+          <li><a class="menu" href="./keyboards.html">Keyboard Types</a></li>
+          <li><a class="menu" href="./compare.html">Compare</a></li>
+          <li><a class="menu" href="./learn.html">Switching Difficulty</a></li>
+          <li><a class="menu" href="./analyze.html">Layout Analyzer</a></li>
+        </ul>
+        
+        <ul>
+          <li><a class="buttons github" href="https://github.com/ColemakMods/mod-dh">Downloads</a></li>
         </ul>
 
-		<p class="header">&nbsp;</p>
-		<!--
+        <p style="text-align: right;"><span>(rev 2)</span></p>
+
+        <!--
         <p class="header">This project is maintained by <a class="header name" href="https://github.com/ColemakMods">ColemakMods</a></p>
-		-->
+        -->
 
 
       </header>
       <section>
-	  
+      
 <h3><a name="welcome-to-mod-dh" class="anchor" href="#welcome-to-mod-dh">
 <span class="octicon octicon-link"></span></a>Colemak Mod-DH</h3>
 
@@ -60,7 +60,9 @@
 Colemak Mod-DH main keys, shown for an ISO keyboard. Keys are colored according to the finger that should be used. The 10 most common English letters are assigned to the 10 easiest keys (highlighted in red).
 </p>
 
-<p>Colemak is a great layout, but that doesn't mean it's impossible to improve on! The idea behind Mod-DH is that by making an adjustment to the placement of a small number of keys, it is possible to gain a significant improvement in ergonomics and comfort. See this <a href="./compare.html">comparison of Mod-DH</a> with other layouts. There are separate <a href="#keyboard-types">implementations</a> optimized for ISO, ANSI and matrix keyboards.</p>
+<p>Colemak is a great layout, but that doesn't mean it's impossible to improve on! The idea behind Mod-DH is that by making an adjustment to the placement of a small number of keys, it is possible to gain a significant improvement in ergonomics and comfort. See this <a href="./compare.html">comparison of Mod-DH</a> with other layouts.</p>
+
+<p>There are separate <a href="./keyboards.html">implementations</a> optimized for ISO, ANSI and matrix keyboards.</p>
 
 <b>Highlights:</b>
 <ul>
@@ -134,46 +136,9 @@ The "Angle Mod" makes it possible to adopt a more comfortable typing posture by 
 
 <p>The original Mod-DH was launched in October 2014. Following feedback from users, a minor revision was been made in May 2017, switching the original M and K key positions. Users of Matrix boards may prefer to retain M on the home row.</p>
 
-<h3><a name="keyboard-types" class="anchor" href="#keyboard-types"><span class="octicon octicon-link"></span></a>Implementation on Keyboard Types</h3>
+<h3><a name="keyboard-types" class="anchor" href="#keyboard-types"><span class="octicon octicon-link"></span></a>Implementations for Keyboards</h3>
 
-<p>The mod works best on keyboards which have good support for the "Angle" mod i.e. ISO&nbsp;keyboards, and symmetric ergonomic keyboards. It can also be applied successfully to ANSI&nbsp;keyboards with an adjustment.</p>
-
-<p>There are some example layout files in the <a href="https://github.com/ColemakMods/mod-dh"><b>Downloads section</b></a>:<br/>
-- Windows:  files for use with <a href="http://msdn.microsoft.com/en-GB/goglobal/bb964665.aspx">Microsoft Keyboard Layout Creator</a>;<br/>
-- Linux: files for use with <a href="http://www.x.org/archive/X11R6.8.2/doc/xmodmap.1.html">xmodmap</a>.<br/>
-</p>
-
-<p>Mod-DH is now also supported in <a href="http://forum.colemak.com/viewtopic.php?id=1438">DreymaR's Big Bag of Keyboard Tricks</a>.
-
-<h4><a name="iso-keyboards" class="anchor" href="#iso-keyboards"><span class="octicon octicon-link"></span></a>ISO Keyboards</h4>
-
-<p class="caption"><img src="gfx/mod_dh_keyb_iso.png"/><br/>
-Colemak Mod-DH for an ISO keyboard. Some of the punctuation keys may vary, depending on your region.
-</p>
-
-<p class="caption"><img src="gfx/mod_dh_keyb_iso_wide.png"/><br/>
-Colemak Mod-DH for an ISO keyboard, in a "wide" configuration. This introduces a greater separation between the hands for a more ergonomic experience. See the <a href="http://forum.colemak.com/viewtopic.php?id=839">Colemak Forum</a> for more details on Wide mods. I&nbsp;recommend this approach if you have an ISO keyboard.
-</p>
-
-<h4><a name="ansi-keyboards" class="anchor" href="#ansi-keyboards"><span class="octicon octicon-link"></span></a>ANSI Keyboards</h4>
-
-<p class="caption"><img src="gfx/mod_dh_keyb_ansi.png"/><br/>
-Colemak Mod-DH for an ANSI keyboard. Due to the lack of an extra key to the right of the Left-Shift key, we need to relocate Z, and so here is the suggested placement. Fortunately Z is a rare key so it shouldn't have too adverse an effect!
-</p>
-
-<p class="caption"><img src="gfx/mod_dh_keyb_ansi_alt.png"/><br/>
-Colemak Mod-DH for an ANSI keyboard with an alternative home position. Keeps Z in the same position relative to the other alphabetic keys by introducing a new column to the left. You may wish to adjust the puncutation keys to your own preference.
-</p>
-
-<p class="caption"><img src="gfx/mod_dh_keyb_ansi_shiftz.png"/><br/>
-Colemak Mod-DH for an ANSI keyboard using Left-Shift for Z. Here the Right-Alt key is redefined to act as Shift, which is accessed via the left thumb. This is arguably a superior position than the standard shift. For more information see this page on <a href="http://colemakmods.github.io/ergonomic-mods/modifiers.html">optimizing modifier keys</a>.
-</p>
-
-<h4><a name="matrix-keyboards" class="anchor" href="#matrix-keyboards"><span class="octicon octicon-link"></span></a>Matrix/Ergonomic Keyboards</h4>
-
-<p class="caption"><img src="gfx/mod_dh_keyb_matrix.png"/><br/>
-Colemak Mod-DH for an idealized, non-staggered keyboard. Note, on this type of keyboard, it is recommended to assign M to the middle row, with directly K below.
-</p>
+<p>There are implementations available for ISO, ANSI, and matrix (orthogonal) keyboards, for a variety of operating systems. See the <a href="./keyboards.html">Keyboard Types</a> page for example implementations.</p>
 
 <h3><a name="feedback-issues" class="anchor" href="#feedback-issues"><span class="octicon octicon-link"></span></a>Feedback / Issues</h3>
 
@@ -188,13 +153,13 @@ Colemak Mod-DH for an idealized, non-staggered keyboard. Note, on this type of k
 <p style="font-size:smaller">The downloadable software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.</p>
 
       </section>
-	  <!--
+      <!--
       <footer>
         <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer>
-	  -->
+      -->
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		
+        
   </body>
 </html>
