@@ -11,8 +11,8 @@ strings as usual
 
 keycode  41  =  grave         asciitilde   dead_tilde       asciitilde     nul
 keycode  2   =  one           exclam       exclamdown       onesuperior
-keycode  3   =  two           at           masculine        twosuperior    nul
-keycode  4   =  three         numbersign   ordfeminine      threesuperior  Escape
+keycode  3   =  two           quotedbl     masculine        twosuperior    nul
+keycode  4   =  three         sterling    ordfeminine      threesuperior  Escape
 keycode  5   =  four          dollar       cent             sterling       Control_backslash
 keycode  6   =  five          percent      euro             yen            Control_bracketright
 keycode  7   =  six           asciicircum  hstroke          Hstroke        Control_asciicircum
@@ -47,7 +47,7 @@ keycode  36  =  n             N            ntilde           Ntilde         Contr
 keycode  37  =  e             E            eacute           Eacute         Control_e
 keycode  38  =  i             I            iacute           Iacute         Control_i
 keycode  39  =  o             O            oacute           Oacute         Control_o
-keycode  40  =  apostrophe    quotedbl     otilde           Otilde
+keycode  40  =  apostrophe    at           otilde           Otilde
 
 keycode  86  =  z             Z            ae               AE             Control_z
 keycode  44  =  x             X            dead_circumflex  asciitilde     Control_x
