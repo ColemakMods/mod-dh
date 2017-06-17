@@ -181,25 +181,6 @@ to_console() { # base-file keymap-name
 	rm "$new_base"
 }
 
-full_to_left() { # keymap-file (should have "full" in the name)
-	new_file=${1//full/left}
-	cp "$1" "$new_file"
-	# swap the key codes for m and h back to normal (only for DvbgHm)
-	swap_keys "$new_file" m h
-	sed -i "1 s/)\.$/, left-hand only)\./" "$new_file"
-}
-
-dvbghm_to_dbghk() { # keymap-file ("dh" in name)
-	new_file=${1//dh/dbghk}
-	cp "$1" "$new_file"
-	swap_keys "$new_file" d v
-	if [[ $1 == *full* ]]; then
-		swap_keys "$new_file" h k
-		swap_keys "$new_file" m k
-	fi
-	sed -i "1 s/)\.$/, DbgHk variant)\./" "$new_file"
-}
-
 # * Generation Functions
 # ** Generic
 generate_keymap() { # base-file keymap-name description
@@ -210,38 +191,26 @@ generate_keymap() { # base-file keymap-name description
 	sed -i "1 s/$/$3/" xmodmap/"$2".xmodmap
 }
 
-generate_left() {
-	for file in "$1"*; do
-		full_to_left "$file"
-	done
-}
-
-generate_dbghk() {
-	for file in "$1"*; do
-		dvbghm_to_dbghk "$file"
-	done
-}
-
 # ** ISO UK
-generate_full_iso_uk() {
-	generate_keymap iso-base iso-uk-colemak-dh-full "(UK, ISO keyboard)."
+generate_iso_uk() {
+	generate_keymap iso-base iso-uk-colemak-dh "(UK, ISO keyboard)."
 }
 
-generate_full_wide_iso_uk() {
+generate_wide_iso_uk() {
 	make_wide_base iso-base iso-wide-base
-	generate_keymap iso-wide-base iso-uk-colemak-dh-full-wide \
+	generate_keymap iso-wide-base iso-uk-colemak-dh-wide \
 		"(UK, ISO keyboard, Wide layout)."
 
 	rm iso-wide-base
 }
 
 # ** ANSI US
-generate_full_z_ansi_us() {
-	generate_keymap ansi-base ansi-us-colemak-dh-full-z  \
+generate_z_ansi_us() {
+	generate_keymap ansi-base ansi-us-colemak-dh-z  \
 		"(US, ANSI keyboard, Z angle mod)."
 }
 
-generate_full_shift_z_ansi_us() {
+generate_shift_z_ansi_us() {
 	# replace shift with z and lalt with shift
 	cp ansi-base ansi-shift-z-base
 	echo "keycode 42 = Shift_L" >> ansi-shift-z-base
@@ -249,14 +218,14 @@ generate_full_shift_z_ansi_us() {
 	swap_keys ansi-shift-z-base Shift_L z
 	swap_keys ansi-shift-z-base Shift_L Alt_L
 
-	generate_keymap ansi-shift-z-base ansi-us-colemak-dh-full-shift-z \
+	generate_keymap ansi-shift-z-base ansi-us-colemak-dh-shift-z \
 		"(US, ANSI keyboard, Shift-z angle mod)."
 	# remove default shift/alt (from console footer)
 	sed -r -i -e 's/^keycode\s*42.*Shift.*$//; s/^keycode\s*56.*Alt.*$//' \
-		console/ansi-us-colemak-dh-full-shift-z.map
+		console/ansi-us-colemak-dh-shift-z.map
 }
 
-generate_full_awing_ansi_us() {
+generate_awing_ansi_us() {
 	cp ansi-base ansi-awing-base
 	# shift 1 to 0 over; move - before
 	# shift q to ; over; move [ before; ' after
@@ -284,7 +253,7 @@ generate_full_awing_ansi_us() {
 	print;
 }' ansi-awing-base | sponge ansi-awing-base
 
-	generate_keymap ansi-awing-base ansi-us-colemak-dh-full-awing \
+	generate_keymap ansi-awing-base ansi-us-colemak-dh-awing \
 		"(US, ANSI keyboard, A-Wing angle mod)."
 
 	rm ansi-awing-base
@@ -293,11 +262,11 @@ generate_full_awing_ansi_us() {
 generate_wide_ansi_us() {
 	make_wide_base ansi-base ansi-wide-base
 	swap_keys ansi-wide-base backslash apostrophe
-	generate_keymap ansi-wide-base ansi-us-colemak-dh-full-z-wide \
+	generate_keymap ansi-wide-base ansi-us-colemak-dh-z-wide \
 		"(US, ANSI keyboard, Z angle mod, Wide layout)."
 
 	make_wide_base ansi-shift-z-base ansi-shift-z-wide-base
-	generate_keymap ansi-shift-z-wide-base ansi-us-colemak-dh-full-shift-z-wide \
+	generate_keymap ansi-shift-z-wide-base ansi-us-colemak-dh-shift-z-wide \
 		"(US, ANSI keyboard, Shift-z angle mod, Wide layout)."
 
 	rm ansi-shift-z-base ansi-wide-base ansi-shift-z-wide-base
@@ -316,12 +285,12 @@ main() {
 	awk '!/# ansi/ {sub("# iso.*",""); print}' base > iso-base
 	awk '!/# iso/ {sub("# ansi.*",""); print}' base > ansi-base
 
-	generate_full_iso_uk
-	generate_full_wide_iso_uk
+	generate_iso_uk
+	generate_wide_iso_uk
 
-	generate_full_z_ansi_us
-	generate_full_shift_z_ansi_us
-	generate_full_awing_ansi_us
+	generate_z_ansi_us
+	generate_shift_z_ansi_us
+	generate_awing_ansi_us
 
 	generate_wide_ansi_us
 
@@ -329,9 +298,6 @@ main() {
 		generate_left console/
 		generate_left xmodmap/
 	fi
-
-	generate_dbghk console/
-	generate_dbghk xmodmap/
 
 	rm iso-base ansi-base
 

@@ -1,5 +1,5 @@
 
-keycode 113 =  Mode_switch Mode_switch
+keycode 108 =  Mode_switch Mode_switch
 
 ! Remove these 2 lines if you want caps lock unmodified
 keycode 66 =  BackSpace BackSpace BackSpace BackSpace
