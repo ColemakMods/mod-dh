@@ -46,6 +46,11 @@ There are also files for [Microsoft Keyboard Layout Creator](http://msdn.microso
 [Download zip](klc/moddh-ansi-us.zip?raw=true)  
 ![US Mod-DH (full)](klc/moddh-ansi-us.jpg)
 
+**US Mod-DH Wide:**  
+[Download KLC](klc/moddh-ansi-us-wide.klc?raw=true)  
+[Download zip](klc/moddh-ansi-us-wide.zip?raw=true)  
+![US Mod-DH (full)](klc/moddh-ansi-us-wide.jpg)
+
 **US Mod-DH (alternative home):**  
 [Download KLC](klc/moddh-ansi-us-alt.klc?raw=true)  
 
