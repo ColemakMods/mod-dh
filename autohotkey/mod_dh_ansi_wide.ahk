@@ -1,4 +1,4 @@
-; Colemak Mod-DH wide mapping for ISO boards
+; Colemak Mod-DH wide mapping for ANSI boards
 
 ;SC002::1
 ;SC003::2
@@ -24,7 +24,7 @@ SC017::l
 SC018::u
 SC019::y
 SC01A::;
-SC01B::#
+SC01B::'
 
 ;SC01E::a
 SC01F::r
@@ -37,14 +37,12 @@ SC025::n
 SC026::e
 SC027::i
 SC028::o
-SC02B::'
 
-SC056::z
 SC02c::x
 SC02d::c
 SC02e::d
 ;SC02f::v
-SC030::\
+SC030::z
 SC031::/
 SC032::m
 SC033::h
