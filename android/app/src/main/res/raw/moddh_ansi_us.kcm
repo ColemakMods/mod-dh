@@ -1,0 +1,34 @@
+# Colemak Mod-DH ANSI US
+
+type OVERLAY
+
+map key   16    Q
+map key   17    W
+map key   18    F
+map key   19    P
+map key   20    B
+map key   21    J
+map key   22    L
+map key   23    U
+map key   24    Y
+map key   25    SEMICOLON
+
+map key   30    A
+map key   31    R
+map key   32    S
+map key   33    T
+map key   34    G
+map key   35    K
+map key   36    N
+map key   37    E
+map key   38    I
+map key   39    O
+map key   40    APOSTROPHE
+
+map key   44    X
+map key   45    C
+map key   46    D
+map key   47    V
+map key   48    Z
+map key   49    M
+map key   50    H

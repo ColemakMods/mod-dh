@@ -1,0 +1,33 @@
+### Colemak ###
+
+type OVERLAY
+
+map key   16    Q
+map key   17    W
+map key   18    F
+map key   19    P
+map key   20    G
+map key   21    J
+map key   22    L
+map key   23    U
+map key   24    Y
+map key   25    SEMICOLON
+
+map key   30    A
+map key   31    R
+map key   32    S
+map key   33    T
+map key   34    D
+map key   35    H
+map key   36    N
+map key   37    E
+map key   38    I
+map key   39    O
+
+map key   44    Z
+map key   45    X
+map key   46    C
+map key   47    V
+map key   48    B
+map key   49    K
+map key   50    M

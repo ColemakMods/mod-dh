@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<keyboard-layouts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <keyboard-layout
+        android:name="keyboard_layout_colemak"
+        android:keyboardLayout="@raw/colemak"
+        android:label="@string/keyboard_layout_colemak" />
+
+    <keyboard-layout
+        android:name="keyboard_layout_moddh_ansi"
+        android:keyboardLayout="@raw/moddh_ansi_us"
+        android:label="@string/keyboard_layout_moddh_ansi_us" />
+
+    <keyboard-layout
+        android:name="keyboard_layout_moddh_iso_us"
+        android:keyboardLayout="@raw/moddh_iso_us"
+        android:label="@string/keyboard_layout_moddh_iso_us" />
+
+    <keyboard-layout
+        android:name="keyboard_layout_moddh_iso_uk"
+        android:keyboardLayout="@raw/moddh_iso_uk"
+        android:label="@string/keyboard_layout_moddh_iso_uk" />
+
+    <keyboard-layout
+        android:name="keyboard_layout_colemak_wide"
+        android:keyboardLayout="@raw/colemak_wide"
+        android:label="@string/keyboard_layout_colemak_wide" />
+
+    <keyboard-layout
+        android:name="keyboard_layout_moddh_ansi_wide"
+        android:keyboardLayout="@raw/moddh_ansi_us_wide"
+        android:label="@string/keyboard_layout_moddh_ansi_us_wide" />
+
+    <keyboard-layout
+        android:name="keyboard_layout_moddh_iso_us_wide"
+        android:keyboardLayout="@raw/moddh_iso_us_wide"
+        android:label="@string/keyboard_layout_moddh_iso_us_wide" />
+
+    <keyboard-layout
+        android:name="keyboard_layout_moddh_iso_uk_wide"
+        android:keyboardLayout="@raw/moddh_iso_uk_wide"
+        android:label="@string/keyboard_layout_moddh_iso_uk_wide" />
+
+</keyboard-layouts>

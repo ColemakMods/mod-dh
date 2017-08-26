@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Colemak Mod-DH Keyboard</string>
+    <string name="keyboard_layouts_label">ColemakMods</string>
+    <string name="keyboard_layout_colemak">Colemak</string>
+    <string name="keyboard_layout_moddh_ansi_us">Colemak Mod-DH ANSI US</string>
+    <string name="keyboard_layout_moddh_iso_us">Colemak Mod-DH ISO US</string>
+    <string name="keyboard_layout_moddh_iso_uk">Colemak Mod-DH ISO UK</string>
+    <string name="keyboard_layout_colemak_wide">Colemak wide</string>
+    <string name="keyboard_layout_moddh_ansi_us_wide">Colemak Mod-DH ANSI US wide</string>
+    <string name="keyboard_layout_moddh_iso_us_wide">Colemak Mod-DH ISO US wide</string>
+    <string name="keyboard_layout_moddh_iso_uk_wide">Colemak Mod-DH ISO UK wide</string>
+</resources>

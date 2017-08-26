@@ -1,0 +1,52 @@
+### Colemak wide ###
+
+type OVERLAY
+
+map key    2    1
+map key    3    2
+map key    4    3
+map key    5    4
+map key    6    5
+map key    7    EQUALS
+map key    8    6
+map key    9    7
+map key   10    8
+map key   11    9
+map key   12    0
+map key   13    MINUS
+
+map key   16    Q
+map key   17    W
+map key   18    F
+map key   19    P
+map key   20    G
+map key   21    LEFT_BRACKET
+map key   22    J
+map key   23    L
+map key   24    U
+map key   25    Y
+map key   26    SEMICOLON
+map key   27    APOSTROPHE
+
+map key   30    A
+map key   31    R
+map key   32    S
+map key   33    T
+map key   34    D
+map key   35    RIGHT_BRACKET
+map key   36    H
+map key   37    N
+map key   38    E
+map key   39    I
+map key   40    O
+
+map key   44    Z
+map key   45    X
+map key   46    C
+map key   47    V
+map key   48    B
+map key   49    SLASH
+map key   50    K
+map key   51    M
+map key   52    COMMA
+map key   53    PERIOD
