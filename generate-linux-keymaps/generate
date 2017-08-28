@@ -19,7 +19,7 @@ options:
 	fi
 }
 
-out_dir="./"
+out_dir=""
 left=false
 while getopts :o:h opt; do
 	case $opt in
@@ -191,15 +191,15 @@ generate_keymap() { # base-file keymap-name description
 	sed -i "1 s/$/$3/" xmodmap/"$2".xmodmap
 }
 
-# ** ISO UK
-generate_iso_uk() {
-	generate_keymap iso-base iso-uk-colemak-dh "(UK, ISO keyboard)."
+# ** ISO US
+generate_iso_us() {
+	generate_keymap iso-base iso-us-colemak-dh "(US, ISO keyboard)."
 }
 
-generate_wide_iso_uk() {
+generate_wide_iso_us() {
 	make_wide_base iso-base iso-wide-base
-	generate_keymap iso-wide-base iso-uk-colemak-dh-wide \
-		"(UK, ISO keyboard, Wide layout)."
+	generate_keymap iso-wide-base iso-us-colemak-dh-wide \
+		"(US, ISO keyboard, Wide layout)."
 
 	rm iso-wide-base
 }
@@ -285,8 +285,8 @@ main() {
 	awk '!/# ansi/ {sub("# iso.*",""); print}' base > iso-base
 	awk '!/# iso/ {sub("# ansi.*",""); print}' base > ansi-base
 
-	generate_iso_uk
-	generate_wide_iso_uk
+	generate_iso_us
+	generate_wide_iso_us
 
 	generate_z_ansi_us
 	generate_shift_z_ansi_us
