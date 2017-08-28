@@ -32,11 +32,30 @@ The currently active layout is switchable using Control-spacebar.
 
 Only the main layout arrangments are supported. Modifier keys, backspace, AltGr layers etc remain as per the defaults. Extend layer is not supported.
 
+## Making modifications
+
+You may want to make your own custom modifications to the keyboard mappings. In most cases, this will involve redefining which keyboard scan code is mapped to which pre-defined key name. These mappings are defined in the format:
+
+
+    map key   <scan-code>   <key-name>
+
+
+For example, suppose you wanted so switch the "6" and "equals" keys in the US ANSI wide layout. To do this, edit the file ```app/src/main/res/raw/moddh_ansi_us_wide.kcm```, and change the following lines:
+
+    map key    7    EQUALS
+    map key    8    6
+to
+
+    map key    7    6
+    map key    8    EQUALS
+
+Then recompile the package. See *Compiling* section below
+
 ## Compiling
 
 To compile the APK:
 
-1. Download the Android developer tools from [http://developer.android.com/](http://developer.android.com/)
+1. Download and install the Android developer tools from [http://developer.android.com/](http://developer.android.com/)
 
 2. Build the app using the command: `./gradlew assemble`
 	
