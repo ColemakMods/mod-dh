@@ -156,7 +156,7 @@
 			<key code="1" output="R"/>
 			<key code="2" output="S"/>
 			<key code="3" output="T"/>
-			<key code="4" action="9"/>
+			<key code="4" output="K"/>
 			<key code="5" output="G"/>
 			<key code="6" output="Z"/>
 			<key code="7" output="X"/>
@@ -265,7 +265,7 @@
 			<key code="1" output="S"/>
 			<key code="2" output="D"/>
 			<key code="3" output="F"/>
-			<key code="4" action="9"/>
+			<key code="4" output="K"/>
 			<key code="5" output="G"/>
 			<key code="6" output="Z"/>
 			<key code="7" output="X"/>
