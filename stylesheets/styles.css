@@ -140,7 +140,7 @@ hr {
 
 /* Images */
 
-/* img {
+img {
     position: relative;
     margin: 0 auto;
     max-width: 650px;
@@ -148,7 +148,6 @@ hr {
     margin: 10px 0 32px 0;
     border: 1px solid #ccc;
   }
-*/ 
 
 p img {
   display: inline;
