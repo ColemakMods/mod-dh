@@ -140,14 +140,15 @@ hr {
 
 /* Images */
 
-img {
-  position: relative;
-  margin: 0 auto;
-  max-width: 650px;
-  padding: 5px;
-  margin: 10px 0 32px 0;
-  border: 1px solid #ccc;
-}
+/* img {
+    position: relative;
+    margin: 0 auto;
+    max-width: 650px;
+    padding: 5px;
+    margin: 10px 0 32px 0;
+    border: 1px solid #ccc;
+  }
+*/ 
 
 p img {
   display: inline;
@@ -191,18 +192,22 @@ table {
 
 th {
   font-family: 'Arvo', Helvetica, Arial, sans-serif;
-	font-size: 18px;
-	font-weight: normal;
+  font-size: 18px;
+  font-weight: normal;
   padding: 10px;
   background: #232323;
   color: #FDFEFB;
  }
 
-td {
-  padding: 10px;
-	background: #ccc;
+tr {
+  background: #ccc;
+}
+tr.highlight {
+  background: #aaa;
  }
-
+td {
+  padding: 8px;
+}
 
 /* Wrapper */
 .wrapper {

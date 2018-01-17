@@ -22,6 +22,14 @@
       ga('create', 'UA-56831209-1', 'auto');
       ga('send', 'pageview');
     </script>
+    <script>
+      function showScores(n) {
+          document.getElementById('keyboard_scores_ergonomic').style.display = ('keyboard_scores_ergonomic' == n) ? 'block' : 'none';
+          document.getElementById('keyboard_scores_traditional').style.display = ('keyboard_scores_traditional' == n) ? 'block' : 'none';
+          document.getElementById('keyboard_scores_alternative').style.display = ('keyboard_scores_alternative' == n) ? 'block' : 'none';
+          document.getElementById('keyboard_scores_matrix').style.display = ('keyboard_scores_matrix' == n) ? 'block' : 'none';
+      };
+    </script>
   </head>
   <body>
     <div class="wrapper">
@@ -47,7 +55,6 @@
         <p class="header">This project is maintained by <a class="header name" href="https://github.com/ColemakMods">ColemakMods</a></p>
         -->
 
-
       </header>
       <section>
       
@@ -59,15 +66,47 @@
 <p>Nonetheless, here is an attempt to compare several layouts with <a href="./">Colemak Mod-DH</a>. It uses a fairly simple scoring system that simulates typing a large volume of standard English text<a href="#notes">¹</a>, and scores each according to (in my view) the two most important considerations for keyboard layout design:
 </p>
 
-<p>1. A base effort value based on the ease with which each key can be typed.<br/>
-<img src="gfx/keyboard_scores.png"/>
+<p>1. A base effort value based on the ease with which each key can be typed:</p>
+ 
+<p class="caption">
+<span id="keyboard_scores_ergonomic" style="display:block">
+  <img src="gfx/keyboard_scores_ergonomic.png"/>
+</span>
+<span id="keyboard_scores_traditional" style="display:none">
+  <img src="gfx/keyboard_scores_traditional.png"/>
+</span>
+<span id="keyboard_scores_alternative" style="display:none">
+  <img src="gfx/keyboard_scores_alternative.png"/>
+</span>
+<span id="keyboard_scores_matrix" style="display:none">
+  <img src="gfx/keyboard_scores_matrix.png"/>
+</span>
+&nbsp;&nbsp;Keyboard Configuration<a href="#notes">²</a>:
+&nbsp;&nbsp;<a onclick="showScores('keyboard_scores_ergonomic')">Ergonomic</a>
+&nbsp;&nbsp;<a onclick="showScores('keyboard_scores_traditional')">Traditional</a>
+&nbsp;&nbsp;<a onclick="showScores('keyboard_scores_alternative')">Alternative</a>
+&nbsp;&nbsp;<a onclick="showScores('keyboard_scores_matrix')">Matrix</a>
 </p>
 
-<p>2. An additional penalty that is incurred for each pair of successive keys that were typing with same finger (i.e. same-finger bigrams). The amount of penalty depends on the distance the finger moves to type both keys, i.e. the row difference between the two keys forming the bigram.
-<img src="gfx/keyboard_penalties.png" width="560"/>
+<p>2. An additional penalty that is incurred where successive keys are typed where these represent an awkward pair. This primarily occurs when the two keys are typed with the same finger (i.e. same-finger bigrams). Certain other neighbour-finger combinations also incur a small penalty, such as pinky-ring and ring-middle finger pairs. In each of these cases, the amount of penalty also depends on the distance the finger moves to type both keys, i.e. the row-difference between the two keys forming the bigram.
 </p>
 
-<p>These efforts and penalties are my estimations based on personal experience/opinion, but I think they're fairly reasonable. Others may disagree of course, and there are some other examples <a href="http://mkweb.bcgsc.ca/carpalx/?typing_effort#carpalx_typing_model">here</a>, <a href="http://viralintrospection.wordpress.com/2010/09/06/a-different-philosophy-in-designing-keyboard-layouts/#design">here</a> and <a href="http://forum.colemak.com/viewtopic.php?pid=15137#p15137">here</a>. Note that for the purposes of fair comparison, all layouts will use these key-effort values, which assume the <a href="./#angle-mod">"angle"</a> mod has been applied.</p>
+<table>
+<tr>
+<td><b><u>Bigram Penalties</u></b></td><td>same-row</td><td>row jump:<br/>top ⟷ middle<br />middle ⟷ bottom</td><td>row jump:<br/>top ⟷ bottom</td>
+</tr>
+<tr>
+<td>same-finger bigrams</td><td>2.5</td><td>2.5</td><td>3.5</td>
+</tr>
+<tr>
+<td>pinky-ring bigrams</td><td>0.5</td><td>1.0</td><td>1.5</td>
+</tr>
+<tr>
+<td>ring-middle bigrams</td><td>0.1</td><td>0.2</td><td>0.3</td>
+</tr>
+</table>
+
+<p>These efforts and penalties are my estimations based on personal experience/opinion, but I think they're fairly reasonable. Others may disagree of course, and there are some other examples <a href="http://mkweb.bcgsc.ca/carpalx/?typing_effort#carpalx_typing_model">here</a>, <a href="http://viralintrospection.wordpress.com/2010/09/06/a-different-philosophy-in-designing-keyboard-layouts/#design">here</a> and <a href="http://forum.colemak.com/viewtopic.php?pid=15137#p15137">here</a>. The <a href="./analyze.html#keyboard-configurations">keyboard configuration</a> used for each layout is in accordance with its usual usage, which in most cases is the ‘traditional’ technique.
 
 <p>You can try out this <a href="./analyze.html">Keyboard Layout Analyzer</a> tool to generate results using your own input values.</p>
 
@@ -75,41 +114,75 @@
 <span class="octicon octicon-link"></span></a>Results</h3>
 
 <table>
-<tr> <td></td> <td>base effort<br/>per key</td> <td>same-finger<br/>bigrams percentage</td> <td> same-finger<br/>penalty</td> <td> overall score<br/>effort per key</td> </tr>
-<tr> <td><b>Mod-DH</b> <a href="http://colemakmods.github.io/mod-dh/" target="new_win"><img src="gfx/open.png"/></a></td> 
-            <td>1.600</td> <td>1.52%</td> <td>0.040</td> <td>1.635</td> </tr>
-<tr> <td>Workman <a href="http://www.workmanlayout.com/blog/" target="new_win"><img src="gfx/open.png"/></a></td>
-            <td>1.607</td> <td>2.97%</td> <td>0.078</td> <td>1.685</td> </tr>
-<tr> <td>MTGAP <a href="http://mtgap.bilfo.com/completed_keyboard.html" target="new_win"><img src="gfx/open.png"/></a></td>
-            <td>1.650</td> <td>1.57%</td> <td>0.040</td> <td>1.690</td> </tr>
-<tr> <td>Colemak <a href="http://colemak.com/" target="new_win"><img src="gfx/open.png"/></a></td> 
-            <td>1.684</td> <td>1.52%</td> <td>0.040</td> <td>1.724</td> </tr>
-<tr> <td>Norman <a href="https://normanlayout.info/" target="new_win"><img src="gfx/open.png"/></a></td>
-            <td>1.612</td> <td>6.38%</td> <td>0.166</td> <td>1.778</td> </tr>
-<tr> <td>Asset <a href="http://millikeys.sourceforge.net/asset/" target="new_win"><img src="gfx/open.png"/></a></td>
-            <td>1.715</td> <td>2.98%</td> <td>0.079</td> <td>1.794</td> </tr>
-<tr> <td>qgmlwyfub <a href="http://mkweb.bcgsc.ca/carpalx/?full_optimization" target="new_win"><img src="gfx/open.png"/></a></td>
-            <td>1.729</td> <td>4.58%</td> <td>0.116</td> <td>1.845</td> </tr>
-<tr> <td>Qwpr <a href="http://sourceforge.net/projects/qwpr/" target="new_win"><img src="gfx/open.png"/></a></td>
-            <td>1.746</td> <td>3.88%</td> <td>0.105</td> <td>1.851</td> </tr>
-<tr> <td>Dvorak <a href="http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard" target="new_win"><img src="gfx/open.png"/></a></td>
-            <td>1.814</td> <td>2.54%</td> <td>0.065</td> <td>1.879</td> </tr>
-<tr> <td>Minimak-8key <a href="http://www.minimak.org/" target="new_win"><img src="gfx/open.png"/></a></td>
-            <td>1.776</td> <td>4.04%</td> <td>0.108</td> <td>1.885</td> </tr>
-<tr> <td>Qwerty <a href="http://en.wikipedia.org/wiki/QWERTY" target="new_win"><img src="gfx/open.png"/></a></td>
-            <td>2.188</td> <td>6.57%</td> <td>0.185</td> <td>2.373</td> </tr>
+<tr> <td>Layout</td> <td>keyboard<br/>config<a href="#notes">²</a></td><td>base effort<br/>per key</td> <td>same-finger<br/>bigrams percent</td> <td> bigram<br/>penalties</td> <td> overall score<br/>effort per key</td> </tr>
+<tr class="highlight">
+    <td>Mod-DH <a href="http://colemakmods.github.io/mod-dh/" target="new_win"><img src="gfx/open.png"/></a></td> 
+    <td>ergonomic</td> <td>1.596</td> <td>1.52%</td> <td>0.066</td> <td>1.662</td>
+</tr>
+<tr> 
+    <td>Workman <a href="http://www.workmanlayout.com/blog/" target="new_win"><img src="gfx/open.png"/></a></td>
+    <td>matrix</td> <td>1.608</td> <td>2.97%</td> <td>0.104</td> <td>1.712</td>
+</tr>
+<tr class="highlight">
+    <td>Colemak <a href="http://colemak.com/" target="new_win"><img src="gfx/open.png"/></a></td> 
+    <td>ergonomic</td> <td>1.684</td> <td>1.52%</td> <td>0.067</td> <td>1.751</td>
+</tr>
+<tr> 
+    <td>MTGAP <a href="http://mtgap.bilfo.com/completed_keyboard.html" target="new_win"><img src="gfx/open.png"/></a></td>
+    <td>traditional</td> <td>1.665</td> <td>1.57%</td> <td>0.091</td> <td>1.756</td>
+</tr>
+<tr class="highlight">
+    <td>Colemak <a href="http://colemak.com/" target="new_win"><img src="gfx/open.png"/></a></td> 
+    <td>traditional</td> <td>1.713</td> <td>1.52%</td> <td>0.067</td> <td>1.780</td>
+</tr>
+<tr> 
+    <td>BEAKL <a href="https://deskthority.net/wiki/BEAKL" target="new_win"><img src="gfx/open.png"/></a></td>
+    <td>matrix</td> <td>1.721</td> <td>1.76%</td> <td>0.060</td> <td>1.781</td>
+</tr>
+<tr> 
+    <td>Norman <a href="https://normanlayout.info/" target="new_win"><img src="gfx/open.png"/></a></td>
+    <td>traditional</td> <td>1.641</td> <td>6.38%</td> <td>0.195</td> <td>1.836</td>
+</tr>
+<tr> 
+    <td>Asset <a href="http://millikeys.sourceforge.net/asset/" target="new_win"><img src="gfx/open.png"/></a></td>
+    <td>traditional</td> <td>1.744</td> <td>2.98%</td> <td>0.114</td> <td>1.859</td>
+</tr>
+<tr> 
+    <td>qgmlwyfub <a href="http://mkweb.bcgsc.ca/carpalx/?full_optimization" target="new_win"><img src="gfx/open.png"/></a></td>
+    <td>traditional</td> <td>1.740</td> <td>4.58%</td> <td>0.127</td> <td>1.867</td>
+</tr>
+<tr> 
+    <td>Dvorak <a href="http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard" target="new_win"><img src="gfx/open.png"/></a></td>
+    <td>traditional</td> <td>1.823</td> <td>2.54%</td> <td>0.077</td> <td>1.900</td>
+</tr>
+<tr> 
+    <td>Qwpr <a href="http://sourceforge.net/projects/qwpr/" target="new_win"><img src="gfx/open.png"/></a></td>
+    <td>traditional</td> <td>1.775</td> <td>3.88%</td> <td>0.141</td> <td>1.917</td>
+</tr>
+<tr> 
+    <td>Minimak-8key <a href="http://www.minimak.org/" target="new_win"><img src="gfx/open.png"/></a></td>
+    <td>traditional</td> <td>1.806</td> <td>4.04%</td> <td>0.136</td> <td>1.942</td>
+</tr>
+<tr> 
+    <td>Qwerty <a href="http://en.wikipedia.org/wiki/QWERTY" target="new_win"><img src="gfx/open.png"/></a></td>
+    <td>traditional</td> <td>2.218</td> <td>6.57%</td> <td>0.212</td> <td>2.430</td>
+</tr>
 <caption>Comparison of various layouts using the scoring system defined above (lower is better).</caption>
 </table>
 
 <p>Hooray, Mod-DH comes out as the clear winner! Perhaps this is not surprising given the scoring system rewards use of the key locations that Mod-DH optimizes. A cynic might even argue that it is easy to win a competition when you choose your own scoring system! But unless you wildly disagree with the effort values used, Mod-DH should work out more comfortable than any of the layouts shown. And of course, if you think the input weights and penalties used need modifying, then why not try out the <a href="./analyze.html">analyzer tool</a> with your own inputs to see how it affects the results!</p>
 
-<p>It is my view that Mod-DH's optimized D and H positions are of almost home key quality, and these keys are often underrated in the design of other layouts. When using the Colemak layout, D and H are the most common non-home keys, so they ought to have good locations. Mod-DH is the only layout with the 10 most common keys in the 10 easiest-to-type positions. While the Workman layout does a good job of making better use of some easy-to-type keys, in the process it makes some keys unduly difficult (I am not a fan of its placement of D), and also increases the amount of same finger bigrams. Mod-DH takes some of the good design elements of Workman and applies them to Colemak, to produce a layout which I would argue is superior to both!</p>
+<p>It is my view that Mod-DH's optimized D and H positions are of almost home key quality, and these keys are often underrated in the design of other layouts. When using the Colemak layout, D and H are the most common non-home keys, so they ought to have good locations. Mod-DH is the only layout with the 10 most common keys in the 10 easiest-to-type positions.</p>
+
+<p>While the Workman layout does a good job of making better use than Colemak of some easy-to-type keys, in the process it makes other keys unduly difficult (I am not a fan of its placement of D), and also increases the occurance of same-finger bigrams. Mod-DH takes some of the good design elements of Workman and applies them to Colemak, to produce a layout which is superior to both!</p>
 
 <p>For a consideration of how easy or difficult the various layouts are to learn, take a look at the <a href="learn.html">Difficulty Index</a> comparison.</p>
 
 <h3><a name="notes" class="anchor" href="#notes"><span class="octicon octicon-link"></span></a>Notes</h3>
 
-<p><a class="anchor" href="#notes">¹</a> Statistics are generated using a corpus which comprises a variety of books from Project Guttenberg, the same as used by <a href="http://mkweb.bcgsc.ca/carpalx/?keyboard_statistics">carpalx</a>.
+<p>
+<a class="anchor" href="#notes">¹</a> Statistics are generated using a corpus which comprises a variety of books from Project Guttenberg, the same as used by <a href="http://mkweb.bcgsc.ca/carpalx/?keyboard_statistics">carpalx</a>.<br/>
+<a class="anchor" href="#notes">²</a> See the Layout Analyzer page for definitions of the <a href="./analyze.html#keyboard-configurations">Keyboard Configurations</a>.<br/>
 </p>
 
       </section>
