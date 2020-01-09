@@ -22,3 +22,7 @@ td img {
   text-align: center;
   border: none;
 }
+
+span {
+  white-space: nowrap;
+}
