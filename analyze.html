@@ -29,6 +29,10 @@
       iframe = document.getElementById('iframe');
       iframe.src = 'webapp/index.html?' + params;
     }
+    function resizeIframe() {
+      iframe = document.getElementById('iframe');
+      iframe.style.height = iframe.contentWindow.document.documentElement.scrollHeight + 'px';
+    }
     </script>
   </head>
   <body onLoad="setIframeSrc()">
