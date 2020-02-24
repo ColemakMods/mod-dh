@@ -4,10 +4,10 @@
     <title>Keyboard Analyzer Tool</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <script type="text/javascript">
-		 if (top === self) {
-		      location.href = "../";
-		 }
-	</script>
+         if (top === self) {
+              ///location.href = "../";
+         }
+    </script>
     <script type="text/javascript" charset="utf-8" src="teavm/classes.js"></script>
     <style type="text/css">
     .preformatted {
@@ -35,8 +35,8 @@
         text-align: center;
         vertical-align: bottom;
         padding: 2px 0px;
-        width: 24px;
-        height: 16px;
+        width: 30px;
+        height: 20px;
         border: 1px solid #555555;
         border-radius: 4px;
         margin: 1px;
@@ -68,7 +68,18 @@
         <td colspan="2" class="center"><button id="analyze-button">Analyze!</button></td>
     </tr>
     <tr>
-        <td colspan="2"><div id="keyboard-panel" class="preformatted" style="margin:0.5ex;padding:0.5ex"></div></td>
+        <td colspan="2">
+            <div id="keyboard-panel">
+                <div id="keyboard-panel-fingers" class="preformatted" style="display:block;font-size:125%;padding:0.5ex"></div>
+                <div id="keyboard-panel-heatmap" class="preformatted" style="display:none"></div>
+                <div id="keyboard-panel-options" style="padding:0.5ex;font-size: 80%;">
+                    &nbsp;&nbsp;<input id="keyboard-option-fingers" type="radio" name="keyboard-panel-option" value="fingers" checked="checked"/>
+                    <label for="keyboard-option-fingers">Fingers</label>
+                    &nbsp;&nbsp;<input id="keyboard-option-heatmap" type="radio" name="keyboard-panel-option" value="heatmap"/>
+                    <label for="keyboard-option-heatmap">Heatmap</label>
+                </div>
+            </div>
+        </td>
     </tr>
     <tr>
         <td colspan="2"><div id="output-panel" class="preformatted" style="margin:0.5ex;padding:0.5ex;min-height:500px"></div></td>
