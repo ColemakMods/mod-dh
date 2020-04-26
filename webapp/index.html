@@ -23,13 +23,21 @@
         white-space: pre;
         background-color:#FFFFFF;
     }
+    #layout-input, config-input {
+        margin: 0px 8px;
+    }
+    #analyze-button {
+        margin: 4px 0px;
+    }
     #output-panel,#keyboard-panel {
         background-color: #F0F0F0;
     }
     #output-panel th {
         text-align:right;
+        padding: 0px 0px 0px 2ex;
     }
     #output-panel td {
+        text-align:center;
         padding: 0px 0px 0px 2ex;
     }
     #output-panel .row_total {
@@ -44,7 +52,7 @@
         vertical-align: bottom;
         padding: 2px 0px;
         width: 30px;
-        height: 20px;
+        height: 22px;
         border: 1px solid #555555;
         border-radius: 4px;
         margin: 1px;
@@ -65,12 +73,12 @@
         </td>
     </tr>
     <tr>
-        <td width="50%">Layout:<select id="layout-select"><option id="layoutOptionDummy">Dummy</option></select></td>
-        <td width="50%">Configuration:<select id="config-select"><option id="configOptionDummy">Dummy</option></select></td>
+        <td width="40%">Layout:<select id="layout-select"><option id="layoutOptionDummy">Dummy</option></select></td>
+        <td width="60%">Configuration:<select id="config-select"><option id="configOptionDummy">Dummy</option></select></td>
     </tr>
     <tr style="min-height:100px">
-        <td width="50%"><TextArea id="layout-input" class="preformatted" rows="6" cols="30"></TextArea></td>
-        <td width="50%"><TextArea id="config-input" class="preformatted" rows="6" cols="40"></TextArea></td>
+        <td width="40%"><TextArea id="layout-input" class="preformatted" rows="6" cols="34"></TextArea></td>
+        <td width="60%"><TextArea id="config-input" class="preformatted" rows="6" cols="40"></TextArea></td>
     </tr>
     <tr>
         <td colspan="2" class="center"><button id="analyze-button" onclick="callResizeIframe()">Analyze!</button></td>
