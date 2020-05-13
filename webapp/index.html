@@ -4,43 +4,48 @@
     <title>Keyboard Analyzer Tool</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <script type="text/javascript">
-         if (top === self) {
-              location.href = "../";
-         }
+    if (top === self) {
+        if (!window.location.pathname.endsWith('/test.html')) {
+            location.href = "../";
+        }
+    }
     </script>
     <script type="text/javascript">
     //resize iframe to correct content size
     function callResizeIframe() {
-        setTimeout(function() { 
-            window.parent.resizeIframe(); 
-        }, 500);
+        if (!window.location.pathname.endsWith('/test.html')) {
+            setTimeout(function() {
+                window.parent.resizeIframe();
+            }, 500);
+        }
     }
     </script>
     <script type="text/javascript" charset="utf-8" src="teavm/classes.js"></script>
     <style type="text/css">
-    .preformatted {
-        font-family: monospace;
-        white-space: pre;
-        background-color:#FFFFFF;
-    }
     #layout-input, config-input {
         margin: 0px 8px;
     }
     #analyze-button {
         margin: 4px 0px;
     }
-    #output-panel,#keyboard-panel {
+    .keyboard-panel {
+        background-color: #F0F0F0;
+        display:block;
+        font-size:125%;
+        padding:0.5ex 0.5ex 0.5ex 4ex;
+    }
+    .output-panel {
         background-color: #F0F0F0;
     }
-    #output-panel th {
+    .output-panel th {
         text-align:right;
         padding: 0px 0px 0px 2ex;
     }
-    #output-panel td {
+    .output-panel td {
         text-align:center;
         padding: 0px 0px 0px 2ex;
     }
-    #output-panel .row_total {
+    .output-panel .row_total {
         font-weight: bold;
     }
     .center {
@@ -61,6 +66,11 @@
         display:inline-block;
         margin: 1px;
     }
+    .preformatted {
+        font-family: monospace;
+        white-space: pre;
+        background-color:#FFFFFF;
+    }
 
     .modal {
         display: none;
@@ -72,14 +82,14 @@
         height: 100%;
         overflow: auto;
         background-color: rgb(0,0,0);
-        background-color: rgba(0,0,0,0.4);
+        background-color: rgba(0,0,0,0.3);
     }
     .modal-content {
         background-color: #fefefe;
         margin: 15% auto;
         padding: 20px;
         border: 1px solid #888;
-        width: 80%;
+        width: 500px;
     }
     .modal-close {
         color: #aaa;
@@ -97,58 +107,72 @@
     </style>
 </head>
 <body onload="main()">
+
+<TextArea id="layout-input" style="display: none;"></TextArea>
+<TextArea id="config-input" style="display: none;"></TextArea>
+
 <div style="position:relative;width:620px">
-<button id="help-button" style="position:absolute;top:2px;right:12px;">&#x1f6c8; Help</button>
-<table style="max-width:620px; border:2px solid #808080; background-color:#CCCCCC">
+<button id="help-button" style="position:absolute;top:6px;right:12px;">&#x1f6c8; Help</button>
+<table style="width:620px; border:2px solid #808080; background-color:#CCCCCC">
     <tr>
         <td colspan="2" class="center">
-            <span style="font-size:large;margin:1ex">Keyboard Analysis Tool</span>
+            <span style="font-size:x-large;margin:1ex">Keyboard Analysis Tool</span>
             <span id="version-text" style="font-size:small"></span>
         </td>
     </tr>
     <tr>
-        <td width="40%">Layout:<select id="layout-select"><option id="layoutOptionDummy">Dummy</option></select></td>
-        <td width="60%">Configuration:<select id="config-select"><option id="configOptionDummy">Dummy</option></select></td>
+        <td width="40%">Layout:<select id="layout-select"><option id="layoutOptionCustom">Custom</option></select></td>
+        <td width="60%">Configuration:<select id="config-select"><option id="configOptionCustom">Custom</option></select></td>
     </tr>
-    <tr style="min-height:100px">
-        <td width="40%"><TextArea id="layout-input" class="preformatted" rows="6" cols="34"></TextArea></td>
-        <td width="60%"><TextArea id="config-input" class="preformatted" rows="6" cols="40"></TextArea></td>
+    <tr>
+        <td colspan="2">
+            <div style="position:relative">
+                <div id="keyboard-panel-fingers" class="keyboard-panel preformatted" style="min-height:100px"></div>
+                <div style="position:absolute;right:12px;top:32px"><button id="edit-input-button">Edit</button></div>
+            </div>
+        </td>
     </tr>
     <tr>
         <td colspan="2" class="center"><button id="analyze-button" onclick="callResizeIframe()">Analyze!</button></td>
     </tr>
     <tr>
         <td colspan="2">
-            <div id="keyboard-panel">
-                <div id="keyboard-panel-fingers" class="preformatted" style="display:block;font-size:125%;padding:0.5ex"></div>
-                <div id="keyboard-panel-heatmap" class="preformatted" style="display:none"></div>
-                <div id="keyboard-panel-options" style="padding:0.5ex;font-size: 80%;">
-                    &nbsp;&nbsp;<input id="keyboard-option-fingers" type="radio" name="keyboard-panel-option" value="fingers" checked="checked"/>
-                    <label for="keyboard-option-fingers">Fingers</label>
-                    &nbsp;&nbsp;<input id="keyboard-option-heatmap" type="radio" name="keyboard-panel-option" value="heatmap"/>
-                    <label for="keyboard-option-heatmap">Heatmap</label>
-                </div>
-            </div>
+            <div id="keyboard-panel-heatmap" class="keyboard-panel preformatted" style="display:none"></div>
         </td>
     </tr>
     <tr>
-        <td colspan="2"><div id="output-panel" class="preformatted" style="margin:0.5ex;padding:0.5ex;min-height:500px"></div></td>
+        <td colspan="2"><div id="output-panel" class="output-panel preformatted" style="margin:0.5ex;padding:0.5ex;min-height:540px"></div></td>
     </tr>
 </table>
 </div>
 
+<div id="edit-input-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-input-button" class="modal-close">&times;</span>
+        <h4>Input Layout:</h4>
+        <TextArea id="modal-layout-input" class="preformatted" rows="5" cols="48"></TextArea>
+        <h4>Input Keyboard Configuration:</h4>
+        <TextArea id="modal-config-input" class="preformatted" rows="10" cols="48"></TextArea>
+        <br/>
+        <div class="center">
+        <button id="save-input-button">Save</button>
+        </div>
+    </div>
+</div>
+
 <div id="help-modal" class="modal">
     <div class="modal-content">
-        <span id="close-button" class="modal-close">&times;</span>
+        <span id="close-help-button" class="modal-close">&times;</span>
         <h3>Keyboard Analysis Tool - Help</h3>
-        <p>Select a layout from the list provided, or enter in your own in the top-left panel.
-            The format is simply 3 or 4 rows of characters representing the layout.
-            The three rows represent the main section of the keyboard. If you enter 4 rows, the top row
-            will be assumed to the number row.</p>
-        <p>Select a preset keyboard configuration or enter your custom values in the top-right panel.
-            You can also adjust penalty values for same-finger and neighbour-finger bigrams, and
+        <p>Select a layout and a keyboard configuration from the provided list of presets. You
+            can edit both the layout and the configuration by clicking on the Edit button.</p>
+        <p>To enter a custom layout, the format is simply 3 or 4 rows of characters representing each key.
+            Three rows represent the main, letter section of the keyboard. If you enter 4 rows, the top row
+            is be assumed to the number row.</p>
+        <p>In the configuration panel, you can also specify the keyboard type, the key-effort weights,
+            adjust penalty values for same-finger and neighbour-finger bigrams, and
             define the finger that should be used for each key.
-            Ensure the number of entries in the 'Effort' and 'Fingers' sections correspond 1-to-1 with your layout.
+            Ensure the number of entries in the 'Effort' and 'Fingers' sections correspond with your layout.
         <p>See the layout comparison page for more explanation of the parameters used in the model.</p>
     </div>
 </div>
@@ -156,21 +180,39 @@
 </body>
 
 <script type="text/javascript">
+    var edit_input_modal = document.getElementById("edit-input-modal");
+    var edit_input_button = document.getElementById("edit-input-button");
+    var close_input_button = document.getElementById("close-input-button");
+
+    edit_input_button.onclick = function() {
+        //populate modal with current text
+        document.getElementById("modal-layout-input").value = document.getElementById("layout-input").value
+        document.getElementById("modal-config-input").value = document.getElementById("config-input").value
+        edit_input_modal.style.display = "block";
+    }
+
+    close_input_button.onclick = function() {
+        edit_input_modal.style.display = "none";
+    }
+
     var help_modal = document.getElementById("help-modal");
     var help_button = document.getElementById("help-button");
-    var close_button = document.getElementById("close-button");
+    var close_help_button = document.getElementById("close-help-button");
 
     help_button.onclick = function() {
         help_modal.style.display = "block";
     }
 
-    // When the user clicks on close or clicks anywhere outside of the modal, close it
-    close_button.onclick = function() {
+    close_help_button.onclick = function() {
         help_modal.style.display = "none";
     }
+
+    // If user clicks anywhere outside of a modal, close it
     window.onclick = function(event) {
         if (event.target == help_modal) {
             help_modal.style.display = "none";
+        } else if (event.target == edit_input_modal) {
+            edit_input_modal.style.display = "none";
         }
     }
 </script>
