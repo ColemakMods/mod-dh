@@ -1,4 +1,4 @@
-package io.github.colemakmods;
+package io.github.colemakmods.mod_dh;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

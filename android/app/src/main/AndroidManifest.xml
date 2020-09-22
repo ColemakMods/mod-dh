@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.github.colemakkods.moddhkeyboard"
+    package="io.github.colemakmods.mod_dh"
     android:versionCode="1"
     android:versionName="1.0">
-
-    <uses-sdk
-        android:minSdkVersion="16"
-        android:targetSdkVersion="17" />
 
     <uses-feature
         android:name="android.hardware.touchscreen"
