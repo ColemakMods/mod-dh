@@ -22,5 +22,19 @@
 		<key>TISIntendedLanguage</key>
 		<string>en</string>
 	</dict>
+	<key>KLInfo_Colemak DHm</key>
+	<dict>
+		<key>TISInputSourceID</key>
+		<string>org.sil.ukelele.keyboardlayout.colemakdh-ansi.colemakdhm</string>
+		<key>TISIntendedLanguage</key>
+		<string>en</string>
+	</dict>
+	<key>KLInfo_Colemak DHm Extended</key>
+	<dict>
+		<key>TISInputSourceID</key>
+		<string>org.sil.ukelele.keyboardlayout.colemakdh-ansi.colemakdhmextended</string>
+		<key>TISIntendedLanguage</key>
+		<string>en</string>
+	</dict>
 </dict>
 </plist>

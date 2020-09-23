@@ -32,7 +32,8 @@ To use a KLC file, load it into Keyboard Layout Creator and use the menu option 
 
 **US Mod-DH (alternative home):**  
 [Download KLC](moddh-ansi-us-alt.klc?raw=true)  
-
+[Download zip](moddh-ansi-us-alt.zip?raw=true)  
+![US Mod-DH (full)](moddh-ansi-us-alt.jpg)
 
 ## Matrix keyboard  
 
