@@ -2,6 +2,10 @@
 .caption {margin-left: 20px; margin-right: 20px; font-size: smaller; text-align: center;}
 .center {margin-left: auto; margin-right: auto; display: block;}
 
+.figure {
+	max-width: 600px;
+}
+
 a.menu {
 	-webkit-font-smoothing: antialiased;
 	font-weight: normal;
@@ -15,14 +19,61 @@ a.menu.selected {
 }
 
 td img {
-  display: inline;
-  margin: 0;
-  padding: 0;
-  vertical-align: middle;
-  text-align: center;
-  border: none;
+	display: inline;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	text-align: center;
+	border: none;
 }
 
 span {
-  white-space: nowrap;
+	white-space: nowrap;
+}
+
+/* styles for slideshow */
+
+.slideshow-container {
+	position: relative;
+	margin: auto;
+}
+
+.slide_prev, .slide_next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -40px;
+	padding: 12px;
+	color: #555;
+	font-weight: bold;
+	font-size: 30px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+.slide_next {
+	right: 0;
+}
+
+.slide_prev:hover, .slide_next:hover {
+	background-color: rgba(0,0,0,0.5);
+}
+
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.0s;
+	animation-name: fade;
+	animation-duration: 1.0s;
+}
+
+@-webkit-keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+}
+
+@keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
 }

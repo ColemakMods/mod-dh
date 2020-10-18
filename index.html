@@ -21,9 +21,34 @@
 
       ga('create', 'UA-56831209-1', 'auto');
       ga('send', 'pageview');
-    </script>    
+    </script>
+    <script>
+    var slideIndex = 0;
+    var slideCallback;
+
+    function advanceSlide(n, auto) {
+        slideIndex+=n;
+        showSlide(auto)
+    }
+
+    function showSlide(auto){
+      var i;
+      var slides = document.getElementsByClassName("slide");
+      if (slideIndex >= slides.length) {slideIndex = 0}
+      if (slideIndex < 0) {slideIndex = slides.length-1}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slides[slideIndex].style.display = "block";  
+      // show next slide after a delay
+      clearTimeout(slideCallback);
+      if (auto) {
+        slideCallback = setTimeout(function(){advanceSlide(1, true)}, 12000);
+      }
+    }
+    </script>
   </head>
-  <body>
+  <body onLoad="showSlide(true)">
     <div class="wrapper">
       <header>
         <h1 class="header">Colemak Mod-DH</h1>
@@ -47,7 +72,6 @@
         <p class="header">This project is maintained by <a class="header name" href="https://github.com/ColemakMods">ColemakMods</a></p>
         -->
 
-
       </header>
       <section>
       
@@ -56,9 +80,25 @@
 
 <p>Colemak Mod-DH introduces a minor modification to the <a href="http://colemak.com/">Colemak</a> keyboard layout, designed to make typing more comfortable. The resulting layout is commonly known as <nobr><i><b>Colemak-DH</b></i></nobr>, with a variant for matrix-like keyboards called <nobr><i><b>Colemak-DHm</b></i></nobr>.</p>
 
-<p class="caption"><img src="gfx/mod_dh_main.png"/><br/>
-Colemak Mod-DH main keys, shown for an ISO keyboard. Keys are colored according to the finger that should be used. The 10 most common English letters are assigned to the 10 easiest keys (highlighted in red).
+<div class="slideshow-container">
+
+<div class="slide fade">
+<p class="caption"><img class="figure" src="gfx/mod_dh_main.png"/><br/>
+Colemak Mod-DH main keys for an ISO keyboard, known as <i>Colemak-DH</i>.<br/>
+Keys are colored according to the finger that should be used. The 10 most common English letters are assigned to the 10 easiest keys (highlighted&nbsp;in&nbsp;red).
 </p>
+</div>
+
+<div class="slide fade" style="display:none">
+<p class="caption"><img class="figure" src="gfx/mod_dhm_main.png"/><br/>
+Colemak Mod-DH main keys for a matrix-like keyboard, known as <i>Colemak-DHm</i>.<br/>
+Keys are colored according to the finger that should be used. The 10 most common English letters are assigned to the 10 easiest keys (highlighted&nbsp;in&nbsp;red).
+</p>
+</div>
+<a class="slide_prev" onclick="advanceSlide(-1, false)">&#10094;</a>
+<a class="slide_next" onclick="advanceSlide(1, false)">&#10095;</a>
+
+</div>
 
 <p>Colemak is a great layout, but that doesn't mean it's impossible to improve on! The idea behind Mod&#8209DH is that by making an adjustment to the placement of a small number of keys, it is possible to gain a significant improvement in ergonomics and comfort. See this <a href="./compare.html">comparison of Mod-DH</a> with other layouts.</p>
 
@@ -68,7 +108,7 @@ Colemak Mod-DH main keys, shown for an ISO keyboard. Keys are colored according 
 <ul>
 <li>Places the heavily used D and H keys in more comfortable and easier-to-reach positions.</li>
 <li>Moves G to a slightly easier position also, reverting to its placement in Qwerty.</li>
-<li>Reduces usage of the difficult-to-reach center column by about half.</li>
+<li>Reduces usage of the difficult-to-reach centre column by about half.</li>
 <li>Utilizes the "Angle Mod" (<a href="#angle-mod">see below</a>) to promote a more comfortable, symmetrical typing posture.</li></iu>
 <li>Retains Colemak's many other strengths, such as its home key placement and low rate of same-finger bigrams.</li>
 <li>No keys change fingers from standard Colemak, making it easy to adopt for existing Colemak users.</li>
