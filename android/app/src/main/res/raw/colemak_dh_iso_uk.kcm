@@ -1,0 +1,256 @@
+# Colemak Mod-DH ISO UK
+
+type OVERLAY
+
+map key   16    Q
+map key   17    W
+map key   18    F
+map key   19    P
+map key   20    B
+map key   21    J
+map key   22    L
+map key   23    U
+map key   24    Y
+map key   25    SEMICOLON
+
+map key   30    A
+map key   31    R
+map key   32    S
+map key   33    T
+map key   34    G
+map key   35    M
+map key   36    N
+map key   37    E
+map key   38    I
+map key   39    O
+map key   40    APOSTROPHE
+map key   43    HENKAN
+
+map key   86    Z
+map key   44    X
+map key   45    C
+map key   46    D
+map key   47    V
+map key   48    BACKSLASH
+map key   49    K
+map key   50    H
+
+key 2 {
+    label:                              '2'
+    base:                               '2'
+    shift:                              '"'
+}
+
+key 3 {
+    label:                              '3'
+    base:                               '3'
+    shift:                              '\u00A3'
+}
+
+key APOSTROPHE {
+    label:                              '\''
+    base:                               '\''
+    shift:                              '@'
+}
+
+key HENKAN {
+    label:                              '#'
+    base:                               '#'
+    shift:                              '~'
+}
+
+# *B*reve
+key B {
+  base: 'b'
+  capslock, shift: 'B'
+  capslock+shift: 'b'
+  ralt, shift+ralt: '\u0306'
+}
+
+# cedilla
+key COMMA {
+  base: ','
+  shift: '<'
+  ralt, shift+ralt: '\u0327'
+}
+
+# *D*iaeresis
+key D {
+  base: 'd'
+  capslock, shift: 'D'
+  capslock+shift: 'd'
+  ralt, shift+ralt: '\u0308'
+}
+
+# acu*T*e and double acute
+key T {
+  base: 't'
+  capslock, shift: 'T'
+  capslock+shift: 't'
+  ralt: '\u0301'
+  ralt+shift: '\u030B'
+}
+
+# g*R*ave
+key R {
+  base: 'r'
+  capslock, shift: 'R'
+  capslock+shift: 'r'
+  ralt, ralt+shift: '\u0300'
+}
+
+# *H*áček (caron)
+key H {
+  base: 'h'
+  capslock, shift: 'H'
+  capslock+shift: 'h'
+  ralt, ralt+shift: '\u030C'
+}
+
+# o*G*onek
+key G {
+  base: 'g'
+  capslock, shift: 'G'
+  capslock+shift    : 'g'
+  ralt, ralt+shift: '\u0328'
+}
+
+# *M*acron
+key M {
+  base: 'm'
+  capslock, shift: 'M'
+  capslock+shift: 'm'
+  ralt, ralt+shift: '\u0304'
+}
+
+# tilde
+key GRAVE {
+  base: '`'
+  shift: '~'
+  ralt, ralt+shift: '\u0303'
+}
+
+# ring
+key K {
+  base: 'k'
+  capslock, shift: 'K'
+  capslock+shift: 'k'
+  ralt, ralt+shift: '\u030A'
+}
+
+# dot
+key PERIOD {
+  base: '.'
+  shift: '>'
+  ralt, ralt+shift: '\u0307'
+}
+
+# circumfle*X*
+key X {
+  base: 'x'
+  capslock, shift: 'X'
+  ralt, ralt+shift: '\u0302'
+  capslock+shift: 'x'
+}
+
+key Q {
+  base: 'q'
+  capslock, shift: 'Q'
+  capslock+shift: 'q'
+}
+
+key W {
+  base: 'w'
+  capslock, shift: 'W'
+  capslock+shift: 'w'
+}
+
+key F {
+  base: 'f'
+  capslock, shift: 'F'
+  capslock+shift: 'f'
+}
+
+key P {
+  base: 'p'
+  capslock, shift: 'P'
+  capslock+shift: 'p'
+}
+
+key J {
+  base: 'j'
+  capslock, shift: 'J'
+  capslock+shift: 'j'
+}
+
+key L {
+  base: 'l'
+  capslock, shift: 'L'
+  capslock+shift: 'l'
+}
+
+key U {
+  base: 'u'
+  capslock, shift: 'U'
+  capslock+shift: 'u'
+}
+
+key Y {
+  base: 'y'
+  capslock, shift: 'Y'
+  capslock+shift: 'y'
+}
+
+key A {
+  base: 'a'
+  capslock, shift: 'A'
+  capslock+shift: 'a'
+}
+
+key S {
+  base: 's'
+  capslock, shift: 'S'
+  capslock+shift: 's'
+}
+
+key N {
+  base: 'n'
+  capslock, shift: 'N'
+  capslock+shift: 'n'
+}
+
+key E {
+  base: 'e'
+  capslock, shift: 'E'
+  capslock+shift: 'e'
+}
+
+key I {
+  base: 'i'
+  capslock, shift: 'I'
+  capslock+shift: 'i'
+}
+
+key O {
+  base: 'o'
+  capslock, shift: 'O'
+  capslock+shift: 'o'
+}
+
+key Z {
+  base: 'z'
+  capslock, shift: 'Z'
+  capslock+shift: 'z'
+}
+
+key C {
+  base: 'c'
+  capslock, shift: 'C'
+  capslock+shift: 'c'
+}
+
+key V {
+  base: 'v'
+  capslock, shift: 'V'
+  capslock+shift: 'v'
+}
