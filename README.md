@@ -29,6 +29,10 @@ Alternatively, keymap files can be generated yourself by running `generate` scri
 
 Colemak-DH mappings for OS X have been contributed in the ![download](gfx/arrow-circle-down.png)[**OS_X folder**](OS_X/)
 
+## Cross platform (Windows, Linux, Mac): KMonad configurations
+
+There are Colemak-DH configurations for the [KMonad](https://github.com/david-janssen/kmonad) program. This application allows manipulation of the raw input from the keyboard device, allowing arbitrary and advanced remapping in a cross-platform friendly way. See the ![download](gfx/arrow-circle-down.png)[**KMonad folder**](kmonad/) for configuration files.
+
 ## Android: APK for physical keyboard
 
 An Android Application Package (APK), with source files, is available, allowing you to type Colemak-DH on a physical keyboard connected to your Android device. See the ![download](gfx/arrow-circle-down.png)[**android section**](android/) for detailed instructions.
