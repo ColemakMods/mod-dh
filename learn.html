@@ -49,15 +49,13 @@
       </header>
       <section>
       
-<h3><a name="mod-dh-compare-layouts" class="anchor" href="#mod-dh-compare-layouts">
-<span class="octicon octicon-link"></span></a>Colemak Mod-DH - How easy to learn?</h3>
+<h2><a name="mod-dh-compare-layouts" class="anchor" href="#mod-dh-compare-layouts"></a>Colemak Mod-DH - How easy to learn?</h2>
 
 <p>On this page is a consideration of how relatively easy or difficult various keyboard layouts are to learn, <b>assuming a starting point of Qwerty</b>. A commonly used simple measure is to count how many keys change position. But it would be useful to have an overall measure of how difficult to learn (i.e. how <i>different</i>) a layout is, which would take into account various relevant factors, to produce a well-defined Switching Difficulty Index.</p>
 
 <p>Presented here is one such proposal. See the <a href="#explanation">explanation</a> below for a more detailed discussion of the model used to produce these results.</p>
 
-<h3><a name="difficulty-index" class="anchor" href="#difficulty-index"">
-<span class="octicon octicon-link"></span></a>The Switching Difficulty Index</h3>
+<h3><a name="difficulty-index" class="anchor" href="#difficulty-index">»&nbsp;</a>The Switching Difficulty Index</h3>
 
 <p>I propose the following scheme which would be used to measure how "different" two layouts are - or to put it another way, how difficult it would be to learn one from the starting point of another (usually Qwerty!).</p>
 
@@ -71,8 +69,7 @@
 
 <p>For the purposes of this analysis I am considering only the 30 keys in the main section of the keyboard. Calculating the Switching Difficulty Index for a selection of keyboard layouts gives these results:</p>
 
-<h3><a name="compare-results" class="anchor" href="#compare-results">
-<span class="octicon octicon-link"></span></a>Results</h3>
+<h3><a name="compare-results" class="anchor" href="#compare-results">»&nbsp;</a>Results</h3>
 
 <table style="width:90%; margin-left:auto; margin-right:auto;">
 <tr> <td></td> <td>Keys<br/>Moved<br/>Finger</td> <td>Keys<br/>Moved<br/>Total</td> <td>Keys Moved<br/>Index<br/><span style="font-size: 200%; vertical-align:middle">Σ</span> m</td> <td>Switching<br/>Difficulty<br/>Index (d)</td> </tr>
@@ -109,8 +106,7 @@
 
 <p>For an assessment of the effectiveness of the various layouts, see this <a href="./compare.html">comparison</a>.</p>
 
-<h3><a name="explanation" class="anchor" href="#explanation">
-<span class="octicon octicon-link"></span></a>Explanation of model</h3>
+<h3><a name="explanation" class="anchor" href="#explanation">»&nbsp;</a>Explanation of model</h3>
 
 <p>There are many possible factors one may want to include in a model of switching difficulty. Some examples are:<br/>
 - the number of keys that move;<br/>
@@ -119,8 +115,7 @@
 - whether a key moves to an easier or more difficult position<br/>
 - the frequency with which a particular key occurs<br/>
 
-<h4><a name="explanation-m" class="anchor" href="#explanation-m">
-<span class="octicon octicon-link"></span></a>Key Movement Score</h4>
+<h4><a name="explanation-m" class="anchor" href="#explanation-m"></a>Key Movement Score</h4>
 
 <p>It may be presumed that a key that moves but remains typed with the same finger, might be easier to relearn compared to one that moves to an adjacent finger, due to the reduced impact on muscle memory. Likewise, a key that switches to a new finger on the other hand, would be significantly more disruptive. The model assigns a key movement value (m) based as follows:</p>
 
@@ -133,8 +128,8 @@
 1.00 = moved to other finger on other hand.<br/>
 </p>
 
-<h4><a name="explanation-f" class="anchor" href="#explanation-f">
-<span class="octicon octicon-link"></span></a>Key Frequency</h4>
+<h4><a name="explanation-f" class="anchor" href="#explanation-f"></a>Key Frequency</h4>
+
 <p>We might also want consider the frequency of the key in question. Consider if you were to move the E key on your keyboard. Because E is so common, it would be extremely disruptive and might take a long time to be able to type efficiently again with it in a new location, whereas moving J might have a minimal impact since it's so rarely typed. On the other hand, it might be argued that a more frequent key can be learned faster precisely because it is so frequently typed, so the disruption might be initially severe but less long-lasting. Hence the level of impact of key frequency on the ease of learning is a matter of debate!</p>
 
 <p>In the model used here, the effect of key frequency is assumed to be non-linear, so that while a more frequent key is harder to learn than an infrequent one, but it is recognised that the difficulty decreases as that key is practised more. This is based on the well-known idea of <a href="https://en.wikipedia.org/wiki/Experience_curve_effects">Experience Curves</a>, in which experience of previous production (<span style="math">P<sub>1</sub></span>) reduces the cost of future production (<span style="math">P<sub>x</sub></span>), the strength of the effect determined by the parameter b.</p> 
