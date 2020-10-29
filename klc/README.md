@@ -19,10 +19,10 @@ To use a KLC file, load it into Keyboard Layout Creator and use the menu option 
 [Download zip](colemak_dh_ansi_us_wide.zip?raw=true)  
 ![US Colemak-DH (wide)](colemak_dh_ansi_us_wide.jpg)  
 
-**US ANSI Colemak-DH (alternative home):**  
-[Download KLC](colemak_dh_ansi_us_althome.klc?raw=true)  
-[Download zip](colemak_dh_ansi_us_althome.zip?raw=true)  
-![US Colemak-DH (althome)](colemak_dh_ansi_us_althome.jpg)  
+**US ANSI Colemak-DH "A-wing":**  
+[Download KLC](colemak_dh_ansi_us_awing.klc?raw=true)  
+[Download zip](colemak_dh_ansi_us_awing.zip?raw=true)  
+![US Colemak-DH (althome)](colemak_dh_ansi_us_awing.jpg)  
 
 ## ISO (UK) keyboard
 
