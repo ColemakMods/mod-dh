@@ -25,9 +25,9 @@ To quickly try out Colemak-DH, there are mapping files for [xmodmap](http://www.
 
 Alternatively, keymap files can be generated yourself by running `generate` script in ![download](gfx/arrow-circle-down.png)[**generate-linux-keymaps**](generate-linux-keymaps/).
 
-## Mac OS X: Installable bundle
+## macOS: Installable bundle
 
-Colemak-DH mappings for OS X have been contributed in the ![download](gfx/arrow-circle-down.png)[**OS_X folder**](OS_X/)
+Colemak-DH mappings for macOS have been contributed in the ![download](gfx/arrow-circle-down.png)[**macOS folder**](macOS/)
 
 ## Cross platform (Windows, Linux, Mac): KMonad configurations
 
