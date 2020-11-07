@@ -1,4 +1,8 @@
-! xmodmap for the Colemak Mod-DH layout (US, ANSI keyboard, Z angle mod).
+! xmodmap for the Colemak Mod-DH layout (US, Matrix keyboard).
+!
+! NOTE: This layout file is NOT recommended on standard, staggered keyboards at it will not correctly apply the Angle Mod.
+! It is recommended to use the approprite ANSI or ISO layout file instead.
+! 
 ! http://colemakmods.github.io/mod-dh/.
 ! Public domain.
 
