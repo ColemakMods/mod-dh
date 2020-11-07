@@ -42,7 +42,7 @@ keycode  46  =  e             E            eacute                Eacute
 keycode  47  =  i             I            iacute                Iacute
 keycode  48  =  o             O            oacute                Oacute
 
-keycode  94  =  minus         underscore   endash                emdash
+keycode  94  =  z             Z            ae                    AE
 keycode  50  =  z             Z            ae                    AE
 keycode  52  =  x             X            dead_circumflex       asciitilde
 keycode  53  =  c             C            ccedilla              Ccedilla

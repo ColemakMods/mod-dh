@@ -42,7 +42,7 @@ keycode  46  =  i             I            iacute                Iacute
 keycode  47  =  o             O            oacute                Oacute
 keycode  48  =  apostrophe    quotedbl     otilde                Otilde
 
-keycode  94  =  minus         underscore   endash                emdash
+keycode  94  =  z             Z            ae                    AE
 keycode  52  =  x             X            dead_circumflex       asciitilde
 keycode  53  =  c             C            ccedilla              Ccedilla
 keycode  54  =  d             D            dead_diaeresis        asciitilde

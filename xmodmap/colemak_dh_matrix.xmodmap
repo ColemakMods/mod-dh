@@ -1,4 +1,4 @@
-! xmodmap for the Colemak Mod-DH layout (US, ANSI keyboard, Fat-Z angle mod).
+! xmodmap for the Colemak Mod-DH layout (US, ANSI keyboard, Z angle mod).
 ! http://colemakmods.github.io/mod-dh/.
 ! Public domain.
 
@@ -42,20 +42,18 @@ keycode  46  =  i             I            iacute                Iacute
 keycode  47  =  o             O            oacute                Oacute
 keycode  48  =  apostrophe    quotedbl     otilde                Otilde
 
-keycode  50  =  z             Z            ae                    AE
-keycode  94  =  z             Z            ae                    AE
-keycode  52  =  x             X            dead_circumflex       asciitilde
-keycode  53  =  c             C            ccedilla              Ccedilla
-keycode  54  =  d             D            dead_diaeresis        asciitilde
-keycode  55  =  v             V            oe                    OE
-keycode  56  =  Alt_L         Meta_L
+keycode  94  =  minus         underscore   endash                emdash
+keycode  52  =  z             Z            ae                    AE
+keycode  53  =  x             X            dead_circumflex       asciitilde
+keycode  54  =  c             C            ccedilla              Ccedilla
+keycode  55  =  d             D            dead_diaeresis        asciitilde
+keycode  56  =  v             V            oe                    OE
 keycode  57  =  k             K            dead_abovering        asciitilde
 keycode  58  =  h             H            dead_caron            asciitilde
 keycode  59  =  comma         less         dead_cedilla          asciitilde
 keycode  60  =  period        greater      dead_abovedot         asciitilde
 keycode  61  =  slash         question     questiondown          asciitilde
 
-keycode  64  =  Shift_L
 keycode  65  =  space         space        space                 nobreakspace
 
 keycode 108 =  Mode_switch Mode_switch
