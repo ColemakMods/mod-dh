@@ -43,7 +43,7 @@
       // show next slide after a delay
       clearTimeout(slideCallback);
       if (auto) {
-        slideCallback = setTimeout(function(){advanceSlide(1, true)}, 12000);
+        slideCallback = setTimeout(function(){advanceSlide(1, true)}, 8000);
       }
     }
     </script>
@@ -87,11 +87,19 @@ Keys are colored according to the finger that should be used. The 10 most common
 </div>
 
 <div class="slide fade" style="display:none">
+  <p class="caption"><img class="figure" src="gfx/colemak_dh_main_ansi.png"/><br/>
+  Colemak Mod-DH main keys for a ANSI keyboard (default configuration), known as <i>Colemak-DH</i>.<br/>
+  Keys are colored according to the finger that should be used. The 10 most common English letters are assigned to the 10 easiest keys (highlighted&nbsp;in&nbsp;red).
+  </p>
+</div>
+
+<div class="slide fade" style="display:none">
 <p class="caption"><img class="figure" src="gfx/colemak_dh_main_matrix.png"/><br/>
-Colemak Mod-DH main keys for a matrix-like keyboard, known as <i>Colemak-DHm</i>.<br/>
+Colemak Mod-DH main keys for a matrix-like keyboard, known as <i>Colemak-DH</i> (formerly <i>Colemak-DHm</i>).<br/>
 Keys are colored according to the finger that should be used. The 10 most common English letters are assigned to the 10 easiest keys (highlighted&nbsp;in&nbsp;red).
 </p>
 </div>
+  
 <a class="slide_prev" onclick="advanceSlide(-1, false)">&#10094;</a>
 <a class="slide_next" onclick="advanceSlide(1, false)">&#10095;</a>
 
