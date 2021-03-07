@@ -28,10 +28,13 @@
       params = loc.split('?')[1];
       iframe = document.getElementById('iframe');
       iframe.src = 'webapp/index.html?' + params;
+      resizeIframe();
     }
     function resizeIframe() {
-      iframe = document.getElementById('iframe');
-      iframe.style.height = iframe.contentWindow.document.documentElement.scrollHeight + 'px';
+      setTimeout(function() {
+        iframe = document.getElementById('iframe');
+        iframe.style.height = iframe.contentWindow.document.documentElement.scrollHeight + 'px';
+      }, 500);
     }
     </script>
   </head>
@@ -65,7 +68,7 @@
 
 <p>This is a tool for analyzing keyboard layouts, according to the two factors described in the <a href="compare.html">layout comparison</a> page. You can compare some well known layouts or try out your own. Importantly, you can modify the input values - effort weights and bigrams penalties - to whatever you think they should be!</p>
 
-<iframe id="iframe" width="680" height="800" frameborder="0" style="border:none;">
+<iframe id="iframe" width="680" height="860" frameborder="0" style="border:none;">
 </iframe>
 
 <h3><a name="keyboard-configurations" class="anchor" href="#keyboard-configurations">»&nbsp;</a>Keyboard Configurations</h3>

@@ -58,25 +58,25 @@
       
 <h2><a name="mod-dh-compare-layouts" class="anchor" href="#mod-dh-compare-layouts"></a>Colemak Mod-DH - Comparing Layouts</h2>
 
-<p>Finding a way to objectively compare keyboards layouts is not an easy task. There are many different factors to consider, as well as how much weight should be given to each factor. Scoring systems are highly subjective.</p> 
+<p>Finding a way to objectively compare keyboards layouts is not an easy task. There are many different factors to consider, as well as how much weight should be given to each factor. Scoring systems can be highly subjective.  Nonetheless, such a system has been developed for just this purpose by taking into account several of the factors that drive efficient and comfortable keyboard use.</p>
 
-<p>Nonetheless, here is an attempt to compare several layouts with <a href="./">Colemak Mod-DH</a>. It uses a fairly simple scoring system that simulates typing a large volume of standard English text<a href="#notes">¹</a>, and scores each according to (in my view) the two most important considerations for keyboard layout design:
+<p>The scoring system used here simulates typing a large volume of standard English text<a href="#notes">¹</a>, and rates each layout according to (in my view) the two most important considerations for keyboard layout design:
 </p>
 
-<p>1. A base effort value based on the ease with which each key can be typed:</p>
+<p>1. A base effort value based on the ease with which each key can be typed on average. This base effort value has been calculated using the <a href="https://stevep99.github.io/keyboard-effort-grid/">Typing Effort Model described here</a>.</p>
  
 <p class="caption">
 <span id="keyboard_scores_ergonomic" style="display:block">
-  <img src="gfx/keyboard_scores_ergonomic.png"/>
+  <img src="gfx/keyboard_calc_std_ergonomic_scores.png"/>
 </span>
 <span id="keyboard_scores_traditional" style="display:none">
-  <img src="gfx/keyboard_scores_traditional.png"/>
+  <img src="gfx/keyboard_calc_std_traditional_scores.png"/>
 </span>
 <span id="keyboard_scores_alternative" style="display:none">
-  <img src="gfx/keyboard_scores_alternative.png"/>
+  <img src="gfx/keyboard_calc_std_alternative_scores.png"/>
 </span>
 <span id="keyboard_scores_matrix" style="display:none">
-  <img src="gfx/keyboard_scores_matrix.png"/>
+  <img src="gfx/keyboard_calc_matrix_scores.png"/>
 </span>
 &nbsp;&nbsp;Keyboard Configuration<a href="#notes">²</a>:
 &nbsp;&nbsp;<a onclick="showScores('keyboard_scores_ergonomic')">Ergonomic</a>
@@ -93,7 +93,7 @@
 <td><b><u>Bigram Penalties</u></b></td><td>same-row</td><td>row jump:<br/>top ⟷ middle<br />middle ⟷ bottom</td><td>row jump:<br/>top ⟷ bottom</td>
 </tr>
 <tr>
-<td>same-finger bigrams</td><td>2.5</td><td>2.5</td><td>3.5</td>
+<td>same-finger bigrams</td><td>2.5</td><td>3.0</td><td>4.0</td>
 </tr>
 <tr>
 <td>pinky-ring bigrams</td><td>0.5</td><td>1.0</td><td>1.5</td>
@@ -113,67 +113,67 @@
 <tr> <td>Layout</td> <td>keyboard<br/>config<a href="#notes">²</a></td><td>base effort<br/>per key</td> <td>same-finger<br/>bigrams percent</td> <td> bigram<br/>penalties</td> <td> overall score<br/>effort per key</td> </tr>
 <tr class="highlight">
     <td>Colemak-DH <a href="https://colemakmods.github.io/mod-dh/" target="new_win"><img src="gfx/open.png"/></a></td> 
-    <td>matrix</td> <td>1.599</td> <td>1.52%</td> <td>0.067</td> <td>1.665</td>
+    <td>matrix</td> <td>1.661</td> <td>1.67%</td> <td>0.065</td> <td>1.726</td>
 </tr>
 <tr class="highlight">
     <td>Colemak-DH <a href="https://colemakmods.github.io/mod-dh/" target="new_win"><img src="gfx/open.png"/></a></td> 
-    <td>ergonomic</td> <td>1.605</td> <td>1.52%</td> <td>0.067</td> <td>1.672</td>
+    <td>ergonomic</td> <td>1.670</td> <td>1.67%</td> <td>0.065</td> <td>1.735</td>
 </tr>
 <tr> 
-  <td>Soul <a href="http://kennetchaz.github.io/symmetric-typing/soul.html" target="new_win"><img src="gfx/open.png"/></a></td>
-  <td>alternative</td> <td>1.618</td> <td>1.67%</td> <td>0.070</td> <td>1.688</td>
-</tr>
-<tr> 
-    <td>Workman <a href="https://workmanlayout.org/" target="new_win"><img src="gfx/open.png"/></a></td>
-    <td>matrix</td> <td>1.604</td> <td>2.96%</td> <td>0.104</td> <td>1.708</td>
+    <td>Soul <a href="http://kennetchaz.github.io/symmetric-typing/soul.html" target="new_win"><img src="gfx/open.png"/></a></td>
+    <td>alternative</td> <td>1.681</td> <td>1.82%</td> <td>0.086</td> <td>1.767</td>
 </tr>
 <tr> 
     <td>MTGAP <a href="https://github.com/kenranunderscore/mtgap-layout" target="new_win"><img src="gfx/open.png"/></a></td>
-    <td>traditional</td> <td>1.682</td> <td>1.12%</td> <td>0.061</td> <td>1.743</td>
+    <td>traditional</td> <td>1.731</td> <td>1.25%</td> <td>0.056</td> <td>1.787</td>
 </tr>
 <tr class="highlight">
     <td>Colemak <a href="https://colemak.com/" target="new_win"><img src="gfx/open.png"/></a></td> 
-    <td>ergonomic</td> <td>1.688</td> <td>1.52%</td> <td>0.067</td> <td>1.755</td>
-</tr>
-<tr> 
-  <td>Niro <a href="http://kennetchaz.github.io/symmetric-typing/niro.html" target="new_win"><img src="gfx/open.png"/></a></td>
-  <td>alternative</td> <td>1.680</td> <td>1.60%</td> <td>0.083</td> <td>1.763</td>
-</tr>
-<tr class="highlight">
-    <td>Colemak <a href="https://colemak.com/" target="new_win"><img src="gfx/open.png"/></a></td> 
-    <td>traditional</td> <td>1.717</td> <td>1.52%</td> <td>0.067</td> <td>1.784</td>
+    <td>ergonomic</td> <td>1.739</td> <td>1.67%</td> <td>0.063</td> <td>1.802</td>
 </tr>
 <tr>
-  <td>Halmak <a href="https://github.com/MadRabbit/halmak" target="new_win"><img src="gfx/open.png"/></a></td> 
-  <td>traditional</td> <td>1.702</td> <td>2.80%</td> <td>0.113</td> <td>1.815</td>
+    <td>Workman <a href="https://workmanlayout.org/" target="new_win"><img src="gfx/open.png"/></a></td>
+    <td>traditional</td> <td>1.710</td> <td>3.15%</td> <td>0.107</td> <td>1.817</td>
+</tr>
+<tr class="highlight">
+    <td>Colemak <a href="https://colemak.com/" target="new_win"><img src="gfx/open.png"/></a></td> 
+    <td>traditional</td> <td>1.773</td> <td>1.67%</td> <td>0.063</td> <td>1.836</td>
 </tr>
 <tr> 
-    <td>Norman <a href="https://normanlayout.info/" target="new_win"><img src="gfx/open.png"/></a></td>
-    <td>traditional</td> <td>1.645</td> <td>6.37%</td> <td>0.195</td> <td>1.840</td>
+    <td>Niro <a href="http://kennetchaz.github.io/symmetric-typing/niro.html" target="new_win"><img src="gfx/open.png"/></a></td>
+    <td>alternative</td> <td>1.739</td> <td>1.75%</td> <td>0.097</td> <td>1.836</td>
+</tr>
+<tr>
+    <td>Halmak <a href="https://github.com/MadRabbit/halmak" target="new_win"><img src="gfx/open.png"/></a></td> 
+    <td>traditional</td> <td>1.760</td> <td>2.96%</td> <td>0.124</td> <td>1.884</td>
 </tr>
 <tr> 
     <td>Asset <a href="http://millikeys.sourceforge.net/asset/" target="new_win"><img src="gfx/open.png"/></a></td>
-    <td>traditional</td> <td>1.748</td> <td>2.99%</td> <td>0.115</td> <td>1.863</td>
-</tr>
-<tr> 
-    <td>qgmlwyfub <a href="http://mkweb.bcgsc.ca/carpalx/?full_optimization" target="new_win"><img src="gfx/open.png"/></a></td>
-    <td>traditional</td> <td>1.744</td> <td>4.58%</td> <td>0.127</td> <td>1.871</td>
+    <td>traditional</td> <td>1.795</td> <td>3.12%</td> <td>0.117</td> <td>1.911</td>
 </tr>
 <tr> 
     <td>Dvorak <a href="http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard" target="new_win"><img src="gfx/open.png"/></a></td>
-    <td>traditional</td> <td>1.837</td> <td>2.57%</td> <td>0.078</td> <td>1.915</td>
+    <td>traditional</td> <td>1.843</td> <td>2.63%</td> <td>0.080</td> <td>1.923</td>
+</tr>
+<tr> 
+    <td>Norman <a href="https://normanlayout.info/" target="new_win"><img src="gfx/open.png"/></a></td>
+    <td>traditional</td> <td>1.711</td> <td>6.42%</td> <td>0.215</td> <td>1.926</td>
+</tr>
+<tr> 
+    <td>qgmlwyfub <a href="http://mkweb.bcgsc.ca/carpalx/?full_optimization" target="new_win"><img src="gfx/open.png"/></a></td>
+    <td>traditional</td> <td>1.793</td> <td>4.66%</td> <td>0.143</td> <td>1.936</td>
 </tr>
 <tr> 
     <td>Qwpr <a href="http://sourceforge.net/projects/qwpr/" target="new_win"><img src="gfx/open.png"/></a></td>
-    <td>traditional</td> <td>1.779</td> <td>3.92%</td> <td>0.143</td> <td>1.922</td>
+    <td>traditional</td> <td>1.830</td> <td>4.06%</td> <td>0.157</td> <td>1.987</td>
 </tr>
 <tr> 
     <td>Minimak-8key <a href="http://www.minimak.org/" target="new_win"><img src="gfx/open.png"/></a></td>
-    <td>traditional</td> <td>1.808</td> <td>4.03%</td> <td>0.136</td> <td>1.944</td>
+    <td>traditional</td> <td>1.863</td> <td>4.10%</td> <td>0.142</td> <td>2.005</td>
 </tr>
 <tr> 
     <td>Qwerty <a href="http://en.wikipedia.org/wiki/QWERTY" target="new_win"><img src="gfx/open.png"/></a></td>
-    <td>traditional</td> <td>2.219</td> <td>6.56%</td> <td>0.212</td> <td>2.431</td>
+    <td>traditional</td> <td>2.169</td> <td>6.58%</td> <td>0.231</td> <td>2.400</td>
 </tr>
 <caption>Comparison of various layouts using the scoring system defined above (lower is better).</caption>
 </table>

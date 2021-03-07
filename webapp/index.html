@@ -14,9 +14,7 @@
     //resize iframe to correct content size
     function callResizeIframe() {
         if (!window.location.pathname.endsWith('/test.html')) {
-            setTimeout(function() {
-                window.parent.resizeIframe();
-            }, 500);
+            window.parent.resizeIframe();
         }
     }
     </script>
@@ -32,7 +30,8 @@
         background-color: #F0F0F0;
         display:block;
         font-size:125%;
-        padding:0.5ex 0.5ex 0.5ex 4ex;
+        padding:0.5ex 2ex 0.5ex 2ex;
+        height: 120px;
     }
     .output-panel {
         background-color: #F0F0F0;
@@ -55,16 +54,10 @@
         display:inline-block;
         text-align: center;
         vertical-align: bottom;
-        padding: 2px 0px;
-        width: 30px;
-        height: 22px;
+        width: 32px;
+        height: 24px;
         border: 1px solid #555555;
         border-radius: 4px;
-        margin: 1px;
-    }
-    .keygap {
-        display:inline-block;
-        margin: 1px;
     }
     .preformatted {
         font-family: monospace;
@@ -110,38 +103,38 @@
 <TextArea id="config-input" style="display: none;"></TextArea>
 
 <div style="position:relative;width:620px">
-<button id="help-button" style="position:absolute;top:6px;right:12px;">&#x1f6c8; Help</button>
-<table style="width:620px; border:2px solid #808080; background-color:#CCCCCC">
-    <tr>
-        <td colspan="2" class="center">
-            <span style="font-size:x-large;margin:1ex">Keyboard Analysis Tool</span>
-            <span id="version-text" style="font-size:small"></span>
-        </td>
-    </tr>
-    <tr>
-        <td width="40%">Layout:<select id="layout-select"><option id="layout-option-custom">Custom</option></select></td>
-        <td width="60%">Configuration:<select id="config-select"><option id="config-option-custom">Custom</option></select></td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <div style="position:relative">
-                <div id="keyboard-panel-fingers" class="keyboard-panel preformatted" style="min-height:100px"></div>
-                <div style="position:absolute;right:12px;top:32px"><button id="edit-input-button">Edit</button></div>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2" class="center"><button id="analyze-button" onclick="callResizeIframe()">Analyze!</button></td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <div id="keyboard-panel-heatmap" class="keyboard-panel preformatted" style="display:none"></div>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2"><div id="output-panel" class="output-panel preformatted" style="margin:0.5ex;padding:0.5ex;min-height:540px"></div></td>
-    </tr>
-</table>
+    <button id="help-button" style="position:absolute;top:6px;right:12px;">&#x1f6c8; Help</button>
+    <table style="width:620px; border:2px solid #808080; background-color:#CCCCCC">
+        <tr>
+            <td colspan="2" class="center">
+                <span style="font-size:x-large;margin:1ex">Keyboard Analysis Tool</span>
+                <span id="version-text" style="font-size:small"></span>
+            </td>
+        </tr>
+        <tr>
+            <td width="40%">Layout:<select id="layout-select"><option id="layout-option-custom">Custom</option></select></td>
+            <td width="60%">Configuration:<select id="config-select"><option id="config-option-custom">Custom</option></select></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div style="position:relative">
+                    <div id="keyboard-panel-fingers" class="keyboard-panel preformatted" style="min-height:100px"></div>
+                    <div style="position:absolute;right:12px;top:32px"><button id="edit-input-button">Edit</button></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="center"><button id="analyze-button" onclick="callResizeIframe()">Analyze!</button></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div id="keyboard-panel-heatmap" class="keyboard-panel preformatted" style="display:none"></div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><div id="output-panel" class="output-panel preformatted" style="margin:0.5ex;padding:0.5ex;min-height:580px"></div></td>
+        </tr>
+    </table>
 </div>
 
 <div id="edit-input-modal" class="modal">
@@ -153,7 +146,7 @@
         <TextArea id="modal-config-input" class="preformatted" rows="10" cols="48"></TextArea>
         <br/>
         <div class="center">
-        <button id="save-input-button">Save</button>
+            <button id="save-input-button">Save</button>
         </div>
     </div>
 </div>
