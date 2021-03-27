@@ -10,11 +10,20 @@ a.menu {
 	-webkit-font-smoothing: antialiased;
 	font-weight: normal;
 	text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
-	padding: 2px 2px 2px 24px;
+	padding: 4px 4px 4px 24px;
+	height: 30px;
+}
+
+a.submenu {
+	-webkit-font-smoothing: antialiased;
+	font-weight: normal;
+	text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
+	padding: 4px 4px 4px 32px;
 	height: 30px;
 }
 
 a.menu.selected {
+	padding-top: 2px;
 	background: url(../images/arrow-right.png) no-repeat;
 }
 

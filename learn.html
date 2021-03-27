@@ -32,8 +32,9 @@
         <ul>
           <li><a class="menu" href="./">About</a></li>
           <li><a class="menu" href="./keyboards.html">Keyboard Types</a></li>
-          <li><a class="menu" href="./compare.html">Compare</a></li>
-          <li><a class="menu selected" href="./learn.html">Switching Difficulty</a></li>
+          <li><a class="menu selected" href="./compare.html">Compare</a></li>
+          <span><a class="submenu" href="./compare.html">Compare Layouts</a></span>
+          <span><a class="submenu" href="./learn.html">Switching Difficulty</a></span>
           <li><a class="menu" href="./analyze.html">Layout Analysis Tool</a></li>
         </ul>
 
@@ -57,15 +58,17 @@
 
 <h3><a name="difficulty-index" class="anchor" href="#difficulty-index">»&nbsp;</a>The Switching Difficulty Index</h3>
 
-<p>I propose the following scheme which would be used to measure how "different" two layouts are - or to put it another way, how difficult it would be to learn one from the starting point of another (usually Qwerty!).</p>
+<p>The following scheme is used to measure how "different" two layouts are - or to put it another way, how difficult it would be to learn one from the starting point of another (usually Qwerty!).</p>
 
-<p>When comparing the two layouts, consider each key, and give it a movement score (m), ranging from 0 to 1 to reflect the degree of difficulty in learning the new position from the old one, depending on whether it moves to key typed with the same finger and/or hand <a href="#explanation-m">(see below)</a>. The sum of these <i>m</i> values for all keys gives a basic measure of overall layout difference the "Keys Moved Index", which is independent of how frequently the keys are typed.</p>
+<p>When comparing the two layouts, consider each key, and give it a movement score (<i>m</i>), ranging from 0 to 1 to reflect the degree of difficulty in learning the new position from the old one, depending on whether it moves to key typed with the same finger and/or hand <a href="#explanation-m">(see below)</a>. The sum of these <i>m</i> values for all keys gives a basic measure of overall layout difference the "Keys Moved Index", which is independent of how frequently the keys are typed.</p>
 
-<p>The model also takes into account the typing frequency of the each key that is moved. To achieve this, an approach based on Experience Curves <a href="#explanation-f">(see below)</a> is used to obtain the frequency-related cost of relearning a key with frequency f (<span style="math">C<sub>f</sub></span>).</p>
+<p>The model also recognises that it's generally easier to learn a new key when it moves to a more comfortable position. Keys that move to less comfortable positions than in the original layout tend to be somewhat more difficult to adapt to. Consequently the ratio of score values (<i>S</i>) representing each position on the keyboard is also included. The position-based score for each key is <a href="https://stevep99.github.io/keyboard-effort-grid/">defined using this model</a>.</p>
 
-<p>Summing both the movement score and frequency cost over all the keys, this gives a formula for the overall "Switching Difficulty Index" (d).</p>
+<p>Finally, the model also takes into account the typing frequency of the each key that is moved. To achieve this, an approach based on Experience Curves <a href="#explanation-f">(see below)</a> is used to obtain the frequency-related cost of relearning a key with frequency f (<span style="math">C<sub>f</sub></span>).</p>
 
-<div class="math">d&nbsp;&nbsp;=&nbsp;&nbsp;<span style="font-size: 200%; vertical-align:middle">&sum;</span> (m × C<sub>f</sub>)</div>
+<p>Summing all these factors over all the moved keys, this gives a formula for the overall "Switching Difficulty Index" (d).</p>
+
+<div class="math">d&nbsp;&nbsp;=&nbsp;&nbsp;<span style="font-size: 200%; vertical-align:middle">&sum;</span> <span style="font-size:120%">(</span> m × C<sub>f</sub> × S<sub>2</sub> / S<sub>1</sub> <span style="font-size:120%">)</span></div>
 
 <p>For the purposes of this analysis I am considering only the 30 keys in the main section of the keyboard. Calculating the Switching Difficulty Index for a selection of keyboard layouts gives these results:</p>
 
@@ -76,25 +79,27 @@
 <tr> <td>Qwerty (base) <a href="http://en.wikipedia.org/wiki/QWERTY" target="new_win"><img src="gfx/open.png"/></a></td> 
         <td> 0</td> <td> 0</td> <td>0.00</td> <td>0</td> </tr>
 <tr> <td>Minimak-8key <a href="http://www.minimak.org/" target="new_win"><img src="gfx/open.png"/></a></td> 
-        <td> 3</td> <td> 8</td> <td>3.50</td> <td>15</td> </tr>
+        <td> 3</td> <td> 8</td> <td>3.50</td> <td>13</td> </tr>
 <tr> <td>Qwpr <a href="http://sourceforge.net/projects/qwpr/" target="new_win"><img src="gfx/open.png"/></a></td> 
         <td> 2</td> <td>11</td> <td>4.25</td> <td>18</td> </tr>
+<tr> <td>Norman <a href="https://normanlayout.info/" target="new_win"><img src="gfx/open.png"/></a></td>
+        <td> 4</td> <td>15</td> <td>5.75</td> <td>19</td> </tr>
 <tr> <td>Asset <a href="http://millikeys.sourceforge.net/asset/" target="new_win"><img src="gfx/open.png"/></a></td>
         <td> 6</td> <td>15</td> <td>6.25</td> <td>20</td> </tr>
-<tr> <td>Norman <a href="https://normanlayout.info/" target="new_win"><img src="gfx/open.png"/></a></td>
-        <td> 4</td> <td>15</td> <td>5.75</td> <td>21</td> </tr>
 <tr> <td>Colemak <a href="http://colemak.com/" target="new_win"><img src="gfx/open.png"/></a></td> 
-        <td>12</td> <td>17</td> <td>8.00</td> <td>31</td> </tr>
+        <td>12</td> <td>17</td> <td>8.00</td> <td>28</td> </tr>
 <tr> <td>Colemak-DH <a href="http://colemakmods.github.io/mod-dh/" target="new_win"><img src="gfx/open.png"/></a></td> 
-        <td>12</td> <td>19 <b>ᵃ</b></td> <td>8.80</td> <td>33</td> </tr>
+        <td>12</td> <td>19 <b>ᵃ</b></td> <td>9.25</td> <td>29</td> </tr>
 <tr> <td>Workman <a href="http://www.workmanlayout.com/blog/" target="new_win"><img src="gfx/open.png"/></a></td> 
-        <td>13</td> <td>21</td> <td>10.00</td> <td>36</td> </tr>
+        <td>13</td> <td>21</td> <td>10.00</td> <td>34</td> </tr>
 <tr> <td>qgmlwyfub <a href="http://mkweb.bcgsc.ca/carpalx/?full_optimization" target="new_win"><img src="gfx/open.png"/></a></td>
-        <td>17</td> <td>20</td> <td>12.25</td> <td>45</td> </tr>
+        <td>17</td> <td>20</td> <td>12.25</td> <td>42</td> </tr>
+<tr> <td>Halmak <a href="https://github.com/MadRabbit/halmak" target="new_win"><img src="gfx/open.png"/></a></td> 
+        <td>27</td> <td>30</td> <td>19.50</td> <td>58</td> </tr>
 <tr> <td>Dvorak <a href="http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard" target="new_win"><img src="gfx/open.png"/></a></td> 
-        <td>26</td> <td>28</td> <td>22.25</td> <td>61</td> </tr>
+        <td>26</td> <td>33</td> <td>23.25</td> <td>68</td> </tr>
 <tr> <td>MTGAP <a href="http://mtgap.bilfo.com/completed_keyboard.html" target="new_win"><img src="gfx/open.png"/></a></td> 
-        <td>26</td> <td>30</td> <td>23.75</td> <td>69</td> </tr>        
+        <td>26</td> <td>30</td> <td>23.75</td> <td>65</td> </tr>        
 <caption>Comparison of switching difficulty for various layouts, assuming Qwerty as the starting point.</caption>
 </table>
 
@@ -121,8 +126,7 @@
 
 <p>
 0 = not moved.<br/>
-0.10 = angle mod only.<br/>
-0.25 = moved but typed with same finger.<br/>
+0.25 = moved but typed with same finger / angle mod only.<br/>
 0.50 = moved to new finger on same hand.<br/>
 0.75 = moved to equivalent finger on other hand.<br/>
 1.00 = moved to other finger on other hand.<br/>

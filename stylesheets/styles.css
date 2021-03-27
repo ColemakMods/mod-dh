@@ -219,9 +219,9 @@ td {
 header {
 	background-color: #171717;
 	color: #FDFDFB;
-  width:180px;
-  float:left;
-  position:fixed;
+	width:180px;
+	float:left;
+	position:fixed;
 	border: 1px solid #000;
 	-webkit-border-top-right-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;
@@ -267,9 +267,9 @@ header ul {
 
 header li {
 	list-style-type: none;
-  width:162px;
-  height:15px;
-	margin-bottom: 10px;
+	width:162px;
+	height:15px;
+	margin: 8px 0px 2px 0px;
 	line-height: 1em;
 	padding: 6px 6px 6px 7px;
 
@@ -304,7 +304,7 @@ a.buttons {
 	background: url(../images/arrow-down.png) no-repeat;
 	font-weight: normal;
 	text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
-	padding: 2px 2px 2px 22px;
+	padding: 4px 4px 4px 24px;
 	height: 30px;
 }
 
