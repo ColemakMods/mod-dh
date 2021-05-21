@@ -1,0 +1,329 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Colemak Mod-DH - Keyboard effort grid</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="stylesheets/steve.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-56831209-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Colemak Mod-DH</h1>
+        <p class="header">A Colemak mod for more comfortable typing.</p>
+
+        <ul>
+          <li><a class="menu" href="./">About</a></li>
+          <li><a class="menu" href="./keyboards.html">Keyboard Types</a></li>
+          <li><a class="menu" href="./compare.html">Compare</a></li>
+          <li><a class="menu selected" href="./model.html">Model</a></li>
+          <span><a class="submenu" href="./model.html">&#9679; Effort Grid</a></span>
+          <span><a class="submenu" href="./learn.html">&#9675; Switching Difficulty</a></span>
+          <li><a class="menu" href="./analyze.html">Layout Analysis Tool</a></li>
+        </ul>
+
+        <ul>
+          <li><a class="buttons github" href="https://github.com/ColemakMods/mod-dh">Downloads</a></li>
+        </ul>
+
+        <!--
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/ColemakMods">ColemakMods</a></p>
+        -->
+
+
+      </header>
+      <section>
+      
+<h2>Typing Effort Grid</h2>
+
+<p>This page presents method of calculating a keyboard effort grid in a more objective and rigorous way than is usual, with the intention of using the results in keyboard layout analysis software. If you want to skip over the methodological details, you can <a href="#results">jump direct to the results</a>.</p> 
+
+<h3><a name="background" class="anchor" href="#background">»&nbsp;</a>Background</h3>
+
+<p>Many keyboard analyses use at their heart a way to measure the effort involved a typing each key. This typically involves considering a number of factors, such as the distance a key is from the home position and the finger being used to type the said key. Although these factors seem reasonable, they are often both simplistic and overly subjective.</p>
+
+<figure>
+  <img src="gfx/model/colemak_dh_keyboard_scores_original.png" alt="Keyboard effort grid originally used by the Colemak Mod-DH project"/>
+  <figcaption>The keyboard effort grid previously used by the <nobr>Colemak Mod-DH</nobr> project.<br/>NB: the analysis on the Mod-DH pages has now been updated to use the effort grids calculated on this page.</figcaption>
+</figure>
+
+<p>In keyboard analyses, it's not possible to eliminate personal judgement entirely, so some subjectivity will always be present. Nonetheless, the ease with which each key is typed can be considered in more detail by including several relevant factors, and using these factors to construct a systematic model.</p>
+
+<p>Note, a comprehensive keyboard analysis should include more components than just an effort grid: there are influences such as bigram analysis, hand and finger balance, and rolls/alternation, which also play a part. These factors are outside the scope this article, as the focus here is on one element only: deriving a more accurate and rigorous keyboard typing effort model based on real-world hand and keyboard geometry. The <a href="./analyze.html">Layout Analysis Tool</a> on these pages incorporates the effort grid described here, along with some additional factors, as described on the <a href="./compare.html">Compare Layouts</a> page.</p>
+
+<h3><a name="notation" class="anchor" href="#notation">»&nbsp;</a>Notation</h3>
+
+To identify keys by name, they are referred to by their Qwerty labels unless explicitly mentioned.
+
+<h3><a name="finger-lengths" class="anchor" href="#finger-lengths">»&nbsp;</a>Finger lengths and Angle of Approach</h3>
+
+<p>The home key positions <i>A S D F J K L ;</i> are right underneath the fingers when using classic touch-tying technique. It might be imagined that natural home positions of the fingers therefore corresponds to the centre of these 8 keys. But we know the fingers are not all the same lengths. Indeed, a new generation of column-staggered keyboards has appeared which recognise hand geometry explicitly: the middle fingers are longer, the pinkies shorter, and the ring and index fingers somewhere in between. The geometry of these column-staggered keyboard can be used to inform where the relaxed home-key finger positions naturally lie. This treatement is based on the geometry of the Atreus keyboard, although other column-staggered keyboards have similar designs.</p>
+
+<p float="left" style="text-align: center">
+  <img src="gfx/model/fingers.jpg" alt="Finger stagger" height="200"/>
+  <img src="gfx/model/keyboardio_atreus.png" alt="Keyboardio Atreus" height="200"/> 
+</p>
+
+<p>The hands don't approach the keyboard at right angles to the keyboard (assuming a traditional, non-split type). A comfortable posture should involve laying out the keyboard directly in front of the user, with wrists straight and forearms approaching the keyboard symmetrically and at an angle. Using the Atreus keyboard as an example, it's notable that this assumption is built-in, by virtue of the columns being laid out at a 10° angle relative to vertical. In split and widely separated keyboards, this angle would be unnecessary, but is certainly needed for single-piece keyboards.</p>
+
+<p>Putting these two observations together, we can overlay the staggered key positions of the Atreus, to guide us toward more natural home positions on a standard, staggered keyboard.</p>
+
+<div style="position:relative">
+  <figure id="keyboard_overlay1" style="display:block">
+    <img src="gfx/model/iso_angle_atreus_overlayed.png" alt="Overlayed traditional and column-staggered keyboards"/>
+    <figcaption>The Atreus key positions overlayed on a traditional keyboard. Blue circles are the centre points of key on a traditional keyboard, the red crosses are the centre points of the column-staggered home keys.</figcaption>
+  </figure>
+  <figure id="keyboard_overlay2" style="display:none">
+    <img src="gfx/model/iso_angle_atreus_only.png" alt="Key positions on a column-staggered keyboard"/>
+    <figcaption>The Atreus key positions with red crosses indicating the centre points of the column-staggered home keys.<br/><br/></figcaption>
+  </figure>
+  <div style="text-align:center; position:absolute; top:0px; right:5px;">
+    <input type="checkbox" id="keyboard_overlay_checkbox" checked="checked" onclick="toggleKeyboardOverlays()"/>
+    <label for="keyboard_overlay_checkbox">Overlay toggle</label>
+  </div>
+</div>
+<script>
+  function toggleKeyboardOverlays() {
+    var keyboard_overlay1 = document.getElementById('keyboard_overlay1');
+    var keyboard_overlay2 = document.getElementById('keyboard_overlay2');
+    var showOverlay = document.getElementById('keyboard_overlay_checkbox').checked;
+    if (showOverlay) {
+      keyboard_overlay1.style.display = "block";
+      keyboard_overlay2.style.display = "none";
+    } else {
+      keyboard_overlay1.style.display = "none";
+      keyboard_overlay2.style.display = "block";  
+    }
+  }
+</script>
+
+<table>
+<tr><th class="wide">Home Key</th> <th class="wide">X-displacement</th> <th class="wide">Y-displacement</th> </tr>
+<tr><td class="left">index</td>    <td>−0.04<i>u</i></td>  <td>−0.32<i>u</i></td> </tr>
+<tr><td class="left">middle</td>   <td>+0.03<i>u</i></td>  <td>+0.16<i>u</i></td> </tr>
+<tr><td class="left">ring</td>     <td>+0.00<i>u</i></td>  <td>+0.08<i>u</i></td> </tr>
+<tr><td class="left">pinky</td>    <td>+0.01<i>u</i></td>  <td>+0.09<i>u</i></td> </tr>
+<caption>The home positions of the fingers don't naturally coincide with the central home-row axis of a traditional keyboard. Instead, they are displaced mainly vertically - with the middle finger above and the index below - the traditional straight home-row positions. Displacements measured in standard key size units (<i>u</i>).</caption>
+</table>
+
+<p>What's notable is that (i) the ring and pinky finger home positions coincide closely, (ii) the middle finger home position is naturally a bit higher than the centre of the D and K keys, and (iii) the index finger home position is significantly below the centre of the F and J positions, reaching about ⅓ of a key unit towards the bottom row.</p>
+
+<p>My personal observation is that this pattern corresponds closely with what I've noticed in practise. When using a traditional keyboard, it's slightly easier for the middle finger to reach the upper row, and also <i>significantly</i> easier for the index finger to reach down the C and M keys.</p>
+
+<h3><a name="finger-strength" class="anchor" href="#finger-strength">»&nbsp;</a>Finger strength</h3>
+
+<p>Not all fingers are created equal, and there is broad agreement that the index and middle fingers are strongest, the pinkies the weakest. This applies both to the action of pressing a key, and to the curling inward/outward motion used to reach keys on the top and bottom rows; in either case there will be more strain on pinkies than index fingers for the same distance moved. Quantifying the relative strengths of each finger numerically is still a subjective matter - in this model, a finger effort factor is defined as follows:</p>
+
+<table>
+<tr><th class="wide">Finger</th> <th class="wide">Effort Factor (P<sub><i>f</i></sub>)</th> </tr>
+<tr><td class="left">index</td> <td>1.0</td> </tr>
+<tr><td class="left">middle</td> <td>1.1</td> </tr>
+<tr><td class="left">ring</td> <td>1.3</td> </tr>
+<tr><td class="left">pinky</td> <td>1.6</td> </tr>
+</table>
+
+<h3><a name="lateral-motion" class="anchor" href="#lateral-motion">»&nbsp;</a>Lateral Motion</h3>
+
+<p>In common with <a href="https://stevep99.github.io/keyboard-layout-analyzer/">my fork of the patorjk analyzer</a>, this model also assumes lateral motion of the hand is more costly than simply curling a finger inward or outward. Consequently, motions that are <i>transverse</i> to the direction of the forearm are penalized more heavily than directions that are aligned (the <i>mesial</i> direction). Using the geometry of the Atreus keyboard as a guide, the angle-of-approach of the arms is set to 10° from the vertical. In this model the lateral movement multiplier (P<sub><i>x</i></sub>) is set to 2.0, making such motions more costly than moving any individual finger.</p>
+
+<figure align="center">
+  <img src="gfx/model/iso_angle_approach.png" alt="Angle of approach"/>
+  <figcaption>The hands approach the keyboard with wrists straight, symmetrically, and at an angle. It's relatively easy for fingers to curl inward/outward to reach keys parallel to the green arrows. To reach keys in a transverse direction, indicated with blue arrows, requires the whole hand to move sideways, and therefore attracts a greater effort penalty.</figcaption>
+</figure>
+
+<h3><a name="key-size" class="anchor" href="#key-size">»&nbsp;</a>Key size</h3>
+
+<p>At noted in the <a href="#finger-lengths">Finger Lengths</a> section, the index fingers may rest over the lower part of the F and J keys rather than over the centre. Nevertheless, it's still easy for those fingers to type their respective home keys - fingers do not necessarily need to travel to the central point of a key to successfully strike it. This observation becomes especially relevant when considering larger keys: taking the left-shift key for example, the point at which it is usually pressed is significantly to the right of its midpoint. A further note on these lines is that it may be easier strike keys such as E and R slightly right of centre, to mitigate the wrong-way stagger on the left-half of traditional keyboards.</p>
+
+<p>We can infer that there is an region surrounding the central point of a key where it can be successfully typed. So instead of basing distance calculations on a key's central point, it is more accurate to consider the distance to the nearest point in this activation area. In this model, the activation area is defined as a box of margin 0.3u within the key's footprint.</p>
+
+<h3><a name="fitts-law" class="anchor" href="#fitts-law">»&nbsp;</a>Fitts's Law</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Fitts%27s_law">Fitts's Law</a> is a predictive model of human movement which can be used to estimate the time or effort it takes to perform a variety of actions, based on the distance and size of the target.</p>
+
+<p>This observation is used to inform the model of typing. Fitts's Law suggests that the distance-based penalty should use logarithmic, rather than linear scaling, so in this model uses the formula used for the lateral distance-based penality is:</p>
+
+<pre style="text-align:center">
+F<sub>x</sub> = Log<sub>2</sub> ( 1 + P<sub><i>d</i></sub> D<sub><i>x</i></sub>)
+</pre>
+
+<p>&nbsp;...where P<sub><i>d</i></sub> is a distance-based penalty constant, D<sub><i>x</i></sub> is the lateral distance to the target key. The formula for the mesial component (<i>y</i>-direction) is equivalent.
+</p>
+
+</a>
+<h3><a name="model" class="anchor" href="#model">»&nbsp;</a>Creating a new model</h3></a>
+
+<p>Putting all these observations together makes it possible to create a new model of keyboard effort grid for any arbitrary keyboard geometry, by calculating the effort values from base principles. In summary, the model works like this:</p>
+
+<ul>
+<li>The effort to type a key is depends on the finger used, the distance moved, and the type of motion that was required.</li>
+<li>The average motion-based effort penalty is deemed to be a combination of the mesial and lateral components of the distance from the home position. The mesial component is finger-dependent, representing the finger curling action, whereas the lateral component requires the whole hand to move.</li>
+<li>The home positions for each finger used in the calculation are informed by natural variation in finger length and the design of column-staggered keyboards.</li>
+<li>Distances are calculated based on the finger reaching the nearest point in the "activation area" rather than than the central point on a key, with the associated penalty logarithmically scaled.</li>
+<li>The finger used to type each key is not imposed on the model, but rather is determined automatically as the one which minimizes the effort function.</li>
+</ul>
+
+<p>The total effort value for each key, P<sub><i>total</i></sub>, is calculated with the formula:</p>
+<pre style="text-align:center">
+P<sub><i>total</i></sub> = P<sub><i>f</i></sub> + <i>dist</i>( P<sub><i>f</i></sub> F<sub><i>y</i></sub>, P<sub><i>x</i></sub> F<sub><i>x</i></sub> ) 
+</pre>
+
+<p>&nbsp;...where P<sub><i>f</i></sub> is the finger-based penalty, P<sub><i>x</i></sub> is the lateral-movement penalty, and F<sub><i>x</i></sub>, F<sub><i>y</i></sub> are the two components of the distance penalty with Fitt's Law applied. The <i>dist(x,y)</i> function is <i>sqrt(x<sup>2</sup> + y<sup>2</sup>)</i>.</p>
+
+<h3><a name="results" class="anchor" href="#results">»&nbsp;</a>Results</h3>
+
+<h4>Standard Keyboard</h4>
+
+<p>Using this new model, the effort scores for each key on a standard keyboard can be calculated. The finger whose effort value is lowest is used to provide at objective indication of which finger should be used to type each key.</p>
+
+<figure id="result_std_ergo_scores">
+  <img src="gfx/model/keyb_calc_std_ergo_scores.png" alt="The generated keyboard effort grid."/>
+  <figcaption>The generated keyboard effort grid, colour-coded by effort.</figcaption>
+</figure>
+<figure id="result_std_ergo_fingers">
+  <img src="gfx/model/keyb_calc_std_ergo_fingers.png" alt="The generated keyboard effort grid."/>
+  <figcaption>The generated keyboard effort grid, colour-coded by finger that should be used.</figcaption>
+</figure>
+<div style="text-align:center">
+  <input type="radio" id="result_std_ergo_scores_radio" name="result_std_ergo" checked="checked" onclick="showResultStdErgo(1)"/>
+  <label for="result_std_ergo_scores_radio">Show by score</label>
+  <input type="radio" id="result_std_ergo_fingers_radio" name="result_std_ergo" onclick="showResultStdErgo(2)";>
+  <label for="result_std_ergo_fingers_radio">Show by finger</label>
+</div>
+<script>
+  function showResultStdErgo(visibleId) {
+    var result_std_ergo_scores = document.getElementById('result_std_ergo_scores');
+    var result_std_ergo_fingers = document.getElementById('result_std_ergo_fingers');
+    if (visibleId == 1) {
+      result_std_ergo_scores.style.display = "block";
+      result_std_ergo_fingers.style.display = "none";
+    } else if (visibleId == 2) {
+      result_std_ergo_scores.style.display = "none";
+      result_std_ergo_fingers.style.display = "block";  
+    }
+  }
+  showResultStdErgo(1);
+</script>
+
+<br/>
+
+<ul>
+  <li>The results are broadly in line with expectations, favouring home keys and strong fingers directly above and below the home positions.</li>
+  <li>It's similar to the <a href="#background">previous Colemak-DH effort grid</a> shown at the top of the page, although there are some notable differences.</li>
+  <li>The top-row left hand positions (W, E, R) are penalised more strongly than the equivalents on the right, due to the wrong-way stagger of traditional keyboards on the left-hand side. An additional consequence is that the T position is found to be significantly better than Y.</li>
+  <li>The best non-home keys on the keyboard are still C and M, but the other bottom-row index-finger keys V and N perform better than expected too.</li>
+  <li>The calculated finger assignments suggest ring fingers should be used for keys 2,3,0; middle fingers for 4,8,9; and index fingers for 5,6,7.</li>
+  <li>Keys on the far-right of the keyboard are costly and should be avoided (e.g. by using mods like <a href="https://colemakmods.github.io/ergonomic-mods/extend.html">Extend</a>, <a href="https://colemakmods.github.io/ergonomic-mods/wide.html">Wide</a>, or both!)</li>  
+</ul>
+
+<h4>Standard Keyboard with traditional finger pattern</h4>
+
+<p>In this case, instead of calculating the optimal finger for each key, the fingers are <nobr>pre-assigned</nobr> to keys using the traditional, staggered pattern. For some keys this will not be the most optimal assignment.</p>
+
+<figure id="result_std_trad_scores">
+  <img src="gfx/model/keyb_calc_std_trad_scores.png" alt="The generated keyboard effort grid."/>
+  <figcaption>The generated keyboard effort grid, colour-coded by effort.</figcaption>
+</figure>
+<figure id="result_std_trad_fingers">
+  <img src="gfx/model/keyb_calc_std_trad_fingers.png" alt="The generated keyboard effort grid."/>
+  <figcaption>The generated keyboard effort grid, colour-coded by finger that should be used.</figcaption>
+</figure>
+<div style="text-align:center">
+  <input type="radio" id="result_std_trad_scores_radio" name="result_std_trad" checked="checked" onclick="showResultStdTrad(1)"/>
+  <label for="result_std_trad_scores_radio">Show by score</label>
+  <input type="radio" id="result_std_trad_fingers_radio" name="result_std_trad" onclick="showResultStdTrad(2)";>
+  <label for="result_std_trad_fingers_radio">Show by finger</label>
+</div>
+<script>
+  function showResultStdTrad(visibleId) {
+    var result_std_trad_scores = document.getElementById('result_std_trad_scores');
+    var result_std_trad_fingers = document.getElementById('result_std_trad_fingers');
+    if (visibleId == 1) {
+      result_std_trad_scores.style.display = "block";
+      result_std_trad_fingers.style.display = "none";
+    } else if (visibleId == 2) {
+      result_std_trad_scores.style.display = "none";
+      result_std_trad_fingers.style.display = "block";  
+    }
+  }
+  showResultStdTrad(1);
+</script>
+
+<br/>
+
+<ul>
+  <li>For most keys there is no difference between the traditional finger assignment and the calculated optimal assignment above.</li>
+  <li>The most significant difference is for the bottom-row left-hand keys (<i>Z X C</i>), which are significantly worse if the traditional finger assignment is used.</li>
+  <li>The results also suggest some number keys, such as 4,6,9,0 can be improved by using non-traditional finger assignment.</li>
+</ul>
+
+<h4>Matrix Keyboard</h4>
+
+<p>Since the model can be applied to arbitrary keyboard geometries, it's possible to calculate the effort grid for non-traditional designs, such as this matrix-like layout. In this case the board is assumed to be split, and the user is free to angle each half appropriately, so the model's 10° angle-of-approach factor is not required in this case.</p>
+
+<figure id="result_matrix_scores">
+  <img src="gfx/model/keyb_calc_matrix_scores.png" alt="The generated keyboard effort grid."/>
+  <figcaption>The generated matrix keyboard effort grid, colour-coded by effort.</figcaption>
+</figure>
+<figure id="result_matrix_fingers">
+  <img src="gfx/model/keyb_calc_matrix_fingers.png" alt="The generated keyboard effort grid."/>
+  <figcaption>The generated matrix keyboard effort grid, colour-coded by finger that should be used.</figcaption>
+</figure>
+<div style="text-align:center">
+  <input type="radio" id="result_matrix_scores_radio" name="result_matrix" checked="checked" onclick="showResultMatrix(1)"/>
+  <label for="result_matrix_scores_radio">Show by score</label>
+  <input type="radio" id="result_matrix_fingers_radio" name="result_matrix" onclick="showResultMatrix(2)";>
+  <label for="result_matrix_scores_radio">Show by finger</label>
+</div>
+<script>
+  function showResultMatrix(visibleId) {
+    var result_matrix_scores = document.getElementById('result_matrix_scores');
+    var result_matrix_fingers = document.getElementById('result_matrix_fingers');
+    if (visibleId == 1) {
+      result_matrix_scores.style.display = "block";
+      result_matrix_fingers.style.display = "none";
+    } else if (visibleId == 2) {
+      result_matrix_scores.style.display = "none";
+      result_matrix_fingers.style.display = "block";  
+    }
+  }
+  showResultMatrix(1);
+</script>
+
+<br/>
+
+<ul>
+  <li>The scoring pattern is largely similar to the traditional keyboard, with most differences representing small improvements over the staggered keyboard design.</li>
+  <li>Some keys, such as the bottom-row keys directly under index fingers' home, are even more favoured. However, the T position is notably worse.</li>
+  <li>The calculated finger assignments are mostly in neat columns, however the model suggests using ring fingers rather than pinkies for the 1 and 0 keys.</li>
+</ul>
+
+
+      </section>
+      <!--
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+      -->
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+        
+  </body>
+</html>

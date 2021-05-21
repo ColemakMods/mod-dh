@@ -32,9 +32,10 @@
         <ul>
           <li><a class="menu" href="./">About</a></li>
           <li><a class="menu" href="./keyboards.html">Keyboard Types</a></li>
-          <li><a class="menu selected" href="./compare.html">Compare</a></li>
-          <span><a class="submenu" href="./compare.html">Compare Layouts</a></span>
-          <span><a class="submenu" href="./learn.html">Switching Difficulty</a></span>
+          <li><a class="menu" href="./compare.html">Compare</a></li>
+          <li><a class="menu selected" href="./model.html">Model</a></li>
+          <span><a class="submenu" href="./model.html">&#9675; Effort Grid</a></span>
+          <span><a class="submenu" href="./learn.html">&#9679; Switching Difficulty</a></span>          
           <li><a class="menu" href="./analyze.html">Layout Analysis Tool</a></li>
         </ul>
 
@@ -68,37 +69,39 @@
 
 <p>Summing all these factors over all the moved keys, this gives a formula for the overall "Switching Difficulty Index" (d).</p>
 
-<div class="math">d&nbsp;&nbsp;=&nbsp;&nbsp;<span style="font-size: 200%; vertical-align:middle">&sum;</span> <span style="font-size:120%">(</span> m × C<sub>f</sub> × S<sub>2</sub> / S<sub>1</sub> <span style="font-size:120%">)</span></div>
+<pre class="math">
+  d&nbsp;&nbsp;=&nbsp;&nbsp;<span style="font-size: 200%; vertical-align:middle">&sum;</span> <span style="font-size:120%">(</span> m × C<sub>f</sub> × S<sub>2</sub> / S<sub>1</sub> <span style="font-size:120%">)</span>
+</pre>
 
 <p>For the purposes of this analysis I am considering only the 30 keys in the main section of the keyboard. Calculating the Switching Difficulty Index for a selection of keyboard layouts gives these results:</p>
 
 <h3><a name="compare-results" class="anchor" href="#compare-results">»&nbsp;</a>Results</h3>
 
-<table style="width:90%; margin-left:auto; margin-right:auto;">
-<tr> <td></td> <td>Keys<br/>Moved<br/>Finger</td> <td>Keys<br/>Moved<br/>Total</td> <td>Keys Moved<br/>Index<br/><span style="font-size: 200%; vertical-align:middle">Σ</span> m</td> <td>Switching<br/>Difficulty<br/>Index (d)</td> </tr>
-<tr> <td>Qwerty (base) <a href="http://en.wikipedia.org/wiki/QWERTY" target="new_win"><img src="gfx/open.png"/></a></td> 
+<table>
+<tr> <th></th> <th>Keys<br/>Moved<br/>Finger</th> <th>Keys<br/>Moved<br/>Total</th> <th>Keys Moved<br/>Index<br/><span style="font-size: 200%; vertical-align:middle">Σ</span> m</th> <th>Switching<br/>Difficulty<br/>Index (d)</th> </tr>
+<tr> <td class="left">Qwerty (base) <a href="http://en.wikipedia.org/wiki/QWERTY" target="new_win"><img src="gfx/open.png"/></a></td> 
         <td> 0</td> <td> 0</td> <td>0.00</td> <td>0</td> </tr>
-<tr> <td>Minimak-8key <a href="http://www.minimak.org/" target="new_win"><img src="gfx/open.png"/></a></td> 
+<tr> <td class="left">Minimak-8key <a href="http://www.minimak.org/" target="new_win"><img src="gfx/open.png"/></a></td> 
         <td> 3</td> <td> 8</td> <td>3.50</td> <td>13</td> </tr>
-<tr> <td>Qwpr <a href="http://sourceforge.net/projects/qwpr/" target="new_win"><img src="gfx/open.png"/></a></td> 
+<tr> <td class="left">Qwpr <a href="http://sourceforge.net/projects/qwpr/" target="new_win"><img src="gfx/open.png"/></a></td> 
         <td> 2</td> <td>11</td> <td>4.25</td> <td>18</td> </tr>
-<tr> <td>Norman <a href="https://normanlayout.info/" target="new_win"><img src="gfx/open.png"/></a></td>
+<tr> <td class="left">Norman <a href="https://normanlayout.info/" target="new_win"><img src="gfx/open.png"/></a></td>
         <td> 4</td> <td>15</td> <td>5.75</td> <td>19</td> </tr>
-<tr> <td>Asset <a href="http://millikeys.sourceforge.net/asset/" target="new_win"><img src="gfx/open.png"/></a></td>
+<tr> <td class="left">Asset <a href="http://millikeys.sourceforge.net/asset/" target="new_win"><img src="gfx/open.png"/></a></td>
         <td> 6</td> <td>15</td> <td>6.25</td> <td>20</td> </tr>
-<tr> <td>Colemak <a href="http://colemak.com/" target="new_win"><img src="gfx/open.png"/></a></td> 
+<tr> <td class="left">Colemak <a href="http://colemak.com/" target="new_win"><img src="gfx/open.png"/></a></td> 
         <td>12</td> <td>17</td> <td>8.00</td> <td>28</td> </tr>
-<tr> <td>Colemak-DH <a href="http://colemakmods.github.io/mod-dh/" target="new_win"><img src="gfx/open.png"/></a></td> 
+<tr> <td class="left">Colemak-DH <a href="http://colemakmods.github.io/mod-dh/" target="new_win"><img src="gfx/open.png"/></a></td> 
         <td>12</td> <td>19 <b>ᵃ</b></td> <td>9.25</td> <td>29</td> </tr>
-<tr> <td>Workman <a href="http://www.workmanlayout.com/blog/" target="new_win"><img src="gfx/open.png"/></a></td> 
+<tr> <td class="left">Workman <a href="http://www.workmanlayout.com/blog/" target="new_win"><img src="gfx/open.png"/></a></td> 
         <td>13</td> <td>21</td> <td>10.00</td> <td>34</td> </tr>
-<tr> <td>qgmlwyfub <a href="http://mkweb.bcgsc.ca/carpalx/?full_optimization" target="new_win"><img src="gfx/open.png"/></a></td>
+<tr> <td class="left">qgmlwyfub <a href="http://mkweb.bcgsc.ca/carpalx/?full_optimization" target="new_win"><img src="gfx/open.png"/></a></td>
         <td>17</td> <td>20</td> <td>12.25</td> <td>42</td> </tr>
-<tr> <td>Halmak <a href="https://github.com/MadRabbit/halmak" target="new_win"><img src="gfx/open.png"/></a></td> 
+<tr> <td class="left">Halmak <a href="https://github.com/MadRabbit/halmak" target="new_win"><img src="gfx/open.png"/></a></td> 
         <td>27</td> <td>30</td> <td>19.50</td> <td>58</td> </tr>
-<tr> <td>Dvorak <a href="http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard" target="new_win"><img src="gfx/open.png"/></a></td> 
+<tr> <td class="left">Dvorak <a href="http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard" target="new_win"><img src="gfx/open.png"/></a></td> 
         <td>26</td> <td>33</td> <td>23.25</td> <td>68</td> </tr>
-<tr> <td>MTGAP <a href="http://mtgap.bilfo.com/completed_keyboard.html" target="new_win"><img src="gfx/open.png"/></a></td> 
+<tr> <td class="left">MTGAP <a href="http://mtgap.bilfo.com/completed_keyboard.html" target="new_win"><img src="gfx/open.png"/></a></td> 
         <td>26</td> <td>30</td> <td>23.75</td> <td>65</td> </tr>        
 <caption>Comparison of switching difficulty for various layouts, assuming Qwerty as the starting point.</caption>
 </table>
@@ -138,19 +141,25 @@
 
 <p>In the model used here, the effect of key frequency is assumed to be non-linear, so that while a more frequent key is harder to learn than an infrequent one, but it is recognised that the difficulty decreases as that key is practised more. This is based on the well-known idea of <a href="https://en.wikipedia.org/wiki/Experience_curve_effects">Experience Curves</a>, in which experience of previous production (<span style="math">P<sub>1</sub></span>) reduces the cost of future production (<span style="math">P<sub>x</sub></span>), the strength of the effect determined by the parameter b.</p> 
 
-<div class="math">P<sub>x</sub>&nbsp;&nbsp;=&nbsp;&nbsp;P<sub>1</sub> x<sup>log<sub>2</sub>(b)</sup></div>
+<pre class="math">
+  P<sub>x</sub>&nbsp;&nbsp;=&nbsp;&nbsp;P<sub>1</sub> x<sup>log<sub>2</sub>(b)</sup>
+</pre>
 
 <p>In particular, by drawing an analogy with key frequency, we can express the cost of incrementally "learning a key" at a given point (<span style="math">P<sub>f</sub></span>) based on experience gained so far. In this model, I am using a value of b=0.8, which gives:</p>
 
-<div class="math">P<sub>f</sub>&nbsp;&nbsp;=&nbsp;&nbsp;f <sup>-0.322</sup></div>
+<pre class="math">
+  P<sub>f</sub>&nbsp;&nbsp;=&nbsp;&nbsp;f <sup>-0.322</sup>
+</pre>
 
 <p>To get the complete learning cost for this key, we can integrate this function over f:</p>
 
-<div class="math">C<sub>f</sub>&nbsp;&nbsp;=&nbsp;&nbsp;<span style="font-size: 200%; vertical-align:middle">&int;</span> P<sub>f</sub>&nbsp;&nbsp;=&nbsp;&nbsp;f <sup>0.678</sup> / 0.678</div>
+<pre class="math">
+  C<sub>f</sub>&nbsp;&nbsp;=&nbsp;&nbsp;<span style="font-size: 200%; vertical-align:middle">&int;</span> P<sub>f</sub>&nbsp;&nbsp;=&nbsp;&nbsp;f <sup>0.678</sup> / 0.678
+</pre>
 
 This produces a non-linear learning effort for a given key with an associated frequency. More frequent keys require more effort overall, but the effort required increases and slower rate to reflect learned experience. Here is a table to illustrate some example values:
-<table style="width:70%; margin-left:auto; margin-right:auto;">
-<tr><td>Key Frequency, f</td><td>Weighted Learning Effort, <span class="math">C<sub>f</sub></span></td></tr>
+<table>
+<tr><th>Key Frequency, f</th><th>Weighted Learning Effort, <span class="math">C<sub>f</sub></span></th></tr>
 <tr><td>1%</td><td>1.47</td></tr>
 <tr><td>2%</td><td>2.36</td></tr>
 <tr><td>5%</td><td>4.39</td></tr>
@@ -159,7 +168,9 @@ This produces a non-linear learning effort for a given key with an associated fr
 
 <p>The overall Switching Difficulty Index is defined as a combination of these two factors, summed over all keys:</p>
 
-<div class="math">d&nbsp;&nbsp;=&nbsp;&nbsp;<span style="font-size: 200%; vertical-align:middle">&sum;</span> (m × C<sub>f</sub>)</div>
+<pre class="math">
+  d&nbsp;&nbsp;=&nbsp;&nbsp;<span style="font-size: 200%; vertical-align:middle">&sum;</span> (m × C<sub>f</sub>)
+</pre>
 
 <p>See the <a href="#compare-results">results</a> of applying this formula to a variety of keyboard layouts.</p>
 
