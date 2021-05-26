@@ -1,21 +1,54 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    compileSdkVersion 30
+
     defaultConfig {
-        applicationId "io.github.colemakkods.moddhkeyboard"
+        applicationId "io.github.colemakkods.mod_dh"
         minSdkVersion 16
-        targetSdkVersion 29
+        targetSdkVersion 30
+
         versionCode 1
-        versionName "1.0"
+        versionName "1.01"
+        setProperty("archivesBaseName", "moddh-$versionName")
     }
+
+    allprojects {
+        afterEvaluate { project ->
+            def propsFile = rootProject.file('keystore.properties')
+            def configName = 'release'
+
+            if (propsFile.exists() && android.signingConfigs.hasProperty(configName)) {
+                def props = new Properties()
+                props.load(new FileInputStream(propsFile))
+                android.signingConfigs[configName].storeFile = file(props['storeFile'])
+                android.signingConfigs[configName].storePassword = props['storePassword']
+                android.signingConfigs[configName].keyAlias = props['keyAlias']
+                android.signingConfigs[configName].keyPassword = props['keyPassword']
+            }
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('storeFile')
+            storePassword ''
+            keyAlias ''
+            keyPassword ''
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
+}
+
+repositories {
+    google()
+    mavenCentral()
 }
 
 dependencies {
