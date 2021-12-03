@@ -33,3 +33,6 @@ SC032::h
 ; set Backspace to CapsLock key
 
 ; sc03a::backspace
+
+^c::^x
+^d::^c
