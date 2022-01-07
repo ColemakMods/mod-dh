@@ -9,13 +9,13 @@ Colemak Mod-DH Downloads
 
 The fastest way to try out Colemak-DH on Windows is to use the [AutoHotKey](https://autohotkey.com/) scripts. See the ![download](gfx/arrow-circle-down.png)[**autohotkey folder**](autohotkey/) for downloads.
 
+### EPKL (Big Bag)
+
+A comprehensive Colemak-DH implementation for Windows (plus many extra features) is available in [DreymaR's Big Bag, EPKL edition](https://forum.colemak.com/topic/1467-dreymars-big-bag-of-keyboard-tricks-pklwindows-edition/).
+
 ### KLC files and Installers
 
 There are files for [Microsoft Keyboard Layout Creator](http://msdn.microsoft.com/en-GB/goglobal/bb964665.aspx "Keyboard Layout Creator") (KLC), together with the generated installers. See the ![download](gfx/arrow-circle-down.png)[**KLC folder**](klc/) for more information and downloads.
-
-### EPKL
-
-A comprehensive Colemak-DH implementation for Windows (plus many extra features) is available in [DreymaR's Big Bag, EPKL edition](https://forum.colemak.com/topic/1467-dreymars-big-bag-of-keyboard-tricks-pklwindows-edition/).
 
 ### EurKEY
 
@@ -23,7 +23,16 @@ There is a project implementing [EurKEY Colemak-DH](https://gitlab.com/jungganz/
 
 # Linux
 
-### XKB files
+### XKB
+
+Support for Colemak-DH exists in recent versions xkeyboard-config (at least as of 2.34). 
+
+Usage examples:
+
+		setxkbmap us -variant colemak_dh
+		setxkbmap uk -variant colemak_dh_iso
+
+### XKB (Big Bag)
 
 A comprehensive Colemak-DH implementation for Linux (plus many extra features) is available in [DreymaR's Big Bag, XKB edition](https://forum.colemak.com/topic/1438-dreymars-big-bag-of-keyboard-tricks-linuxxkb-files-included/)
 
