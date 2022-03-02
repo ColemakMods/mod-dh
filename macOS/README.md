@@ -6,7 +6,14 @@ support for ANSI, ISO, and Matrix keyboards in both regular and
 "Extended" deadkey variants. These layouts are based off of the built-in
 "ABC" and "ABC - Extended" layouts that come with macOS.
 
-## Installing
+
+## Download (Quick Start)
+
+1. From the [project's main page](https://github.com/ColemakMods/mod-dh), click on the **Code** button, then **Download ZIP**
+2. Extract the downloaded ZIP file.
+3. Locate the "macOS" folder containing the Colemak-DH bundle files.
+
+## Install
 
 To install, simply copy the `Colemak DH.bundle` or `Colemak DHk.bundle`
 file to your `Keyboard Layouts` directory. There are two possible
