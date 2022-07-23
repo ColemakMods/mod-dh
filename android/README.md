@@ -32,7 +32,7 @@ The currently active layout is switchable using Control-spacebar.
 
 ## Limitations
 
-Only the main layout arrangments are supported. Modifier keys, backspace, AltGr layers etc remain as per the defaults. Extend layer is not supported.
+Only the main layout arrangments are supported by the Android API. Modifier keys, backspace, AltGr layers etc remain as per the defaults. Extend layer is not supported.
 
 ## Making modifications
 
