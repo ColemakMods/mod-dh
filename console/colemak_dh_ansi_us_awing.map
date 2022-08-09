@@ -23,7 +23,7 @@ keycode  11  =  nine          parenleft    asciitilde       asciitilde
 keycode  12  =  zero          parenright   asciitilde       asciitilde
 keycode  13  =  equal         plus         multiply         division
 
-keycode  16  =  bracketleft   braceleft    asciitilde       0x1002039      Escape
+keycode  16  =  bracketleft   braceleft    asciitilde       guillemotleft  Escape
 keycode  17  =  q             Q            adiaeresis       Adiaeresis     Control_q
 keycode  18  =  w             W            aring            Aring          Control_w
 keycode  19  =  f             F            atilde           Atilde         Control_f
@@ -37,7 +37,7 @@ keycode  26  =  semicolon     colon        odiaeresis       Odiaeresis
 keycode  27  =  apostrophe    quotedbl     otilde           Otilde
 keycode  43  =  backslash     bar          asciitilde       asciitilde     Control_backslash
 
-keycode  30  =  bracketright  braceright   asciitilde       0x100203a      Control_bracketright
+keycode  30  =  bracketright  braceright   asciitilde       guillemotright Control_bracketright
 keycode  31  =  a             A            aacute           Aacute         Control_a
 keycode  32  =  r             R            dead_grave       asciitilde     Control_r
 keycode  33  =  s             S            ssharp           asciitilde     Control_s
