@@ -33,8 +33,8 @@ keycode  22  =  l             L            asciitilde       asciitilde     Contr
 keycode  23  =  u             U            uacute           Uacute         Control_u
 keycode  24  =  y             Y            udiaeresis       Udiaeresis     Control_y
 keycode  25  =  semicolon     colon        odiaeresis       Odiaeresis
-keycode  26  =  bracketleft   braceleft    asciitilde       0x1002039      Escape
-keycode  27  =  bracketright  braceright   asciitilde       0x100203a      Control_bracketright
+keycode  26  =  bracketleft   braceleft    asciitilde       guillemotleft  Escape
+keycode  27  =  bracketright  braceright   asciitilde       guillemotright Control_bracketright
 keycode  43  =  numbersign    asciitilde   dead_circumflex  asciitilde
 
 keycode  30  =  a             A            aacute           Aacute         Control_a
