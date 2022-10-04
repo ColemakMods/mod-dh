@@ -37,10 +37,15 @@ To use a KLC file, load it into Keyboard Layout Creator and use the menu option 
 
 ## ISO (US) keyboard
 
-**UK ISO Colemak-DH:**
+**US ISO Colemak-DH:**
 [Download KLC](colemak_dh_iso_us.klc?raw=true)
 [Download ZIP](colemak_dh_iso_us.zip?raw=true)
 ![US Colemak-DH](colemak_dh_iso_us.jpg)
+
+**US ISO Colemak-DH (wide)**
+[Download KLC](colemak_dh_iso_us_wide.klc?raw=true)
+[Download ZIP](colemak_dh_iso_us_wide.zip?raw=true)
+![US Colemak-DH](colemak_dh_iso_us_wide.jpg)
 
 ## Matrix keyboard
 
