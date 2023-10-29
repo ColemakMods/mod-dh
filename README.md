@@ -15,7 +15,7 @@ A comprehensive Colemak-DH implementation for Windows (plus many extra features)
 
 ### KLC files and Installers
 
-There are files for [Microsoft Keyboard Layout Creator](http://msdn.microsoft.com/en-GB/goglobal/bb964665.aspx "Keyboard Layout Creator") (KLC), together with the generated installers. See the ![download](gfx/arrow-circle-down.png)[**KLC folder**](klc/) for more information and downloads.
+There are files for [Microsoft Keyboard Layout Creator](https://www.microsoft.com/en-us/download/details.aspx?id=102134 "MS Keyboard Layout Creator") (MSKLC), together with the generated installers. See the ![download](gfx/arrow-circle-down.png)[**KLC folder**](klc/) for more information and downloads.
 
 ### EurKEY
 

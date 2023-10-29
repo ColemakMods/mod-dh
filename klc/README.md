@@ -1,6 +1,6 @@
 # Colemak Mod-DH for Windows (Microsoft KLC files and Windows Installers)
 
-Microsoft has created a tool called [Keyboard Layout Creator](https://www.microsoft.com/en-us/download/details.aspx?id=102134 "Keyboard Layout Creator") (KLC) which allows users to generate their own keyboard mapping files. The tool also allow you to generate a "setup.exe" installer file if you want to install the layout into the operating system.
+Microsoft has created a tool called [Keyboard Layout Creator](https://www.microsoft.com/en-us/download/details.aspx?id=102134 "MS Keyboard Layout Creator") (MSKLC) which allows users to generate their own keyboard mapping files. The tool also allow you to generate a "setup.exe" installer file if you want to install the layout into the operating system.
 
 To use a KLC file, load it into Keyboard Layout Creator and use the menu option "Project > Build DLL and Setup Package".
 
