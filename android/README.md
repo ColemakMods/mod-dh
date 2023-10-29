@@ -18,6 +18,8 @@ For layout diagrams, see the [Mod-DH keyboard layouts page](http://colemakmods.g
 
 **[Install direct from Google Play](http://play.google.com/store/apps/details?id=io.github.colemakmods.mod_dh)**
 
+**[Dowload the compiled APK direct](release/)**
+
 Or, compile the APK yourself from source - see below.
 
 Presented here are instructions for a stock Android device, but be aware the there may be some variation between devices.
