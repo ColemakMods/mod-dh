@@ -60,6 +60,9 @@ There are Colemak-DH configurations for the [KMonad](https://github.com/david-ja
 
 # Android
 
+## Virtual Keyboards supporting Colemak Mod-DH
+[FlorisBoard on F-Droid](https://f-droid.org/packages/dev.patrickgold.florisboard/) - https://github.com/florisboard/florisboard
+
 ## APK for physical keyboard
 
 An Android Application Package (APK), with source files, is available, allowing you to type Colemak-DH on a physical keyboard connected to your Android device. See the ![download](gfx/arrow-circle-down.png)[**android section**](android/) for detailed instructions.
