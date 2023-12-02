@@ -60,8 +60,14 @@ There are Colemak-DH configurations for the [KMonad](https://github.com/david-ja
 
 # Android
 
-## APK for physical keyboard
+## APK for physical keyboards
 
 An Android Application Package (APK), with source files, is available, allowing you to type Colemak-DH on a physical keyboard connected to your Android device. See the ![download](gfx/arrow-circle-down.png)[**android section**](android/) for detailed instructions.
+
+## Virtual (software) keyboards
+
+*N.B. Colemak-DH is designed for touch-typing on a physical keyboard and may not be optimal for phone-based software keyboards. Nonetheless, some software keyboard apps now support Colemak-DH:*
+
+[FlorisBoard](https://f-droid.org/packages/dev.patrickgold.florisboard/) - An open source soft-keyboard project [(source code)](https://github.com/florisboard/florisboard)
 
 
