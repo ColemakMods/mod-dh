@@ -81,7 +81,7 @@
             <key code="36" output="&#x000D;"/>
             <key code="32" action="21"/>
             <key code="16" output="["/>
-            <key code="39" output="&#x0027;"/>
+            <key code="39" action="18"/>
             <key code="45" output="/"/>
             <key code="35" output="0"/>
             <key code="42" output="\"/>
@@ -190,7 +190,7 @@
             <key code="36" output="&#x000D;"/>
             <key code="32" action="13"/>
             <key code="16" output="{"/>
-            <key code="39" output="&#x0022;"/>
+            <key code="39" action="10"/>
             <key code="45" output="?"/>
             <key code="35" action="12"/>
             <key code="42" output="|"/>
@@ -299,7 +299,7 @@
             <key code="36" output="&#x000D;"/>
             <key code="32" output="J"/>
             <key code="16" output="["/>
-            <key code="39" output="&#x0027;"/>
+            <key code="39" action="10"/>
             <key code="45" output="/"/>
             <key code="35" action="12"/>
             <key code="42" output="\"/>
@@ -408,7 +408,7 @@
             <key code="36" output="&#x000D;"/>
             <key code="32" output="∆"/>
             <key code="16" output="“"/>
-            <key code="39" output="æ"/>
+            <key code="39" output="ø"/>
             <key code="45" output="÷"/>
             <key code="35" output="¥"/>
             <key code="42" output="«"/>
@@ -517,7 +517,7 @@
             <key code="36" output="&#x000D;"/>
             <key code="32" output="Ô"/>
             <key code="16" output="”"/>
-            <key code="39" output="Æ"/>
+            <key code="39" output="Ø"/>
             <key code="45" output="¿"/>
             <key code="35" output="Á"/>
             <key code="42" output="»"/>
@@ -626,7 +626,7 @@
             <key code="36" output="&#x000D;"/>
             <key code="32" output="Ô"/>
             <key code="16" output="“"/>
-            <key code="39" output="Æ"/>
+            <key code="39" output="Ø"/>
             <key code="45" output="÷"/>
             <key code="35" output="Á"/>
             <key code="42" output="«"/>
@@ -735,7 +735,7 @@
             <key code="36" output="&#x000D;"/>
             <key code="32" output="∆"/>
             <key code="16" output="“"/>
-            <key code="39" output="æ"/>
+            <key code="39" output="ø"/>
             <key code="45" output="÷"/>
             <key code="35" output="¥"/>
             <key code="42" output="«"/>
@@ -844,7 +844,7 @@
             <key code="36" output="&#x000D;"/>
             <key code="32" output="&#x000A;"/>
             <key code="16" output="&#x001B;"/>
-            <key code="39" output="&#x0027;"/>
+            <key code="39" output="&#x000F;"/>
             <key code="45" output="/"/>
             <key code="35" output="&#x0019;"/>
             <key code="42" output="&#x001C;"/>
@@ -919,7 +919,6 @@
             <key code="24" output="="/>
             <key code="4" output="["/>
             <key code="16" output="@"/>
-            <key code="39" output=":"/>
             <key code="42" output="]"/>
             <key code="93" output="¥"/>
             <key code="94" output="_"/>
@@ -937,7 +936,6 @@
             <key code="29" output=")"/>
             <key code="4" output="{"/>
             <key code="16" output="`"/>
-            <key code="39" output="*"/>
             <key code="33" output="+"/>
             <key code="42" output="}"/>
             <key code="93" output="|"/>
@@ -949,7 +947,6 @@
         <keyMap index="2" baseMapSet="16c" baseIndex="2">
             <key code="4" output="["/>
             <key code="16" output="@"/>
-            <key code="39" output=":"/>
             <key code="42" output="]"/>
             <key code="93" output="¥"/>
             <key code="94" output="_"/>
