@@ -916,6 +916,7 @@
     </keyMapSet>
     <keyMapSet id="984">
         <keyMap index="0" baseMapSet="16c" baseIndex="0">
+            <key code="26" output="^"/>
             <key code="24" output="="/>
             <key code="4" output="["/>
             <key code="16" output="@"/>
@@ -929,9 +930,9 @@
         </keyMap>
         <keyMap index="1" baseMapSet="16c" baseIndex="1">
             <key code="19" output="&#x0022;"/>
+            <key code="26" output="~"/>
             <key code="22" output="&#x0026;"/>
             <key code="25" output="("/>
-            <key code="26" output="~"/>
             <key code="27" output="0"/>
             <key code="28" output="&#x0027;"/>
             <key code="29" output=")"/>
@@ -947,6 +948,7 @@
             <key code="104" action="5"/>
         </keyMap>
         <keyMap index="2" baseMapSet="16c" baseIndex="2">
+            <key code="26" output="^"/>
             <key code="4" output="["/>
             <key code="16" output="@"/>
             <key code="42" output="]"/>
