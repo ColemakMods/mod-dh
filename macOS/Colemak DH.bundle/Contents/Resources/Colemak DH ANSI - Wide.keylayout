@@ -71,7 +71,7 @@
             <key code="26" output="="/>
             <key code="27" output="-"/>
             <key code="28" output="7"/>
-            <key code="29" output="0"/>
+            <key code="29" output="9"/>
             <key code="30" output="]"/>
             <key code="41" action="18"/>
             <key code="34" output="l"/>
@@ -180,7 +180,7 @@
             <key code="26" output="+"/>
             <key code="27" output="_"/>
             <key code="28" output="&#x0026;"/>
-            <key code="29" output=")"/>
+            <key code="29" output="("/>
             <key code="30" output="}"/>
             <key code="41" action="10"/>
             <key code="34" output="L"/>
@@ -289,7 +289,7 @@
             <key code="26" output="="/>
             <key code="27" output="-"/>
             <key code="28" output="7"/>
-            <key code="29" output="0"/>
+            <key code="29" output="9"/>
             <key code="30" output="]"/>
             <key code="41" action="10"/>
             <key code="34" output="L"/>
@@ -398,7 +398,7 @@
             <key code="26" output="≠"/>
             <key code="27" output="–"/>
             <key code="28" output="¶"/>
-            <key code="29" output="º"/>
+            <key code="29" output="ª"/>
             <key code="30" output="‘"/>
             <key code="41" output="ø"/>
             <key code="34" output="¬"/>
@@ -507,7 +507,7 @@
             <key code="26" output="±"/>
             <key code="27" output="—"/>
             <key code="28" output="‡"/>
-            <key code="29" output="‚"/>
+            <key code="29" output="·"/>
             <key code="30" output="’"/>
             <key code="41" output="Ø"/>
             <key code="34" output="Ò"/>
@@ -616,7 +616,7 @@
             <key code="26" output="≠"/>
             <key code="27" output="–"/>
             <key code="28" output="¶"/>
-            <key code="29" output="º"/>
+            <key code="29" output="ª"/>
             <key code="30" output="‘"/>
             <key code="41" output="Ø"/>
             <key code="34" output="Ò"/>
@@ -725,7 +725,7 @@
             <key code="26" output="≠"/>
             <key code="27" output="–"/>
             <key code="28" output="¶"/>
-            <key code="29" output="º"/>
+            <key code="29" output="ª"/>
             <key code="30" output="‘"/>
             <key code="41" output="ø"/>
             <key code="34" output="¬"/>
@@ -834,7 +834,7 @@
             <key code="26" output="="/>
             <key code="27" output="&#x001F;"/>
             <key code="28" output="7"/>
-            <key code="29" output="0"/>
+            <key code="29" output="9"/>
             <key code="30" output="&#x001D;"/>
             <key code="41" output="&#x000F;"/>
             <key code="34" output="&#x000C;"/>
@@ -935,7 +935,7 @@
             <key code="26" output="~"/>
             <key code="27" output="="/>
             <key code="28" output="&#x0027;"/>
-            <key code="29" output="0"/>
+            <key code="29" output=")"/>
             <key code="4" output="{"/>
             <key code="16" output="`"/>
             <key code="39" output="*"/>
