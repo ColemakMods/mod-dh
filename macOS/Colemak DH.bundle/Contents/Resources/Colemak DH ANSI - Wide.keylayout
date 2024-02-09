@@ -83,7 +83,7 @@
             <key code="16" output="["/>
             <key code="39" action="18"/>
             <key code="45" output="/"/>
-            <key code="35" output="0"/>
+            <key code="35" action="20"/>
             <key code="42" output="\"/>
             <key code="43" output="h"/>
             <key code="44" output="."/>
