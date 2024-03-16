@@ -7,8 +7,8 @@ map key    3    2
 map key    4    3
 map key    5    4
 map key    6    5
-map key    7    EQUALS
-map key    8    6
+map key    7    6
+map key    8    EQUALS
 map key    9    7
 map key   10    8
 map key   11    9
@@ -26,7 +26,7 @@ map key   23    L
 map key   24    U
 map key   25    Y
 map key   26    SEMICOLON
-map key   27    HENKAN
+map key   27    SLASH
 
 map key   30    A
 map key   31    R
@@ -47,7 +47,7 @@ map key   45    C
 map key   46    D
 map key   47    V
 map key   48    BACKSLASH
-map key   49    SLASH
+map key   49    HENKAN
 map key   50    K
 map key   51    H
 map key   52    COMMA

@@ -1,10 +1,12 @@
 # Colemak Mod-DH for Windows (Microsoft KLC files and Windows Installers)
 
-Microsoft has created a tool called [Keyboard Layout Creator](https://www.microsoft.com/en-us/download/details.aspx?id=102134 "MS Keyboard Layout Creator") (MSKLC) which allows users to generate their own keyboard mapping files. The tool also allow you to generate a "setup.exe" installer file if you want to install the layout into the operating system.
-
-To use a KLC file, load it into Keyboard Layout Creator and use the menu option "Project > Build DLL and Setup Package".
-
 **Quick start:** Pre-generated installer files are available in the zip packages listed below.
+
+## Create custom installer
+
+Microsoft has created a tool called [Keyboard Layout Creator](https://www.microsoft.com/en-us/download/details.aspx?id=102134 "MS Keyboard Layout Creator") (MSKLC) which allows users to generate their own installable keyboard layout definitions.
+
+You can use Keyboard Layout Creator to customize your layout or to provide country and language mappings not provided in the downloads below. To use one of these KLC files, load it into MSKLC, make your edits, and use the menu option "Project > Build DLL and Setup Package" to generate the installer.
 
 ## ANSI (US) keyboard
 
@@ -22,13 +24,6 @@ To use a KLC file, load it into Keyboard Layout Creator and use the menu option 
 
 ![US Colemak-DH (wide)](colemak_dh_ansi_us_wide.jpg)
 
-**US ANSI Colemak-DH "A-wing":**
-
-- [Download KLC](colemak_dh_ansi_us_awing.klc?raw=true)
-- [Download zip](colemak_dh_ansi_us_awing.zip?raw=true)
-
-![US Colemak-DH (althome)](colemak_dh_ansi_us_awing.jpg)
-
 ## ISO (UK) keyboard
 
 **UK ISO Colemak-DH:**
@@ -44,22 +39,6 @@ To use a KLC file, load it into Keyboard Layout Creator and use the menu option 
 - [Download zip](colemak_dh_iso_uk_wide.zip?raw=true)
 
 ![UK Colemak-DH (wide)](colemak_dh_iso_uk_wide.jpg)
-
-## ISO (US) keyboard
-
-**US ISO Colemak-DH:**
-
-- [Download KLC](colemak_dh_iso_us.klc?raw=true)
-- [Download ZIP](colemak_dh_iso_us.zip?raw=true)
-
-![US Colemak-DH](colemak_dh_iso_us.jpg)
-
-**US ISO Colemak-DH (wide)**
-
-- [Download KLC](colemak_dh_iso_us_wide.klc?raw=true)
-- [Download ZIP](colemak_dh_iso_us_wide.zip?raw=true)
-
-![US Colemak-DH](colemak_dh_iso_us_wide.jpg)
 
 ## Matrix keyboard
 

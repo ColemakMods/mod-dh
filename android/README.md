@@ -46,12 +46,12 @@ You may want to make your own custom modifications to the keyboard mappings. In 
 
 For example, suppose you wanted so switch the "6" and "equals" keys in the US ANSI wide layout. To do this, edit the file ```app/src/main/res/raw/moddh_ansi_us_wide.kcm```, and change the following lines:
 
-    map key    7    EQUALS
-    map key    8    6
-to
-
     map key    7    6
     map key    8    EQUALS
+to
+    map key    7    EQUALS
+    map key    8    6
+
 
 Then recompile the package. See *Compiling* section below
 
