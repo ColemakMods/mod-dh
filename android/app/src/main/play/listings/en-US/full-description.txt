@@ -1,6 +1,6 @@
-This tiny app allows you to connect a physical keyboard to your device's USB socket, and then type using one of the Colemak Mod-DH layout mappings.
+This tiny app allows you to connect a physical keyboard to your device using USB or Bluetooth, and then type using one of the Colemak Mod-DH layout mappings.
 
-Supported layouts:
+<b>Supported layouts:</b>
 <ul>
 	<li>Mod-DH ANSI US</li>
 	<li>Mod-DH ANSI US wide</li>
@@ -12,5 +12,5 @@ Supported layouts:
 	<li>Vanilla Colemak wide</li>
 </ul>
 
-Note:
-- This app is for physically connected keyboards only - it does NOT change the on-screen software keyboard.
+<b>Note:</b>
+<ul><li>This app is for physically connected keyboards only - it does <b>NOT</b> change the on-screen software keyboard.</li></ul>
