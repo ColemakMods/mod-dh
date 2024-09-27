@@ -38,7 +38,7 @@ A comprehensive Colemak-DH implementation for Linux (plus many extra features) i
 
 ### Xmodmap and console files
 
-To quickly try out Colemak-DH, there are mapping files for [xmodmap](http://www.x.org/archive/X11R6.8.2/doc/xmodmap.1.html) available in the ![download](gfx/arrow-circle-down.png)[**xmodmap folder**](xmodmap/) download area. You may need to customize these for your own language/region. Keymap files for the console are also provided in the ![download](gfx/arrow-circle-down.png)[**console folder**](console/).
+To quickly try out Colemak-DH, there are mapping files for [xmodmap](http://www.x.org/archive/X11R6.8.2/doc/xmodmap.1.html) available in the ![download](gfx/arrow-circle-down.png)[**xmodmap folder**](xmodmap/) download area. You may need to customize these for your own language/region. Keymap files for the Linux console are provided by the [kbd project](https://kbd-project.org/) since v2.6.2, which is included with most Linux distributions.
 
 Alternatively, keymap files can be generated yourself by running `generate` script in ![download](gfx/arrow-circle-down.png)[**generate-linux-keymaps**](generate-linux-keymaps/).
 
