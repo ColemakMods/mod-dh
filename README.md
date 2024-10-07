@@ -52,6 +52,15 @@ There is a project implementing [EurKEY Colemak-DH](https://gitlab.com/jungganz/
 
 Colemak-DH mappings for macOS have been contributed in the ![download](gfx/arrow-circle-down.png)[**macOS folder**](macOS/)
 
+### Homebrew
+
+Homebrew user can use the following command to install Colemak-DH to macOS:
+
+```sh
+brew install --cask colemak-dh # Install Colemak-DH
+brew install --cask colemak-dhk # Install Colemak-DHk
+```
+
 # Cross platform (Windows, Linux, Mac)
 
 ### KMonad configurations
