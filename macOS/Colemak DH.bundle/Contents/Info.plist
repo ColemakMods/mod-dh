@@ -26,6 +26,15 @@
 		<key>TISIntendedLanguage</key>
 		<string>en</string>
 	</dict>
+	<key>KLInfo_Colemak DH ANSI - P</key>
+	<dict>
+		<key>TICapsLockLanguageSwitchCapable</key>
+		<false/>
+		<key>TISInputSourceID</key>
+		<string>io.github.colemakmods.keyboardlayout.colemakdh.colemakdhansi-p</string>
+		<key>TISIntendedLanguage</key>
+		<string>en</string>
+	</dict>
 	<key>KLInfo_Colemak DH ISO</key>
 	<dict>
 		<key>TICapsLockLanguageSwitchCapable</key>
