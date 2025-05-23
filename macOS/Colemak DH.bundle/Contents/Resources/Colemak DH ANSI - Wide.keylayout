@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<keyboard group="126" id="-7379" name="Colemak DH ANSI - Wide" maxout="2">
+<keyboard group="126" id="-27364" name="Colemak DH ANSI - Wide" maxout="2">
     <layouts>
         <layout first="0" last="17" mapSet="16c" modifiers="f4"/>
         <layout first="18" last="18" mapSet="984" modifiers="f4"/>
