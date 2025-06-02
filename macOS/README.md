@@ -23,7 +23,8 @@ file to your `Keyboard Layouts` directory. There are two possible
   `Macintosh HD > Library > Keyboard Layouts`  
   Installing to this directory will install the keyboard layout
   system-wide for all users. This is the preferred installation
-  directory.
+  directory. You will need sudo rights for this, and because of how macOS handles spaces in its filesystem and how readline work you will need apostrophes like so;
+  ```sudo cp -r "./Colemak DH.bundle" "/Library/Keyboard Layouts"```
 - `~/Library/Keyboard Layouts` aka
   `Macintosh HD > Users > USERNAME > Library > Keyboard Layouts`  
   This is your personal user-local keyboard layouts directory. The
