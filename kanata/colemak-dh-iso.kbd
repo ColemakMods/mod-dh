@@ -42,23 +42,23 @@
   lctl    lmet lalt           spc            ralt rmet menu rctl
 )
 
-;; Colemak Mod-DH main layer (ISO)
+;; Colemak Mod-DH main layer (ISO) with angle mod
 (deflayer colemak-dh-iso
   esc     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
   grv     1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab     q    w    f    p    b    j    l    u    y    ;    [    ]    ret
   @ext    a    r    s    t    g    m    n    e    i    o    '    \
-  lsft    \    z    x    c    d    v    k    h    ,    .    /    rsft
+  lsft    z    x    c    d    v    \    k    h    ,    .    /    rsft
   lctl    lmet lalt           spc            ralt rmet menu rctl
 )
 
-;; Colemak Mod-DHk variant for ISO (k and m positions swapped)
+;; Colemak Mod-DHk variant for ISO (k and m positions swapped) with angle mod
 (deflayer colemak-dhk-iso
   esc     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
   grv     1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab     q    w    f    p    b    j    l    u    y    ;    [    ]    ret
   @ext    a    r    s    t    g    k    n    e    i    o    '    \
-  lsft    \    z    x    c    d    v    m    h    ,    .    /    rsft
+  lsft    z    x    c    d    v    \    m    h    ,    .    /    rsft
   lctl    lmet lalt           spc            ralt rmet menu rctl
 )
 
