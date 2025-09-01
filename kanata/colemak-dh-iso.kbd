@@ -36,55 +36,55 @@
 (defsrc
   esc     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
   grv     1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab     q    w    e    r    t    y    u    i    o    p    [    ]    ret
-  caps    a    s    d    f    g    h    j    k    l    ;    '    \
-  lsft    nubs z    x    c    v    b    n    m    ,    .    /    rsft
+  tab     q    w    e    r    t    y    u    i    o    p    [    ]
+  caps    a    s    d    f    g    h    j    k    l    ;    '    \    ret
+  lsft nubs  z    x    c    v    b    n    m    ,    .    /    rsft
   lctl    lmet lalt           spc            ralt rmet menu rctl
 )
 
-;; Colemak Mod-DH main layer (ISO) with angle mod
-(deflayer colemak-dh-iso
+;; Colemak Mod-DH main layer (ISO)
+(deflayer colemak-dh
   esc     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
   grv     1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab     q    w    f    p    b    j    l    u    y    ;    [    ]    ret
-  @ext    a    r    s    t    g    m    n    e    i    o    '    \
-  lsft    z    x    c    d    v    \    k    h    ,    .    /    rsft
+  tab     q    w    f    p    b    j    l    u    y    ;    [    ]
+  @ext    a    r    s    t    g    m    n    e    i    o    '    \    ret
+  lsft  z    x    c    d    v    nubs k    h    ,    .    /    rsft
   lctl    lmet lalt           spc            ralt rmet menu rctl
 )
 
-;; Colemak Mod-DHk variant for ISO (k and m positions swapped) with angle mod
-(deflayer colemak-dhk-iso
+;; Colemak-DHk variant for ISO (k and m positions swapped)
+(deflayer colemak-dhk
   esc     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
   grv     1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab     q    w    f    p    b    j    l    u    y    ;    [    ]    ret
-  @ext    a    r    s    t    g    k    n    e    i    o    '    \
-  lsft    z    x    c    d    v    \    m    h    ,    .    /    rsft
+  tab     q    w    f    p    b    j    l    u    y    ;    [    ]
+  @ext    a    r    s    t    g    k    n    e    i    o    '    \    ret
+  lsft  z    x    c    d    v    nubs m    h    ,    .    /    rsft
   lctl    lmet lalt           spc            ralt rmet menu rctl
 )
 
 ;; QWERTY layer for comparison/fallback (ISO)
-(deflayer qwerty-iso
+(deflayer qwerty
   esc     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
   grv     1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab     q    w    e    r    t    y    u    i    o    p    [    ]    ret
-  @ext    a    s    d    f    g    h    j    k    l    ;    '    \
-  lsft    nubs z    x    c    v    b    n    m    ,    .    /    rsft
+  tab     q    w    e    r    t    y    u    i    o    p    [    ]
+  @ext    a    s    d    f    g    h    j    k    l    ;    '    \    ret
+  lsft  nubs z    x    c    v    b    n    m    ,    .    /    rsft
   lctl    lmet lalt           spc            ralt rmet menu rctl
 )
 
 ;; Extend layer for navigation, function keys, and layer switching
 ;; Inspired by DreymaR's BigBag extend layer
-(deflayer extend-iso
+(deflayer extend
   _       @lq  @lh  @lm  _    _    _    _    _    _    _    _    _
   _       @lq  @lh  @lm  _    _    _    _    _    _    _    _    _    _
-  _       esc  @bk  @fnd @fw  ins  pgup home up   end  menu _    slck _
-  _       lalt lmet lsft lctl ralt pgdn lft  down rght del  caps _
-  _       nubs @cut @cpy tab  @pst @udo pgdn bspc lsft lctl menu _
+  _       esc  @bk  @fnd @fw  ins  pgup home up   end  menu _    slck
+  _       lalt lmet lsft lctl ralt pgdn lft  down rght del  caps _    _
+  _     @udo @cut @cpy tab  @pst _   pgdn bspc lsft lctl menu _
   _       _    _              ret            _    _    _    _
 )
 
 ;; Layer switching layer
-(deflayer layers-iso
+(deflayer layers
   _       _    _    _    _    _    _    _    _    _    _    _    _
   _       @lq  @lh  @lm  _    _    _    _    _    _    _    _    _    _
   _       _    _    _    _    _    _    _    _    _    _    _    _    _
@@ -96,12 +96,12 @@
 ;; Aliases for cleaner layer definitions
 (defalias
   ;; Extend layer toggle on Caps Lock (tap for Caps, hold for Extend)
-  ext  (tap-hold 200 200 caps (layer-toggle extend-iso))
+  ext  (tap-hold 200 200 caps (layer-toggle extend))
   
   ;; Layer switching aliases
-  lq   (layer-switch qwerty-iso)      ;; Switch to QWERTY ISO
-  lh   (layer-switch colemak-dh-iso)  ;; Switch to Colemak-DH ISO
-  lm   (layer-switch colemak-dhk-iso) ;; Switch to Colemak-DHk ISO
+  lq   (layer-switch qwerty)      ;; Switch to QWERTY ISO
+  lh   (layer-switch colemak-dh)  ;; Switch to Colemak-DH ISO
+  lm   (layer-switch colemak-dhk) ;; Switch to Colemak-DHk ISO
 
   ;; Common shortcuts for Extend layer
   cpy  C-c   ;; Copy

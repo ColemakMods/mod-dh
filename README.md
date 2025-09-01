@@ -63,9 +63,13 @@ brew install --cask colemak-dhk # Install Colemak-DHk
 
 # Cross platform (Windows, Linux, Mac)
 
-### KMonad configurations
+### KMonad & Kanata configurations
 
-There are Colemak-DH configurations for the [KMonad](https://github.com/david-janssen/kmonad) program. This application allows manipulation of the raw input from the keyboard device, allowing arbitrary and advanced remapping in a cross-platform friendly way. See the ![download](gfx/arrow-circle-down.png)[**KMonad folder**](kmonad/) for configuration files.
+There are Colemak-DH configurations for the [KMonad](https://github.com/david-janssen/kmonad) and [Kanata](https://github.com/jtroo/kanata) programs. These programs work in a similar way, allowing manipulation of the raw input from the keyboard device to support arbitrary and advanced remapping in a cross-platform friendly way. 
+
+![download](gfx/arrow-circle-down.png)[**KMonad folder**](kmonad/).
+
+![download](gfx/arrow-circle-down.png)[**Kanata folder**](kanata/).
 
 # Android
 

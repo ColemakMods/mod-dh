@@ -43,7 +43,7 @@
 )
 
 ;; Colemak Mod-DH main layer (optimized for matrix keyboards)
-(deflayer colemak-dh-matrix
+(deflayer colemak-dh
   esc     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
   grv     1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab     q    w    f    p    b    j    l    u    y    ;    [    ]    \
@@ -53,7 +53,7 @@
 )
 
 ;; Colemak Mod-DHk variant for matrix keyboards (k and m positions swapped)
-(deflayer colemak-dhk-matrix
+(deflayer colemak-dhk
   esc     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
   grv     1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab     q    w    f    p    b    j    l    u    y    ;    [    ]    \
@@ -63,7 +63,7 @@
 )
 
 ;; QWERTY layer for comparison/fallback
-(deflayer qwerty-matrix
+(deflayer qwerty
   esc     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
   grv     1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab     q    w    e    r    t    y    u    i    o    p    [    ]    \
@@ -74,7 +74,7 @@
 
 ;; Extend layer for navigation, function keys, and layer switching
 ;; Optimized for matrix keyboard usage patterns
-(deflayer extend-matrix
+(deflayer extend
   _       @lq  @lh  @lm  _    _    _    _    _    _    _    _    _
   _       @lq  @lh  @lm  _    _    _    _    _    _    _    _    _    _
   _       esc  @bk  @fnd @fw  ins  pgup home up   end  menu _    slck _
@@ -84,7 +84,7 @@
 )
 
 ;; Layer switching layer
-(deflayer layers-matrix
+(deflayer layers
   _       _    _    _    _    _    _    _    _    _    _    _    _
   _       @lq  @lh  @lm  _    _    _    _    _    _    _    _    _    _
   _       _    _    _    _    _    _    _    _    _    _    _    _    _
@@ -96,12 +96,12 @@
 ;; Aliases for cleaner layer definitions
 (defalias
   ;; Extend layer toggle on Caps Lock (tap for Caps, hold for Extend)
-  ext  (tap-hold 200 200 caps (layer-toggle extend-matrix))
+  ext  (tap-hold 200 200 caps (layer-toggle extend))
   
   ;; Layer switching aliases
-  lq   (layer-switch qwerty-matrix)        ;; Switch to QWERTY Matrix
-  lh   (layer-switch colemak-dh-matrix)    ;; Switch to Colemak-DH Matrix
-  lm   (layer-switch colemak-dhk-matrix)   ;; Switch to Colemak-DHk Matrix
+  lq   (layer-switch qwerty)        ;; Switch to QWERTY Matrix
+  lh   (layer-switch colemak-dh)    ;; Switch to Colemak-DH Matrix
+  lm   (layer-switch colemak-dhk)   ;; Switch to Colemak-DHk Matrix
 
   ;; Common shortcuts for Extend layer
   cpy  C-c   ;; Copy
