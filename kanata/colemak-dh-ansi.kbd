@@ -37,7 +37,7 @@
   grv     1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab     q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps    a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft    z    x    c    v    b    n    m    ,    .    /    rsft
+  lsft      z    x    c    v    b    n    m    ,    .    /    rsft
   lctl    lmet lalt           spc            ralt rmet menu rctl
 )
 
@@ -47,7 +47,7 @@
   grv     1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab     q    w    f    p    b    j    l    u    y    ;    [    ]    \
   @ext    a    r    s    t    g    m    n    e    i    o    '    ret
-  lsft    z    x    c    d    v    k    h    ,    .    /    rsft
+  lsft      x    c    d    v    z    k    h    ,    .    /    rsft
   lctl    lmet lalt           spc            ralt rmet menu rctl
 )
 
@@ -57,7 +57,7 @@
   grv     1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab     q    w    f    p    b    j    l    u    y    ;    [    ]    \
   @ext    a    r    s    t    g    k    n    e    i    o    '    ret
-  lsft    z    x    c    d    v    m    h    ,    .    /    rsft
+  lsft      x    c    d    v    z    m    h    ,    .    /    rsft
   lctl    lmet lalt           spc            ralt rmet menu rctl
 )
 
@@ -67,7 +67,7 @@
   grv     1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab     q    w    e    r    t    y    u    i    o    p    [    ]    \
   @ext    a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft    z    x    c    v    b    n    m    ,    .    /    rsft
+  lsft      z    x    c    v    b    n    m    ,    .    /    rsft
   lctl    lmet lalt           spc            ralt rmet menu rctl
 )
 
