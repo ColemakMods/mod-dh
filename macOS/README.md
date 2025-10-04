@@ -1,8 +1,7 @@
 Colemak DH and Colemak DHk for macOS
 ====================================
 
-macOS keylayout bundles for Colemak DH and Colemak DHk. Each bundle has
-support for ANSI, ISO, and Matrix keyboards in both regular and
+Each bundle has support for ANSI, ISO, and Matrix keyboards in both regular and
 "Extended" deadkey variants. These layouts are based off of the built-in
 "ABC" and "ABC - Extended" layouts that come with macOS.
 
@@ -52,4 +51,9 @@ layout. The newly installed keyboard layouts should be available in the
 If you'd like to customize these keyboard layouts, you can edit the XML
 inside of the `.keylayout` files directly or, if obtuse XML isn't to
 your liking, Ukelele is a graphical tool for editing these bundles.
-Ukelele is available for download at http://scripts.sil.org/ukelele
+Ukelele is available for download at https://software.sil.org/ukelele/
+
+## Alternative - Karabiner Elements
+
+There is also an application called [Karabiner Elements](https://karabiner-elements.pqrs.org) which allows you to remap keys in macOS.
+
