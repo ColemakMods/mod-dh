@@ -13,7 +13,7 @@
 		<key>TICapsLockLanguageSwitchCapable</key>
 		<false/>
 		<key>TISInputSourceID</key>
-		<string>io.github.colemakmods.keyboardlayout.colemakdh.colemakdhansi</string>
+		<string>io.github.colemakmods.keyboardlayout.colemakdh.keylayout.ColemakDHANSI</string>
 		<key>TISIntendedLanguage</key>
 		<string>en</string>
 	</dict>
@@ -22,7 +22,7 @@
 		<key>TICapsLockLanguageSwitchCapable</key>
 		<false/>
 		<key>TISInputSourceID</key>
-		<string>io.github.colemakmods.keyboardlayout.colemakdh.colemakdhansi-wide</string>
+		<string>io.github.colemakmods.keyboardlayout.colemakdh.keylayout.ColemakDHANSI-Wide</string>
 		<key>TISIntendedLanguage</key>
 		<string>en</string>
 	</dict>
@@ -31,7 +31,7 @@
 		<key>TICapsLockLanguageSwitchCapable</key>
 		<false/>
 		<key>TISInputSourceID</key>
-		<string>io.github.colemakmods.keyboardlayout.colemakdh.colemakdhansi-extended</string>
+		<string>io.github.colemakmods.keyboardlayout.colemakdh.keylayout.ColemakDHANSI-Extended</string>
 		<key>TISIntendedLanguage</key>
 		<string>en</string>
 	</dict>
@@ -40,7 +40,7 @@
 		<key>TICapsLockLanguageSwitchCapable</key>
 		<false/>
 		<key>TISInputSourceID</key>
-		<string>io.github.colemakmods.keyboardlayout.colemakdh.colemakdhiso</string>
+		<string>io.github.colemakmods.keyboardlayout.colemakdh.keylayout.ColemakDHISO</string>
 		<key>TISIntendedLanguage</key>
 		<string>en</string>
 	</dict>
@@ -49,7 +49,7 @@
 		<key>TICapsLockLanguageSwitchCapable</key>
 		<false/>
 		<key>TISInputSourceID</key>
-		<string>io.github.colemakmods.keyboardlayout.colemakdh.colemakdhiso-extended</string>
+		<string>io.github.colemakmods.keyboardlayout.colemakdh.keylayout.ColemakDHISO-Extended</string>
 		<key>TISIntendedLanguage</key>
 		<string>en</string>
 	</dict>
@@ -58,7 +58,7 @@
 		<key>TICapsLockLanguageSwitchCapable</key>
 		<false/>
 		<key>TISInputSourceID</key>
-		<string>io.github.colemakmods.keyboardlayout.colemakdh.colemakdhmatrix</string>
+		<string>io.github.colemakmods.keyboardlayout.colemakdh.keylayout.ColemakDHMatrix</string>
 		<key>TISIntendedLanguage</key>
 		<string>en</string>
 	</dict>
@@ -67,7 +67,7 @@
 		<key>TICapsLockLanguageSwitchCapable</key>
 		<false/>
 		<key>TISInputSourceID</key>
-		<string>io.github.colemakmods.keyboardlayout.colemakdh.colemakdhmatrix-extended</string>
+		<string>io.github.colemakmods.keyboardlayout.colemakdh.keylayout.ColemakDHMatrix-Extended</string>
 		<key>TISIntendedLanguage</key>
 		<string>en</string>
 	</dict>
